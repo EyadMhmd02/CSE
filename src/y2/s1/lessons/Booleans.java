@@ -2,7 +2,7 @@ package y2.s1.lessons;
 
 public class Booleans {
     public static void main(String[] args) {
-        boolean A, B, C;
+        boolean A, B;
 
         A = true;
         B = false;
