@@ -1,6 +1,6 @@
 package y2.s1.lessons;
 
-public class Booleans {
+public class LogicGates {
     public static void main(String[] args) {
         boolean A, B;
 
