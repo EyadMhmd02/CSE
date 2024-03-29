@@ -1,0 +1,29 @@
+- Common orders of growth
+(slowest to fastest growth)
+(fastest to slowest time)
+
+O(1)        Constant complexity
+O(lg n)     Logarithmic complexity
+O(n)        Linear complexity
+O(n lg n)   Linearithmic complexity (linear + logarithmic)
+O(n2)       Quadratic complexity
+O(n3)       Cubic complexity
+O(2n)       Exponential (power of 2)
+
+- linear search O(n): list size (n) => max comparisons (n)
+    Begin linearSearch(In: List<T> list; In: T key) → Int
+        For i := 0 to list.size() - 1 Do
+            If listi = key Then
+                Return i
+            End If
+        End For
+        Return NOT_FOUND
+    End linearSearch
+
+- List Size   Max Comparisons
+    0           0
+    1           1
+    2           2
+    ...         ...
+    n           n
+

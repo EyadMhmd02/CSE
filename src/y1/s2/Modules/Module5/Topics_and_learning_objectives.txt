@@ -1,0 +1,12 @@
+Topics
+Selection Sort
+Insertion Sort
+Merge Sort
+Quick Sort
+
+Learning Objectives
+By the end of this module, students will be able to:
+Implement the selection sort algorithm to sort a list of elements, and analyze the algorithm's time complexity.
+Implement the insertion sort algorithm to sort a list of elements, and analyze the algorithm's time complexity.
+Implement the merge sort algorithm to sort a list of elements, and analyze the algorithm's time complexity.
+Implement the quick sort algorithm to sort a list of elements, and analyze the algorithm's time complexity.

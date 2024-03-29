@@ -1,0 +1,11 @@
+Topics
+- Object-Oriented Design with UML
+- Inheritance
+
+Learning Objectives
+- Read UML class diagrams and convert the diagram into Java classes.
+- Identify and implement dependency, aggregation, inheritance, and composition relationships.
+- Properly use the public, private, and protected accessibility modifiers.
+- Write Java code to override and overload methods.
+- Recognize when inheritance is present among classes in an OOD.
+- Design and implement classes using inheritance.
