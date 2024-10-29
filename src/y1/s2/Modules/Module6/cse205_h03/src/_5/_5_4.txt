@@ -1,0 +1,1 @@
+The key operation is the operation (or operations, there could be more than one) that is fundamental to the nature of the algorithm and is going to be performed the most times. For split() the key operation is the comparison of n % 2 to 0.
