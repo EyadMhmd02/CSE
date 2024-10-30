@@ -1,0 +1,21 @@
+- Solution:
+1. We write the algorithm in pseudocode.
+2. Because it's a pseudocode, no compiling is needed.
+3. The skill of the programmer is avoided because we are not implementing the algorithm in a HLL.
+4. We analyze the efficiency without actually running the algorithm on a real machine.
+
+- if we have two sorting algorithms A & B, and the list size is n:
+1. A: number of operations is proportional to n^2.
+2. B: number of operations is proportional to n.
+then B is more efficient.
+
+- Asymptotic time complexity:
+If problem size n goes to infinity,
+we derive a function which counts how many times
+operations are performed relative to n.
+
+- Most common asymptotic time complexity measurement: Worst case performance.
+
+- Upper bound of the time: Algorithm's maximum time taken to execute.
+- Big O notation: O(g(n)), g(n) is a function referring to the order of growth of it.
+

@@ -1,0 +1,14 @@
+Topics
+Trees
+Binary Search Trees
+
+Learning Objectives
+By the end of this module, students will be able to:
+Explain what a binary tree is.
+Explain the organization of the binary tree data structure.
+Explain how operations such as search, add, remove, and traverse are performed on a binary tree.
+Implement a relatively simple binary tree class.
+Explain what a binary search tree (BST) is.
+Explain the organization of a BST.
+Explain how operations such as search, add, and remove are performed on a BST.
+Determine the asymptotic time complexity of search, add, and remove operations on a BST.
