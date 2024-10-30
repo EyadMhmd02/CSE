@@ -1,0 +1,163 @@
+- Aspects of programming languages:
+    1- Reliability
+    2- Readability
+    3- Writeability
+    4- Reusability
+    5- Efficiency
+
+- What characteristics of a language improve what performance metrics of the program written in that language?
+    - Characteristics:
+    1- Simplicity/Orthogonality.
+    2- Control structures.
+    3- Data types and structures.
+    4- Syntax design.
+    5- Support for abstraction.
+    6- Expressiveness.
+    7- Strong/weak type checking.
+    8- Exception handling.
+    9- Restricted aliasing/pointer.
+
+    - Performance metrics:
+    1- Execution efficiency.
+    2- Readability/Reusability.
+    3- Writeability.
+    4- Reliability.
+
+- Development of programming languages:
+    - Development of hardware.
+    - Development of compiler technology.
+    - Need for ability to write larger programs.
+        - Code reuse.
+        - Component reuse.
+        - System reuse.
+        - Facilitating discovery of reusable code.
+        - Trustworthiness of reused code.
+        - Web-enabled sharing.
+
+- Stored program concept (von Neumann machine):
+    Machine language level:
+    - Program is a sequence of instructions stored in memory.
+    - CPU interprets the program in the specified order.
+    - At the lowest level, the program is a sequence of bits (binary numbers) of machine code.
+    - Data is also stored in memory and is accessed by the program.
+
+    Assembly level:
+    - Use of mnemonics (short names) for machine code instructions and registers.
+
+    Example of languages: assembly, Java byte code, MIPS machine code, etc.
+    Require a program called assembler to convert assembly language to machine code.
+
+    e.g.: assembly language instructions: MOV, ADD, SUB, JMP, JZ, JNZ, etc.
+    register names: AX, BX, CX, DX, etc.
+    e.g.: assembly language program:
+    MOV AX, 10
+    MOV BX, 20
+    ADD AX, BX
+    MOV CX, AX
+    - Another example is Java byte code.
+    e.g.: java byte code instructions: iconst_0, iconst_1, iadd, istore_0, istore_1, istore_2, etc
+
+    Higher level language level:
+    Example of languages: Autocode, FORTRAN, COBOL, LISP, Scheme, C.
+    Require a program called compiler to convert high level language to machine code.
+
+    Autocode:
+    - First high level language.
+    - Single letter identifiers. (26)
+    - Simple formulas: a+b, c-d -> 2*a+3*b*c-d
+
+    FORTRAN:
+    - Variables of different types: integer, real, array.
+    - Procedures.
+    - Conditional (if-then, if-then-else).
+    - Simple control structures: do, for, while, repeat.
+
+    Still a low-level:
+    - Machine dependent.
+    - Difficult to write.
+    - Difficult to understand.
+    - Spaghetti code (Monolithic code).
+
+    Structured programming:
+    - 1960s.
+    - Structured programming languages: Algol, Pascal, C, etc.
+    - More abstraction.
+    - Focus on structure in program (use of procedures to divide program into smaller parts).
+    - Use of different scopes (i.e. local variables).
+    - Better procedures.
+    - Better data structures.
+    - Better control and loop structures.
+
+    Object-oriented programming:
+    - Abstraction/Encapsulation.
+    - Code reuse/inheritance.
+    - e.g.: Simula, Smalltalk, Eiffel, C++, C#, Java, Pyton, etc.
+
+    Parallel and Distributed programming:
+    - Parallel/Multithreaded programming:
+        multiple tasks or threads can run simultaneously on a single processor.
+        e.g.: Java, C#, Concurrent C, C++.
+    - Shared and distributed memory:
+        having a number of CPUs working on the same task.
+        e.g.: CSP, occam, Linda, Emerald, Ravan, Core.
+
+    - Service-oriented programming:
+        - XML/XML Schema.
+        - RDF/RDFS.
+        - OWL.
+        - WSDL.
+        - UDDI.
+        - SOAP.
+        - BPEL.
+        - Xlang.
+        - WS-CDL.
+
+Paradigms:
+    - Imperative programming: C, C++, Pascal, Fortran, Java, Python, etc.
+    - Functional programming: Lisp, Scheme, ML, Haskell, etc.
+    - Object-oriented programming: C++, Java, Python, etc.
+    - Logic programming: Prolog, etc.
+
+- Imperative/Procedural: fully-specified fully-controlled manipulation of data in a stepwise fashion.
+- Object-oriented: encapsulation of state of the program in objects can be accessed only through operations defined on them. Other features include: inheritance, polymorphism, etc.
+- Functional/Applicative: Focus on higher level of abstraction (free from programming detail), simpler semantics, closer to mathematical functions, referential transparency (no side effects).
+- Logic: Program is a set of rules that define the problem domain. The program is solved by finding a solution that satisfies the rules. The goal is to get rid of programming altogether.
+- Service-oriented: Based on web services. The program is a set of services that can be accessed by other programs. The program is solved by finding a solution that satisfies the services.
+
+- Programming language design:
+    - Syntax: rules for writing programs in the language.
+    - Semantics: meaning of the program.
+    - Implementation: how the program is executed.
+
+Structure of Programs:
+    - Lexical Structure: Lexical symbols, units, tokens: basic building blocks.
+        - Identifiers: Names (programmer chosen) of objects of interest (variables, procedure names etc.). Issues: length, case sensitivity, allowable characters, special rules.
+        - Keywords: names reserved by the language designer: if, else, switch, int, float, char
+        - Operators:  +, *, <<, >=, !, &&, ||,
+        - Separators: , ; . ( ) etc.
+        - Literals: numbers, characters, strings
+        - Comments: /* ... */,  // ...
+        - Layout, space: some languages are of free format, while some are not, e.g., Python.
+    - Syntactic Structure: describes how to put lexical units together to form valid sentences/statements.
+        - BNF: Meta-language for describing languages, context free language:
+        - Non-terminal symbol: symbols in grammar — They do not appear in final program;
+        - Terminal symbol: symbols that appear in actual programs — go no further in translating from grammar.
+
+        Example: Define a Very Simple Language (VSL)
+        <sentence>	::= <subject> <verb> <object>
+        <subject>	::= <adjective> <noun>
+        <adjective>	::= <adjective> | <adjective> <adjective>
+        <object>	::= <subject>
+        <noun>      ::= table | horse | computer
+        <adjective>	::= big | fast | good | high
+        <verb>		::= is | makes
+        <sentence>	::= <verb> <subject> <object> ?
+
+        Example: Define a Very Simple Programming Language (VSPL)
+        <char>      ::= 	a | b | c | … | z | 0 | 1 |  ... | 9
+        <operator> 	::= 	+ | - | * | / | % | < | > | == |  | 
+        <variable> 	::= 	<char> | <char> < variable>
+        <expr>      ::= 	< variable> <operator><variable> | ( <expr> ) <operator> ( <expr> )
+        <assign> 	::= 	< variable> = <expr>;
+        <statements>::= 	<assign> | <assign> <statements>
+
