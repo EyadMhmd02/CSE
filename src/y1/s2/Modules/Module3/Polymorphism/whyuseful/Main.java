@@ -1,6 +1,6 @@
 package y1.s2.Modules.Module3.Polymorphism.whyuseful;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
         Direct direct = new Direct();
         Indirect indirect = new Indirect();

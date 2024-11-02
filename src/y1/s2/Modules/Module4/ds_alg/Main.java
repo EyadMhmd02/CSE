@@ -5,15 +5,15 @@ import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
-        Random random = new Random();
         System.out.println("creating list...");
         System.out.println();
         ArrayList<Integer> list = new ArrayList<>(); // n
 
         System.out.println("populating list...");
         System.out.println();
+        Random random = new Random();
         for (int i = 0; i < Integer.MAX_VALUE / 5; i++) {
             list.add(random.nextInt(20));
         }
@@ -23,12 +23,10 @@ public class Main {
 
         System.out.println("searching for " + key + "...");
         System.out.println();
-
         Instant start = Instant.now();
 //        System.out.println(linearSearch(list, key)); // O(n)
         System.out.println(binarySearch(list, key, 0, list.size() - 1)); // O(log n)
         Instant end = Instant.now();
-
         Duration timeElapsed = Duration.between(start, end);
         System.out.println("Time taken: " + timeElapsed.toSeconds() + " seconds");
     }
