@@ -80,7 +80,7 @@ public class Trends {
         // Bigger           =>      O(n n!)
         stopwatch = new Stopwatch();
         list = ListHandler.createList();
-        size = 13;
+        size = 14;
         ListHandler.populateListWithRandomNumbers(list, size);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
         System.out.println("Bogo sorting a list of size " + size +"...");
