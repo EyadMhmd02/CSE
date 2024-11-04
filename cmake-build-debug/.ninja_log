@@ -1,0 +1,8 @@
+# ninja log v6
+167	2428	7524212462795034	CMakeFiles/CSE.dir/src/y3/s1/cse240/lecs/lec05_01_first_program.c.obj	664bbd9a4c1d00d1
+6	121	7524308776583238	CMakeFiles/CSE.dir/src/y3/s1/cse240/lecs/lec07/lec07.c.obj	cd9d5833c04ff111
+594	845	7524330972280860	CSE.exe	fecff6b9b3159db6
+2	279	7524491559515613	build.ninja	b1b34cf91ca9fb67
+11	593	7524330966446251	CMakeFiles/CSE.dir/src/y3/s1/cse240/lecs/lec08/lec08.c.obj	3238544f855dc9cf
+5	235	7524226199347721	CMakeFiles/CSE.dir/src/y3/s1/cse240/lecs/lec05/_01_first_program.c.obj	863a2abb9f64d0af
+10	144	7524280074784366	CMakeFiles/CSE.dir/src/y3/s1/cse240/lecs/lec06/lec06.c.obj	5760c2f2b85eca3d

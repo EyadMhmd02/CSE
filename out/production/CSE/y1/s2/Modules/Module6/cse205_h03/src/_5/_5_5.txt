@@ -1,2 +1,0 @@
-If n is the size of pList, the enhanced for loop will iterate n times (once for each list element). Therefore, the key operation will be performed f(n) = n times. f(n) is O(n) so split() has linear worst case time complexity (in fact, the best and average case time complexities are also O(n)).
-Here is a hint to help you solve these types of problems. If you are doing something with the elements of a data structure containing n elements, and the "something" requires examining or visiting every element, then the time complexity is going to be O(n).

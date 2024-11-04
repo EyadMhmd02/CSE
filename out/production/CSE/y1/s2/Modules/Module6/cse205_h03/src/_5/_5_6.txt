@@ -1,1 +1,0 @@
-The time complexity would still be O(n). Since we have to examine every element of the list, ift doesn't matter if we examine them in random order or in sorted order.
