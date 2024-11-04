@@ -1,0 +1,39 @@
+DEPTH first:
+- we follow one path DOWNWARDS.
+- 3 traversals:
+    1- PRE-order: (ROOT => LEFT => RIGHT).
+        Method void preorderTraversal(Node root, Visitor visitor) {
+            visitor.visit(root.data);
+
+            if(root.hasLeft()) {
+                preorderTraversal(root.leftChild, visitor);
+            }
+
+            if(root.hasRight()) {
+                preorderTraversal(root.rightChild, visitor);
+            }
+        }
+    2- IN-order: (LEFT => ROOT => RIGHT)
+        Method void inorderTraversal(Node root, Visitor visitor) {
+            if(root.hasLeft()) {
+                inorderTraversal(root.leftChild, visitor);
+            }
+
+            visitor.visit(root.data);
+
+            if(root.hasRight()) {
+                inorderTraversal(root.rightChild, visitor);
+            }
+        }
+    3- POST-order: (LEFT => RIGHT => ROOT)
+        Method void postorderTraversal(Node root, Visitor visitor) {
+            if(root.hasLeft()) {
+                inorderTraversal(root.leftChild, visitor);
+            }
+
+            if(root.hasRight()) {
+                inorderTraversal(root.rightChild, visitor);
+            }
+
+            visitor.visit(root.data);
+        }

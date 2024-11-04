@@ -227,5 +227,7 @@ Populating list with size of 14...
 
 Bigger			=>		O(n n!)
 Bogo sorting a list of size 14...
+Actually it's unpredictable
+Elapsed time: 60835.0 ms => 60.835 s => 1 m => 0 h
 Elapsed time: 4702063.0 ms => 4702.063 s => 78 m => 1 h
 */

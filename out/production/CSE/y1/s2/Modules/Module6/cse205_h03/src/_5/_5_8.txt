@@ -1,0 +1,20 @@
+Let n be the size of the list being searched and assume that n is a power of 3, i.e., n = 3^p for p >= 0.
+The key operations are the comparison of pKey to the elements of pList, and although we actually make four comparisons during each recursive call, we will treat this as one comparison (we will obtain the same time complexity in either case).
+Let c(n) be the maximum number of comparisons in the worst case. But what is the worst case? As with linearSearch, the worst case (the maximum number of comparisons) occurs when key is not in list.
+If key is not in list then we will make recursive calls - reducing the size of the list by exactly one-third each time we assume n is a power of 3 - until the base case of an empty list is reached. This means that c(n) will be proportional to the number of recursive calls, so all we need to do to find c(n) is determine the number of recursive calls.
+Let's number the calls to recTernarySearch 1, 2, 3, ..., k. A table will be helpful
+Call        List Size       Comparison
+1           n               1
+1           n / 3           1
+1           n / 9           1
+...         ...             ...
+k - 1       n / 3^k-2       1
+k           0               0
+Note that on call k, the base case, the list will be empty so no comparison will be made. Therefore, the number of comparisons c(n) = k - 1 and our question becomes, what is k - 1?
+Since n is a power of 3 (by our assumption), on call k - 1 the list size will be 1. Thus:
+    n / 3^k-2 = 1
+solving for k:
+    n = 3^k-2
+    log3(n) = log3(3^k-2)
+    k - 1 = log3(n) + 1 = c(n).
+c(n) can easily be shown to be O(log3 n) so the worst case asymptotic time complexity of ternary search is O(log3 n). Note from Exercise 5.3 that this means that recursive binary search is also O(log n), so from an asymptotic time complexity standpoint, ternary search is not more efficient than binary search.

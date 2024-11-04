@@ -1,0 +1,4 @@
+- TRAVERSAL: visiting each node to perform something on the elements of the tree.
+- Categories:
+    - DEPTH first.
+    - BREADTH first.

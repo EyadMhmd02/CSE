@@ -1,0 +1,20 @@
+        0  1  2  3   4   5   6   7   8   9    10   11   12   13
+list = {2, 3, 5, 10, 16, 24, 32, 48, 96, 120, 240, 360, 800, 1600}
+n = 14
+
+Original call number 1: pLow = 0, pHigh = 13, pKey = 150
+    Calculate pMiddle = 6
+    pKey = 10 < list[middle] = 32: return recursiveBinarySearch(pList, 150, 7, 13);
+        Call number 2: pLow = 7, pHigh = 13
+        Calculate pMiddle = 10
+        pKey = 150 < list[middle] = 240: return recursiveBinarySearch(pList, 150, 7, 9);
+            Call number 3: pLow = 7, pHigh = 9
+                Calculate pMiddle = 8
+                pKey = 150 > list[middle] = 96: return recursiveBinarySearch(pList, 150, 9, 9);
+                    Call number 4: pLow = 9, pHigh = 9
+                        Calculate pMiddle = 9
+                        pKey = 150 > list[middle] = 120: return recursiveBinarySearch(pList, 150, 10, 9);
+                            Call number 5: pLow = 10, pHigh = 9
+                            pLow > pHigh so base case reached, return -1
+index is assigned -1.
+The method was called 5 times.
