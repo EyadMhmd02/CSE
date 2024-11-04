@@ -12,7 +12,7 @@ class ListHandler {
     }
 
     public static void populateListWithRandomNumbers(ArrayList<Integer> list, int size) {
-        System.out.println("Populating list...");
+        System.out.println("Populating list with size of " + size + "...");
         System.out.println();
         Random random = new Random();
         for (int i = 0; i < size; i++) {

@@ -1,5 +1,6 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Trends {
@@ -13,8 +14,8 @@ public class Trends {
         // Constant         =>      O(1)
         Stopwatch stopwatch = new Stopwatch();
         System.out.println("Constant\t\t=>\t\tO(1)");
-        System.out.println("Adding two numbers...");
-        addTwoNumbers(list.get(4), list.get(5));
+        System.out.println("Adding two very large numbers...");
+        addTwoNumbers(BigInteger.valueOf(Long.MAX_VALUE), BigInteger.valueOf(Long.MAX_VALUE));
         System.out.println(stopwatch);
 
         // Logarithmic      =>      O(log n)
@@ -54,7 +55,8 @@ public class Trends {
         // Cubic            =>      O(n^3)
         stopwatch = new Stopwatch();
         list = ListHandler.createList();
-        size = Integer.MAX_VALUE / 100000;
+//        size = Integer.MAX_VALUE / 100000;
+        size = 5000;
         ListHandler.populateListWithRandomNumbers(list, size);
         System.out.println("Cubic\t\t\t=>\t\tO(n^3)");
         System.out.println("Checking all triplets in a list of size " + size + "...");
@@ -63,10 +65,10 @@ public class Trends {
 
         // Exponential      =>      O(2^n)
         stopwatch = new Stopwatch();
-        int n = 50;
+        int n = 52;
         System.out.println("Exponential\t\t=>\t\tO(2^n)");
         System.out.println("Finding fibonacci sum of " + n + "...");
-        fibonacci(50);
+        fibonacci(n);
         System.out.println(stopwatch);
 
         // Factorial        =>      O(n!)
@@ -83,14 +85,14 @@ public class Trends {
         size = 14;
         ListHandler.populateListWithRandomNumbers(list, size);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
-        System.out.println("Bogo sorting a list of size " + size +"...");
+        System.out.println("Bogo sorting a list of size " + size + "...");
         BogoSorter.bogoSort(list);
         System.out.println(stopwatch);
     }
 
     // Constant         =>      O(1)
-    private static int addTwoNumbers(int n1, int n2) {
-        return n1 + n2;
+    private static BigInteger addTwoNumbers(BigInteger n1, BigInteger n2) {
+        return n1.add(n2);
     }
 
     // Logarithmic      =>      O(log n)
@@ -167,3 +169,63 @@ public class Trends {
     // Bigger           =>      O(n n!)
     // Bogo sort
 }
+
+/*
+SAMPLE OUTPUT:
+
+Creating list...
+
+Populating list with size of 429496729...
+
+Constant		=>		O(1)
+Adding two very large numbers...
+Elapsed time: 1.0 ms => 0.001 s => 0 m => 0 h
+
+Logarithmic		=>		O(log n)
+Binary searching in a list of size 429496729...
+Elapsed time: 1.0 ms => 0.001 s => 0 m => 0 h
+
+Linear			=>		O(n)
+Finding the maximum number in a list of size 429496729...
+Elapsed time: 913.0 ms => 0.913 s => 0 m => 0 h
+
+Creating list...
+
+Populating list with size of 21474836...
+
+Linearithmic	=>		O(n log n)
+Merge sorting a list of size 21474836...
+Elapsed time: 22206.0 ms => 22.206 s => 0 m => 0 h
+
+Creating list...
+
+Populating list with size of 214748...
+
+Quadratic		=>		O(n^2)
+Checking all pairs in a list of size 214748...
+Elapsed time: 84861.0 ms => 84.861 s => 1 m => 0 h
+
+Creating list...
+
+Populating list with size of 5000...
+
+Cubic			=>		O(n^3)
+Checking all triplets in a list of size 5000...
+Elapsed time: 105098.0 ms => 105.098 s => 2 m => 0 h
+
+Exponential		=>		O(2^n)
+Finding fibonacci sum of 52...
+Elapsed time: 196852.0 ms => 196.852 s => 3 m => 0 h
+
+Factorial		=>		O(n!)
+Running a function for 14! times...
+Elapsed time: 545232.0 ms => 545.232 s => 9 m => 0 h
+
+Creating list...
+
+Populating list with size of 14...
+
+Bigger			=>		O(n n!)
+Bogo sorting a list of size 14...
+Elapsed time: 4702063.0 ms => 4702.063 s => 78 m => 1 h
+*/

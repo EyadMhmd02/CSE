@@ -17,8 +17,18 @@ public class Stopwatch {
         return (now - start) / 1000.0;
     }
 
+    public double elapsedTimeMinutes() {
+        long now = System.currentTimeMillis();
+        return (now - start) / 1000.0 / 60.0;
+    }
+
+    public double elapsedTimeHours() {
+        long now = System.currentTimeMillis();
+        return (now - start) / 1000.0 / 60.0 / 60.0;
+    }
+
     @Override
     public String toString() {
-        return "Elapsed time: " + elapsedTimeMillis() + " ms (" + elapsedTimeSeconds() + " s)\n";
+        return "Elapsed time: " + elapsedTimeMillis() + " ms => " + elapsedTimeSeconds() + " s => " + Math.round(elapsedTimeMinutes()) + " m => " + Math.round(elapsedTimeHours()) + " h\n";
     }
 }
