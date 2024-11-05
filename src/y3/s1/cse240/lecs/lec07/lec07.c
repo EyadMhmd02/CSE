@@ -9,7 +9,7 @@
 • A pointer is a variable that store an address.
 • Direct manipulation of addresses is powerful in programming.
 • Pointer type is common in all imperative languages.
-• C has 2 pointer operators: & (ampersand_and_asterisk) and * (asterisk)
+• C has 2 pointer operators: & (ampersand) and * (asterisk)
 */
 
 void example1()
@@ -17,6 +17,8 @@ void example1()
     // note: %p for pointers
     int x = 5;
     int* y = &x;
+    printf("int x = 5;\n");
+    printf("int* y = &x;\n");
     printf("x\tvalue of x:\t\t%d\n", x);
     printf("&x\taddress of x:\t\t%p\n", &x);
     printf("y\tvalue of y:\t\t%p\n", y);
@@ -29,12 +31,15 @@ void example2()
     int x = 5;
     int* y = &x;
     int** z = &y;
+    printf("int x = 5;\n");
+    printf("int* y = &x;\n");
+    printf("int** z = &y;\n");
     printf("x\tvalue of x:\t\t\t\t\t%d\n", x);
     printf("&x\taddress of x:\t\t\t\t\t%p\n", &x);
     printf("y\tvalue of y:\t\t\t\t\t%p\n", y);
     printf("&y\taddress of y:\t\t\t\t\t%p\n", &y);
     printf("*y\tvalue pointed by y:\t\t\t\t%d\n", *y);
-    printf("y\tvalue of z:\t\t\t\t\t%p\n", z);
+    printf("z\tvalue of z:\t\t\t\t\t%p\n", z);
     printf("&z\taddress of z:\t\t\t\t\t%p\n", &z);
     printf("*z\tvalue pointed by z:\t\t\t\t%p\n", *z);
     printf("**z\tvalue pointed by the address pointed by z:\t%d\n", **z);
@@ -106,11 +111,11 @@ void arrays2()
 int main()
 {
     // example1();
-    // example2();
+    example2();
     // example3();
     // ampersand_and_asterisk();
     // arrays1();
-    arrays2();
+    // arrays2();
     return 0;
 }
 
