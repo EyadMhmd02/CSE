@@ -39,7 +39,7 @@ public class Trends {
         ListHandler.populateListWithRandomNumbers(list, size);
         System.out.println("Linearithmic\t=>\t\tO(n log n)");
         System.out.println("Merge sorting a list of size " + size + "...");
-        MergeSorter.mergeSort(list);
+        mergeSort(list);
         System.out.println(stopwatch);
 
         // Quadratic        =>      O(n^2)
@@ -86,7 +86,7 @@ public class Trends {
         ListHandler.populateListWithRandomNumbers(list, size);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
         System.out.println("Bogo sorting a list of size " + size + "...");
-        BogoSorter.bogoSort(list);
+        bogoSort(list);
         System.out.println(stopwatch);
     }
 
@@ -122,7 +122,9 @@ public class Trends {
     }
 
     // Linearithmic     =>      O(n log n)
-    // Merge sort
+    private static void mergeSort(ArrayList<Integer> list) {
+        MergeSorter.mergeSort(list);
+    }
 
 
     // Quadratic        =>      O(n^2)
@@ -167,7 +169,9 @@ public class Trends {
     }
 
     // Bigger           =>      O(n n!)
-    // Bogo sort
+    private static void bogoSort(ArrayList<Integer> list) {
+        BogoSorter.bogoSort(list);
+    }
 }
 
 /*
