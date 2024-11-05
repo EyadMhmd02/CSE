@@ -12,11 +12,10 @@
 • C has 2 pointer operators: & (ampersand) and * (asterisk)
 */
 
-void example1()
-{
+void example1() {
     // note: %p for pointers
     int x = 5;
-    int* y = &x;
+    int *y = &x;
     printf("int x = 5;\n");
     printf("int* y = &x;\n");
     printf("x\tvalue of x:\t\t%d\n", x);
@@ -26,11 +25,10 @@ void example1()
     printf("*y\tvalue pointed by y:\t%d\n", *y);
 }
 
-void example2()
-{
+void example2() {
     int x = 5;
-    int* y = &x;
-    int** z = &y;
+    int *y = &x;
+    int **z = &y;
     printf("int x = 5;\n");
     printf("int* y = &x;\n");
     printf("int** z = &y;\n");
@@ -45,9 +43,10 @@ void example2()
     printf("**z\tvalue pointed by the address pointed by z:\t%d\n", **z);
 }
 
-void example3()
-{
-    int a = 12, *b = 0, **c = 0;
+void example3() {
+    int a = 12;
+    int *b = 0;
+    int **c = 0;
     printf("a = %d, b = %p, c = %p\n", a, b, c);
     b = &a;
     *b = 24;
@@ -57,8 +56,7 @@ void example3()
 }
 
 // &, *
-void ampersand_and_asterisk()
-{
+void ampersand_and_asterisk() {
     /* & is a referencing function that returns the address value of the variable it precedes, for instance:
      if integer x is allocated at memory address = 2000, then:
      y = &x; // y = 2000
@@ -72,50 +70,51 @@ void ampersand_and_asterisk()
      */
 }
 
-void arrays1()
-{
-    int a[4];
-    a[0] = 0; // same as *(a + 0)
-    a[1] = 1; // same as *(a + 1)
-    a[2] = 2; // same as *(a + 2)
-    a[3] = 3; // same as *(a + 3)
+void arrays1() {
+    char a[4];
+    a[0] = 'e'; // same as *(a + 0)
+    a[1] = 'o'; // same as *(a + 1)
+    a[2] = 'i'; // same as *(a + 2)
+    a[3] = 'm'; // same as *(a + 3)
+
+    printf("a[0] = %c\n", a[0]);
+    printf("a[1] = %c\n", a[1]);
+    printf("a[2] = %c\n", a[2]);
+    printf("a[3] = %c\n", a[3]);
+
+    printf("\n");
+
+    printf("*(a + 0) = %c\n", *(a + 0));
+    printf("*(a + 1) = %c\n", *(a + 1));
+    printf("*(a + 2) = %c\n", *(a + 2));
+    printf("*(a + 3) = %c\n", *(a + 3));
 }
 
-void arrays2()
-{
+void arrays2() {
     int i = 0;
     char a[] = "Hello CSE 240";
-    printf("\n message: %s\n ", a);
-
-    // iterate the whole string
-    while (a[i] != '\0')
-    {
-        // printf("*(a + %d) = %c\n", i, *(a + i));
-        // printf("*(a + %d) + 1 = %c\n", i, *(a + i) + 1);
+    printf("\n message: %s\n", a);
+    while (a[i] != '\0') {
         a[i] = *(a + i) + 1;
         i++;
     }
-    printf("\n message after encryption: %s\n ", a);
-    char* q;
-    q = a;
-    while (*q != '\0')
-    {
-        // printf("*q = %c\n", *q);
-        // printf("*q - 1 = %c\n", *q - 1);
+    printf("message after encryption: %s\n", a);
+
+    char *q = a;
+    while (*q != '\0') {
         *q = *q - 1;
         q++;
     }
-    printf("\n message after decryption: %s\n ", a);
+    printf("message after decryption: %s\n", a);
 }
 
-int main()
-{
+int main() {
     // example1();
-    example2();
+    // example2();
     // example3();
     // ampersand_and_asterisk();
     // arrays1();
-    // arrays2();
+    arrays2();
     return 0;
 }
 
