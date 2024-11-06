@@ -1,0 +1,33 @@
+/**
+ * Recursion Overview:
+ * <p>
+ * A full size problem (n) contains a sub problem (n 1).
+ * <p>
+ * Each time the problem is analyzed, some part of the solution is computed and is combined with the solution of the sub-problem, to form the solution for the whole.
+ * <p>
+ * The sub-problem is the same type of problem as the main problem, but is easier to solve. It is smaller according to size metrics.
+ * <p>
+ * The sub-problems continue until they are small enough to be solved directly.
+ * <p>
+ * <p>
+ * The keys to recursion:
+ * <p>
+ * - For all valid inputs, a recursive must make the problem smaller during each call, and make progress towards the base case (terminating case).
+ * <p>
+ * - The type of problem should not change, nor the sub-problem be the same as the original problem.
+ * <p>
+ * <p>
+ * Recursive methods:
+ * <p>
+ * - Recursive structure: a method is recursive if it calls itself.
+ * <p>
+ * - Tail recursion: A recursive method that calls itself once and in the last statement.
+ * <p>
+ * <p>
+ * The fantastic four approaches to recursion:
+ * <p>
+ * 1- Formulate the size-n problem.
+ * 2- Identify the base case.
+ * 3- Formulate the size-m sub-problem, which in many cases m = n - 1.
+ * 4- Construct the solution of size-n problem from size-m sub-problem.
+ */
