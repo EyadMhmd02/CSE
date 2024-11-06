@@ -8,7 +8,7 @@ class SearchExample {
 
         ListHandler.populateListWithRandomNumbers(list, Integer.MAX_VALUE / 5);
 
-        int key = ListHandler.getKey(list);
+        int key = ListHandler.setKey(list);
 
         SearchHandler.printSearchResult(key, list);
     }

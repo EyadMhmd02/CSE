@@ -9,7 +9,8 @@ public class Trends {
         ArrayList<Integer> list = ListHandler.createList();
         int size = Integer.MAX_VALUE / 5;
         ListHandler.populateListWithRandomNumbers(list, size);
-        ListHandler.getKey(list);
+        QuickSorter.quickSort(list, 0, list.size() - 1);
+        int key = ListHandler.setKey(list);
 
         // Constant         =>      O(1)
         Stopwatch stopwatch = new Stopwatch();
@@ -22,7 +23,7 @@ public class Trends {
         stopwatch = new Stopwatch();
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
         System.out.println("Binary searching in a list of size " + size + "...");
-        binarySearch(list, 30, 0, list.size() - 1);
+        binarySearch(list, key, 0, list.size() - 1);
         System.out.println(stopwatch);
 
         // Linear           =>      O(n)

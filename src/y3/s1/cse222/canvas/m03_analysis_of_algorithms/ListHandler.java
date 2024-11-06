@@ -20,7 +20,7 @@ class ListHandler {
         }
     }
 
-    public static int getKey(ArrayList<Integer> list) {
+    public static int setKey(ArrayList<Integer> list) {
         list.set(list.size() - 1, 30);
         return 30;
     }
