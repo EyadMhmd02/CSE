@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Trends {
     public static void main(String[] args) {
-        // generate an ArrayList with maximum integer size possible, number in it are randomly generated, with upper bound 20
+        // generate an ArrayList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
         ArrayList<Integer> list = ListHandler.createList();
         int size = Integer.MAX_VALUE / 5;
         ListHandler.populateListWithRandomNumbers(list, size);

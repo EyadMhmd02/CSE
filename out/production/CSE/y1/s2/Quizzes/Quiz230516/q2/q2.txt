@@ -1,7 +1,0 @@
-Which one of these computational functions is the most desirable:
-a. O(2^n)
-b. O(n^2)
-c. O(n log n)
-d. O(1)
-
-ANS => d
