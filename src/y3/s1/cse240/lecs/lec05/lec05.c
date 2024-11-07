@@ -71,9 +71,9 @@ void test_booleans()
 
 int main()
 {
-    // test_output();
+    test_output();
     // test_input();
-    test_booleans();
+    // test_booleans();
     return 0;
 }
 

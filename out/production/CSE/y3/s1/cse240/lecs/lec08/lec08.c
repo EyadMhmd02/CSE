@@ -12,7 +12,8 @@ introduces a new name that becomes a synonym for the type given by the typename 
 typedef int booOoolean;
 typedef char FlagType;
 
-void typedef1() {
+void typedef1()
+{
     booOoolean x = 0;
     int counter;
     FlagType y = 'A';
@@ -23,7 +24,8 @@ typedef int cat;
 typedef int dog;
 typedef char letter;
 
-void typedef2() {
+void typedef2()
+{
     letter x = 'A';
     cat one = 1;
     cat two = 2;
@@ -40,7 +42,8 @@ typedef enum { false, true } boolean;
 
 typedef enum { Sat, Sun, Mon, Tue, Wed, Thu, Fri } days;
 
-void enums1() {
+void enums1()
+{
     boolean a = false;
     int counter;
     days x = Mon, y = Fri;
@@ -52,27 +55,30 @@ typedef enum { red, amber, green } traffic_lights;
 
 typedef enum { No, Yes } logic;
 
-void enums2() {
+void enums2()
+{
     traffic_lights x = Yes;
     logic var = Yes;
 
     // printf("x = %d\n", x);
     // printf("var = %d\n", var);
 
-    while (var == Yes) {
-        switch (x) {
-            case amber:
-                x = red;
-                printf("Red Light");
-                break;
-            case red:
-                x = green;
-                printf("Green Light");
-                break;
-            case green:
-                x = amber;
-                printf("Amber Light");
-                break;
+    while (var == Yes)
+    {
+        switch (x)
+        {
+        case amber:
+            x = red;
+            printf("Red Light");
+            break;
+        case red:
+            x = green;
+            printf("Green Light");
+            break;
+        case green:
+            x = amber;
+            printf("Amber Light");
+            break;
         }
         var = No;
     }
@@ -85,12 +91,14 @@ struct
 - similar to Java class, but DOES NOT allow methods.
 */
 
-struct person {
+struct person
+{
     char name[30];
     int id;
 };
 
-void struct1() {
+void struct1()
+{
     struct person x, y;
     scanf("%s", x.name);
     scanf("%d", &x.id);
@@ -99,7 +107,8 @@ void struct1() {
     printf("%d", x.id);
 }
 
-struct contact {
+struct contact
+{
     char name[30];
     int phone;
     char email[30];
@@ -107,7 +116,8 @@ struct contact {
 
 struct contact contact_book[100]; // an array of structure
 
-void struct2() {
+void struct2()
+{
     int index = 0;
     scanf("%d", &contact_book[index].phone);
     scanf("%s", contact_book[index].name);
@@ -118,10 +128,11 @@ void struct2() {
     printf("\n %s", contact_book[index].email);
 }
 
-int main() {
+int main()
+{
     // enums1();
     // enums2();
-    struct1();
-    // struct2();
+    // struct1();
+    struct2();
     return 0;
 }

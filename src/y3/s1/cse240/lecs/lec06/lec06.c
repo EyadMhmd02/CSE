@@ -5,8 +5,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-void primitive_data_types()
-{
+void primitive_data_types() {
     short s = 1; // a whole number smaller than int
     int n = 5; // integer, a whole number
     long l = 55; // a whole number larger than int
@@ -42,8 +41,7 @@ void primitive_data_types()
         printf("zero is false");
 }
 
-void arrays()
-{
+void arrays() {
     int a[3], i, j, k; // a is not initialized
     int ma[2][3] = {
         {4, 2, 3},
@@ -56,10 +54,13 @@ void arrays()
     i = sizeof a; // # of bytes used by a is 12
     j = sizeof b; // # of bytes used by b is 16
     k = sizeof ma; // # of bytes used by ma is 24
+
+    printf("%d\n", i);
+    printf("%d\n", j);
+    printf("%d\n", k);
 }
 
-void strings1()
-{
+void strings1() {
     char s1[] = {'a', 'l', 'p', 'h', 'a'}; // as an array of char
     // in memory:
     // a, l, p, h, a
@@ -79,8 +80,7 @@ void strings1()
     printf("\n");
 }
 
-void strings2()
-{
+void strings2() {
     int i;
     char s1[] = "hello", s2[] = "world";
     for (i = 0; i < 5; i++)
@@ -92,8 +92,7 @@ void strings2()
     printf("\n");
 }
 
-void constants()
-{
+void constants() {
     // const is equivalent to final in Java. this way is slower since it has to read memory.
     const int i = 5;
     // i = i + 2; // this line will cause a compilation error
@@ -101,16 +100,14 @@ void constants()
 
 #define PI 3.14
 
-void define()
-{
+void define() {
     // #define substitutes values for constant definitions in compilation time. Provide a faster execution.
     int radius = 5;
     int circumference = 2 * PI * radius;
     printf("radius = %d, circumference = %.2f\n", radius, circumference);
 }
 
-int main()
-{
+int main() {
     // primitive_data_types();
     // arrays();
     // strings1();

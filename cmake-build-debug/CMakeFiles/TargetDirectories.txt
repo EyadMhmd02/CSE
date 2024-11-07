@@ -1,3 +1,3 @@
-F:/Clients/Dr. Rana Zidan/CSE/cmake-build-debug/CMakeFiles/CSE.dir
-F:/Clients/Dr. Rana Zidan/CSE/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/Clients/Dr. Rana Zidan/CSE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/CSE/cmake-build-debug/CMakeFiles/CSE.dir
+C:/CSE/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/CSE/cmake-build-debug/CMakeFiles/rebuild_cache.dir
