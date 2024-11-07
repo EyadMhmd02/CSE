@@ -4,6 +4,11 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Trends {
+    /**
+     * The main method of the Trends class. It demonstrates the time complexity of various algorithms.
+     *
+     * @param args Command line arguments (not used in this method).
+     */
     public static void main(String[] args) {
         // generate an ArrayList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
         ArrayList<Integer> list = ListHandler.createList();
@@ -56,7 +61,7 @@ public class Trends {
         // Cubic            =>      O(n^3)
         stopwatch = new Stopwatch();
         list = ListHandler.createList();
-//        size = Integer.MAX_VALUE / 100000;
+//    size = Integer.MAX_VALUE / 100000;
         size = 5000;
         ListHandler.populateListWithRandomNumbers(list, size);
         System.out.println("Cubic\t\t\t=>\t\tO(n^3)");
@@ -92,12 +97,43 @@ public class Trends {
     }
 
     // Constant         =>      O(1)
+    /**
+     * This function adds two BigInteger numbers together.
+     *
+     * @param n1 The first BigInteger number to add.
+     * @param n2 The second BigInteger number to add.
+     *
+     * @return The sum of the two input numbers.
+     */
     private static BigInteger addTwoNumbers(BigInteger n1, BigInteger n2) {
         return n1.add(n2);
     }
-
     // Logarithmic      =>      O(log n)
+    /**
+     * Performs a binary search on a sorted list of integers.
+     *
+     * @param list The sorted list of integers to search.
+     * @param n The integer to search for.
+     * @param low The lower index of the search range.
+     * @param high The upper index of the search range.
+     *
+     * @return The index of the first occurrence of the integer {@code n} in the list, or -1 if not found.
+     *
+     * @throws IllegalArgumentException if the list is null or empty.
+     * @throws IllegalArgumentException if the low index is less than 0 or greater than the high index.
+     * @throws IllegalArgumentException if the high index is greater than the size of the list minus one.
+     */
     private static int binarySearch(ArrayList<Integer> list, int n, int low, int high) {
+        if (list == null || list.isEmpty()) {
+            throw new IllegalArgumentException("The list cannot be null or empty.");
+        }
+        if (low < 0 || low > high) {
+            throw new IllegalArgumentException("The low index must be non-negative and less than or equal to the high index.");
+        }
+        if (high > list.size() - 1) {
+            throw new IllegalArgumentException("The high index must be less than or equal to the size of the list minus one.");
+        }
+
         if (low > high) {
             return -1;
         }
@@ -112,7 +148,23 @@ public class Trends {
     }
 
     // Linear           =>      O(n)
+    /**
+     * Finds the maximum number in a given list of integers.
+     *
+     * @param list The list of integers to find the maximum from.
+     * @return The maximum number in the list.
+     *
+     * @throws NullPointerException If the given list is null.
+     * @throws IllegalArgumentException If the given list is empty.
+     */
     private static int findMaximumNumber(ArrayList<Integer> list) {
+        if (list == null) {
+            throw new NullPointerException("The given list is null.");
+        }
+        if (list.isEmpty()) {
+            throw new IllegalArgumentException("The given list is empty.");
+        }
+
         int max = 0;
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i) > max) {
@@ -123,12 +175,26 @@ public class Trends {
     }
 
     // Linearithmic     =>      O(n log n)
+    /**
+     * Performs a merge sort on the given list of integers.
+     * Merge sort is a divide-and-conquer algorithm that divides the list into two halves,
+     * sorts them separately, and then merges them back together.
+     * The time complexity of merge sort is O(n log n), where n is the number of elements in the list.
+     *
+     * @param list The list of integers to be sorted.
+     */
     private static void mergeSort(ArrayList<Integer> list) {
         MergeSorter.mergeSort(list);
     }
 
 
     // Quadratic        =>      O(n^2)
+    /**
+     * This function checks all possible pairs of integers in the given list and counts the number of pairs whose sum equals zero.
+     *
+     * @param list The list of integers to check pairs from.
+     * @return The count of pairs whose sum equals zero.
+     */
     private static int checkAllPairs(ArrayList<Integer> list) {
         int counter = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -142,6 +208,12 @@ public class Trends {
     }
 
     // Cubic            =>      O(n^3)
+    /**
+     * This function checks all possible triplets in the given list and counts the number of triplets whose sum equals zero.
+     *
+     * @param list The list of integers to check for triplets.
+     * @return The count of triplets whose sum equals zero.
+     */
     private static int checkAllTriplets(ArrayList<Integer> list) {
         int counter = 0;
         for (int i = 0; i < list.size(); i++) {
@@ -157,12 +229,40 @@ public class Trends {
     }
 
     // Exponential      =>      O(2^n)
+    /**
+     * This function calculates the nth Fibonacci number using recursion.
+     * The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones,
+     * usually starting with 0 and 1.
+     *
+     * @param n The position of the Fibonacci number to calculate.
+     *          Must be a non-negative integer.
+     *
+     * @return The nth Fibonacci number.
+     *         If n is less than or equal to 1, the function returns n.
+     *         Otherwise, the function returns the sum of the (n-2)th and (n-1)th Fibonacci numbers.
+     *
+     * @throws IllegalArgumentException If n is a negative number.
+     */
     private static int fibonacci(int n) {
+        if (n < 0) {
+            throw new IllegalArgumentException("n must be a non-negative integer");
+        }
         if (n <= 1) return n;
         return fibonacci(n - 2) + fibonacci(n - 1);
     }
 
     // Factorial        =>      O(n!)
+    /**
+     * This function calculates the factorial of a given number using recursion.
+     * The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+     * For example, the factorial of 5 (denoted as 5!) is 5 * 4 * 3 * 2 * 1 = 120.
+     *
+     * @param n The non-negative integer for which the factorial is to be calculated.
+     * @return The factorial of the given number.
+     *
+     * Note: This function has a time complexity of O(n!), which means it will take an exponential amount of time to compute
+     * the factorial of large numbers.
+     */
     private static void factorialRuntimeFunction(int n) {
         for (int i = 0; i < n; i++) {
             factorialRuntimeFunction(n - 1);
@@ -170,10 +270,20 @@ public class Trends {
     }
 
     // Bigger           =>      O(n n!)
+    /**
+     * Performs a bogo sort on the given list of integers.
+     * Bogo sort is a highly inefficient sorting algorithm that randomly shuffles elements until the list is sorted.
+     * It is not suitable for large lists due to its high time complexity of O(n n!).
+     *
+     * @param list The list of integers to be sorted.
+     * @throws IllegalArgumentException If the input list is null.
+     */
     private static void bogoSort(ArrayList<Integer> list) {
+        if (list == null) {
+            throw new IllegalArgumentException("Input list cannot be null");
+        }
         BogoSorter.bogoSort(list);
-    }
-}
+    }}
 
 /*
 SAMPLE OUTPUT:
