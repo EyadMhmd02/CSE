@@ -68,3 +68,48 @@ class SortingDemo {
         System.out.println(stopwatch);
     }
 }
+
+// SAMPLE OUTPUT
+/*
+Creating list...
+
+Populating list with size of 549999...
+
+Merge sort		=>		O(n log n)
+Sorting a list of size 549999...
+Elapsed time: 00:00:00:392
+
+Shuffling list...
+
+Heap sort		=>		O(n log n)
+Sorting a list of size 549999...
+Elapsed time: 00:00:00:426
+
+Shuffling list...
+
+Quick sort		=>		O(n^2)
+Sorting a list of size 549999...
+Elapsed time: 00:00:34:162
+
+Selection sort	=>		O(n^2)
+Sorting a list of size 549999...
+Elapsed time: 00:05:54:417
+
+Shuffling list...
+
+Insertion sort	=>		O(n^2)
+Sorting a list of size 549999...
+Elapsed time: 00:21:38:189
+
+Shuffling list...
+
+Bubble sort		=>		O(n^2)
+Sorting a list of size 549999...
+Elapsed time: 00:53:00:759
+
+Shuffling list...
+
+Bogo sort		=>		O(n n!)
+Sorting a list of size 549999...
+
+*/
