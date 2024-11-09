@@ -11,9 +11,6 @@ import java.util.concurrent.Executors;
  * @author Eyad Mohamed AbdelMohsen Ghanem
  * @version (version)
  */
-import java.util.Iterator;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 class Driver {
     public static void main(String[] args) {

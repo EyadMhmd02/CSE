@@ -1,4 +1,9 @@
-package y3.s1.cse222.canvas.m03_analysis_of_algorithms;
+package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis;
+
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.list_handler.ListHandler;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms.BogoSorter;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms.MergeSorter;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwatch;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -13,9 +18,10 @@ public class Trends {
         // generate an ArrayList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
         ArrayList<Integer> list = ListHandler.createList();
         int size = Integer.MAX_VALUE / 5;
-        ListHandler.populateListWithRandomNumbers(list, size);
-        QuickSorter.quickSort(list, 0, list.size() - 1);
-        int key = ListHandler.setKey(list);
+        int bound = 20;
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
+//        QuickSorter.quickSort(list, 0, list.size() - 1);
+        int key = ListHandler.setKeyAtLast(list, 30);
 
         // Constant         =>      O(1)
         Stopwatch stopwatch = new Stopwatch();
@@ -25,52 +31,52 @@ public class Trends {
         System.out.println(stopwatch);
 
         // Logarithmic      =>      O(log n)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
         System.out.println("Binary searching in a list of size " + size + "...");
         binarySearch(list, key, 0, list.size() - 1);
         System.out.println(stopwatch);
 
         // Linear           =>      O(n)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         System.out.println("Linear\t\t\t=>\t\tO(n)");
         System.out.println("Finding the maximum number in a list of size " + size + "...");
         findMaximumNumber(list);
         System.out.println(stopwatch);
 
         // Linearithmic     =>      O(n log n)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         list = ListHandler.createList();
         size = Integer.MAX_VALUE / 100;
-        ListHandler.populateListWithRandomNumbers(list, size);
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Linearithmic\t=>\t\tO(n log n)");
         System.out.println("Merge sorting a list of size " + size + "...");
         mergeSort(list);
         System.out.println(stopwatch);
 
         // Quadratic        =>      O(n^2)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         list = ListHandler.createList();
         size = Integer.MAX_VALUE / 10000;
-        ListHandler.populateListWithRandomNumbers(list, size);
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Quadratic\t\t=>\t\tO(n^2)");
         System.out.println("Checking all pairs in a list of size " + size + "...");
         checkAllPairs(list);
         System.out.println(stopwatch);
 
         // Cubic            =>      O(n^3)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         list = ListHandler.createList();
 //    size = Integer.MAX_VALUE / 100000;
         size = 5000;
-        ListHandler.populateListWithRandomNumbers(list, size);
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Cubic\t\t\t=>\t\tO(n^3)");
         System.out.println("Checking all triplets in a list of size " + size + "...");
         checkAllTriplets(list);
         System.out.println(stopwatch);
 
         // Exponential      =>      O(2^n)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         int n = 52;
         System.out.println("Exponential\t\t=>\t\tO(2^n)");
         System.out.println("Finding fibonacci sum of " + n + "...");
@@ -78,7 +84,7 @@ public class Trends {
         System.out.println(stopwatch);
 
         // Factorial        =>      O(n!)
-        stopwatch = new Stopwatch();
+        stopwatch.reset();
         n = 14;
         System.out.println("Factorial\t\t=>\t\tO(n!)");
         System.out.println("Running a function for " + n + "! times...");
@@ -89,10 +95,11 @@ public class Trends {
         stopwatch = new Stopwatch();
         list = ListHandler.createList();
         size = 14;
-        ListHandler.populateListWithRandomNumbers(list, size);
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
         System.out.println("Bogo sorting a list of size " + size + "...");
         bogoSort(list);
+        System.out.println("Actually it's unpredictable...");
         System.out.println(stopwatch);
     }
 
@@ -184,7 +191,7 @@ public class Trends {
      * @param list The list of integers to be sorted.
      */
     private static void mergeSort(ArrayList<Integer> list) {
-        MergeSorter.mergeSort(list);
+        MergeSorter.sort(list);
     }
 
 
@@ -282,12 +289,11 @@ public class Trends {
         if (list == null) {
             throw new IllegalArgumentException("Input list cannot be null");
         }
-        BogoSorter.bogoSort(list);
+        BogoSorter.sort(list);
     }}
 
+// SAMPLE OUTPUT
 /*
-SAMPLE OUTPUT:
-
 Creating list...
 
 Populating list with size of 429496729...
@@ -345,4 +351,5 @@ Bogo sorting a list of size 14...
 Actually it's unpredictable
 Elapsed time: 60835.0 ms => 60.835 s => 1 m => 0 h
 Elapsed time: 4702063.0 ms => 4702.063 s => 78 m => 1 h
+Elapsed time: 8945477.0 ms => 8945.477 s => 149 m => 2 h
 */

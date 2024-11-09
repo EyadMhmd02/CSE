@@ -114,6 +114,15 @@ struct contact
     char email[30];
 };
 
+struct emp
+{
+    int id;
+    char* name;
+};
+
+struct emp john;
+
+
 struct contact contact_book[100]; // an array of structure
 
 void struct2()
@@ -133,6 +142,13 @@ int main()
     // enums1();
     // enums2();
     // struct1();
-    struct2();
+    // struct2();
+
+    int a = 1;
+    char b[] = "John Doe";
+    john.id = a;
+    john.name = b;
+    printf("%d, %s", john.id, john.name);
+
     return 0;
 }
