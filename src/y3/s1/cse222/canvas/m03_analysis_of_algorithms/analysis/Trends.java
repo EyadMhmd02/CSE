@@ -24,80 +24,80 @@ public class Trends {
         int key = ListHandler.setKeyAtLast(list, 30);
 
         // Constant         =>      O(1)
-        Stopwatch stopwatch = new Stopwatch();
         System.out.println("Constant\t\t=>\t\tO(1)");
         System.out.println("Adding two very large numbers...");
+        Stopwatch stopwatch = new Stopwatch();
         addTwoNumbers(BigInteger.valueOf(Long.MAX_VALUE), BigInteger.valueOf(Long.MAX_VALUE));
         System.out.println(stopwatch);
 
         // Logarithmic      =>      O(log n)
-        stopwatch.reset();
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
         System.out.println("Binary searching in a list of size " + size + "...");
+        stopwatch.reset();
         binarySearch(list, key, 0, list.size() - 1);
         System.out.println(stopwatch);
 
         // Linear           =>      O(n)
-        stopwatch.reset();
         System.out.println("Linear\t\t\t=>\t\tO(n)");
         System.out.println("Finding the maximum number in a list of size " + size + "...");
+        stopwatch.reset();
         findMaximumNumber(list);
         System.out.println(stopwatch);
 
         // Linearithmic     =>      O(n log n)
-        stopwatch.reset();
         list = ListHandler.createList();
         size = Integer.MAX_VALUE / 100;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Linearithmic\t=>\t\tO(n log n)");
         System.out.println("Merge sorting a list of size " + size + "...");
+        stopwatch.reset();
         mergeSort(list);
         System.out.println(stopwatch);
 
         // Quadratic        =>      O(n^2)
-        stopwatch.reset();
         list = ListHandler.createList();
         size = Integer.MAX_VALUE / 10000;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Quadratic\t\t=>\t\tO(n^2)");
         System.out.println("Checking all pairs in a list of size " + size + "...");
+        stopwatch.reset();
         checkAllPairs(list);
         System.out.println(stopwatch);
 
         // Cubic            =>      O(n^3)
-        stopwatch.reset();
         list = ListHandler.createList();
 //    size = Integer.MAX_VALUE / 100000;
         size = 5000;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Cubic\t\t\t=>\t\tO(n^3)");
         System.out.println("Checking all triplets in a list of size " + size + "...");
+        stopwatch.reset();
         checkAllTriplets(list);
         System.out.println(stopwatch);
 
         // Exponential      =>      O(2^n)
-        stopwatch.reset();
         int n = 52;
         System.out.println("Exponential\t\t=>\t\tO(2^n)");
         System.out.println("Finding fibonacci sum of " + n + "...");
+        stopwatch.reset();
         fibonacci(n);
         System.out.println(stopwatch);
 
         // Factorial        =>      O(n!)
-        stopwatch.reset();
         n = 14;
         System.out.println("Factorial\t\t=>\t\tO(n!)");
         System.out.println("Running a function for " + n + "! times...");
+        stopwatch.reset();
         factorialRuntimeFunction(n);
         System.out.println(stopwatch);
 
         // Bigger           =>      O(n n!)
-        stopwatch = new Stopwatch();
         list = ListHandler.createList();
         size = 14;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
         System.out.println("Bogo sorting a list of size " + size + "...");
+        stopwatch.reset();
         bogoSort(list);
         System.out.println("Actually it's unpredictable...");
         System.out.println(stopwatch);
@@ -256,6 +256,20 @@ public class Trends {
         }
         if (n <= 1) return n;
         return fibonacci(n - 2) + fibonacci(n - 1);
+    }
+
+
+    static void towerOfHanoi(int n, char from_rod,
+                             char to_rod, char aux_rod)
+    {
+        if (n == 0) {
+            return;
+        }
+        towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
+        System.out.println("Move disk " + n + " from rod "
+                + from_rod + " to rod "
+                + to_rod);
+        towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
     }
 
     // Factorial        =>      O(n!)
