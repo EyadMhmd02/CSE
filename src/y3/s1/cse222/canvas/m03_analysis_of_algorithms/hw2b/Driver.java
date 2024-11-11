@@ -19,16 +19,7 @@ class Driver {
 
         //RA: These are _extremely_ simple tests! You will need to write more!
 
-        list.add(23);
-        list.add(24);
-        list.add(16);
-        list.add(3);
-        list.add(7);
-        list.add(17);
-        list.add(9);
-        list.add(13);
-        list.add(14);
-        list.add(1);
+        addRandomElements(list);
 
         System.out.println(list);
 
@@ -47,16 +38,18 @@ class Driver {
         */
 
         Iterator<Integer> iter = list.iterator();
+        System.out.print("Iteration result: ");
         while (iter.hasNext()) {
             System.out.print(iter.next());
             if (iter.hasNext())
                 System.out.print(" ");
         }
+        System.out.println();
 
         list = new CompletedOrderedList<>();
 
         // Add elements to the list
-        // ...
+        addRandomElements(list);
 
         // Create an ExecutorService to run multiple threads
         ExecutorService executor = Executors.newFixedThreadPool(2);
@@ -85,5 +78,18 @@ class Driver {
 
         // Shutdown the executor
         executor.shutdown();
+    }
+
+    private static void addRandomElements(OrderedListADT<Integer> list) {
+        list.add(23);
+        list.add(24);
+        list.add(16);
+        list.add(3);
+        list.add(7);
+        list.add(17);
+        list.add(9);
+        list.add(13);
+        list.add(14);
+        list.add(1);
     }
 }
