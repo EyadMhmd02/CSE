@@ -34,3 +34,22 @@ public class SearchingDemo {
         System.out.println(stopwatch);
     }
 }
+
+// SAMPLE OUTPUT:
+/*
+Creating list...
+
+Populating list with size of 214748364...
+
+Sorting the list...
+
+Binary Search			=>		O(log n)
+Searching a list of size 214748364...
+Found at index: 214748363
+Elapsed time:	000:00:00:00:116
+
+Linear Search			=>		O(n)
+Searching a list of size 214748364...
+Found at index: 214748363
+Elapsed time:	000:00:00:00:930
+*/

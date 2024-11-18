@@ -9,7 +9,7 @@ import java.util.ArrayList;
 class SortingDemo {
     public static void main(String[] args) {
         ArrayList<Integer> list = ListHandler.createList();
-        int size = 549999;
+        int size = Integer.MAX_VALUE;
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
 
@@ -17,7 +17,7 @@ class SortingDemo {
         System.out.println("Merge sort\t\t=>\t\tO(n log n)");
         System.out.printf("Sorting a list of size %d...\n", size);
         Stopwatch stopwatch = new Stopwatch();
-        MergeSorter.sort(list);
+        IterativeMergeSorter.sort(list);
         System.out.println(stopwatch);
 
         // Heap Sort        =>      O(n log n)
@@ -60,8 +60,15 @@ class SortingDemo {
         System.out.println(stopwatch);
 
         // Bogo Sort        =>      O(n n!)
+        // impossible code, possibilities are 1 in about 549999!
         ListHandler.shuffle(list);
         System.out.println("Bogo sort\t\t=>\t\tO(n n!)");
+        System.out.printf("Impossible code, possibilities are 1 in about %d!\nList will be shrunken ", size);
+        size = 14;
+        System.out.printf("to size %d\n\n", size);
+        list = ListHandler.createList();
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
+        System.out.println("Note that this sort is of unpredictable time.\n");
         System.out.printf("Sorting a list of size %d...\n", size);
         stopwatch.reset();
         BogoSorter.sort(list);

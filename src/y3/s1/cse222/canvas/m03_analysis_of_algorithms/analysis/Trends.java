@@ -20,7 +20,6 @@ public class Trends {
         int size = Integer.MAX_VALUE / 5;
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
-//        QuickSorter.quickSort(list, 0, list.size() - 1);
         int key = ListHandler.setKeyAtLast(list, 30);
 
         // Constant         =>      O(1)
@@ -104,6 +103,7 @@ public class Trends {
     }
 
     // Constant         =>      O(1)
+
     /**
      * This function adds two BigInteger numbers together.
      *
@@ -116,6 +116,7 @@ public class Trends {
         return n1.add(n2);
     }
     // Logarithmic      =>      O(log n)
+
     /**
      * Performs a binary search on a sorted list of integers.
      *
@@ -155,6 +156,7 @@ public class Trends {
     }
 
     // Linear           =>      O(n)
+
     /**
      * Finds the maximum number in a given list of integers.
      *
@@ -182,6 +184,7 @@ public class Trends {
     }
 
     // Linearithmic     =>      O(n log n)
+
     /**
      * Performs a merge sort on the given list of integers.
      * Merge sort is a divide-and-conquer algorithm that divides the list into two halves,
@@ -196,6 +199,7 @@ public class Trends {
 
 
     // Quadratic        =>      O(n^2)
+
     /**
      * This function checks all possible pairs of integers in the given list and counts the number of pairs whose sum equals zero.
      *
@@ -215,6 +219,7 @@ public class Trends {
     }
 
     // Cubic            =>      O(n^3)
+
     /**
      * This function checks all possible triplets in the given list and counts the number of triplets whose sum equals zero.
      *
@@ -236,6 +241,7 @@ public class Trends {
     }
 
     // Exponential      =>      O(2^n)
+
     /**
      * This function calculates the nth Fibonacci number using recursion.
      * The Fibonacci sequence is a series of numbers in which each number is the sum of the two preceding ones,
@@ -260,8 +266,7 @@ public class Trends {
 
 
     static void towerOfHanoi(int n, char from_rod,
-                             char to_rod, char aux_rod)
-    {
+                             char to_rod, char aux_rod) {
         if (n == 0) {
             return;
         }
@@ -273,6 +278,7 @@ public class Trends {
     }
 
     // Factorial        =>      O(n!)
+
     /**
      * This function calculates the factorial of a given number using recursion.
      * The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
@@ -291,6 +297,7 @@ public class Trends {
     }
 
     // Bigger           =>      O(n n!)
+
     /**
      * Performs a bogo sort on the given list of integers.
      * Bogo sort is a highly inefficient sorting algorithm that randomly shuffles elements until the list is sorted.
@@ -304,7 +311,8 @@ public class Trends {
             throw new IllegalArgumentException("Input list cannot be null");
         }
         BogoSorter.sort(list);
-    }}
+    }
+}
 
 // SAMPLE OUTPUT
 /*
@@ -314,15 +322,15 @@ Populating list with size of 429496729...
 
 Constant		=>		O(1)
 Adding two very large numbers...
-Elapsed time: 1.0 ms => 0.001 s => 0 m => 0 h
+Elapsed time:	000:00:00:00:009
 
 Logarithmic		=>		O(log n)
 Binary searching in a list of size 429496729...
-Elapsed time: 1.0 ms => 0.001 s => 0 m => 0 h
+Elapsed time:	000:00:00:00:000
 
 Linear			=>		O(n)
 Finding the maximum number in a list of size 429496729...
-Elapsed time: 913.0 ms => 0.913 s => 0 m => 0 h
+Elapsed time:	000:00:00:00:890
 
 Creating list...
 
@@ -330,7 +338,7 @@ Populating list with size of 21474836...
 
 Linearithmic	=>		O(n log n)
 Merge sorting a list of size 21474836...
-Elapsed time: 22206.0 ms => 22.206 s => 0 m => 0 h
+Elapsed time:	000:00:00:16:531
 
 Creating list...
 
@@ -338,7 +346,7 @@ Populating list with size of 214748...
 
 Quadratic		=>		O(n^2)
 Checking all pairs in a list of size 214748...
-Elapsed time: 84861.0 ms => 84.861 s => 1 m => 0 h
+Elapsed time:	000:00:01:29:033
 
 Creating list...
 
@@ -346,15 +354,15 @@ Populating list with size of 5000...
 
 Cubic			=>		O(n^3)
 Checking all triplets in a list of size 5000...
-Elapsed time: 105098.0 ms => 105.098 s => 2 m => 0 h
+Elapsed time:	000:00:01:51:059
 
 Exponential		=>		O(2^n)
 Finding fibonacci sum of 52...
-Elapsed time: 196852.0 ms => 196.852 s => 3 m => 0 h
+Elapsed time:	000:00:03:28:772
 
 Factorial		=>		O(n!)
 Running a function for 14! times...
-Elapsed time: 545232.0 ms => 545.232 s => 9 m => 0 h
+Elapsed time:	000:00:09:07:436
 
 Creating list...
 
@@ -362,8 +370,10 @@ Populating list with size of 14...
 
 Bigger			=>		O(n n!)
 Bogo sorting a list of size 14...
-Actually it's unpredictable
-Elapsed time: 60835.0 ms => 60.835 s => 1 m => 0 h
-Elapsed time: 4702063.0 ms => 4702.063 s => 78 m => 1 h
-Elapsed time: 8945477.0 ms => 8945.477 s => 149 m => 2 h
+Actually it's unpredictable...
+Elapsed time:	000:00:00:34:166
+Elapsed time:	000:00:09:45:653
+Elapsed time:	000:00:18:39:753
+Elapsed time:	000:00:44:03:972
+
 */
