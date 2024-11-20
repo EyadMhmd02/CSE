@@ -7,6 +7,7 @@ import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwat
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Trends {
     /**
@@ -17,7 +18,7 @@ public class Trends {
     public static void main(String[] args) {
         // generate an ArrayList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
         ArrayList<Integer> list = ListHandler.createList();
-        int size = Integer.MAX_VALUE / 5;
+        int size = Integer.MAX_VALUE / 10;
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         int key = ListHandler.setKeyAtLast(list, 30);
@@ -30,6 +31,8 @@ public class Trends {
         System.out.println(stopwatch);
 
         // Logarithmic      =>      O(log n)
+        System.out.println("Sorting the list to be prepared for binary search...\n");
+        Collections.sort(list);
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
         System.out.println("Binary searching in a list of size " + size + "...");
         stopwatch.reset();
