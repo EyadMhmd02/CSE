@@ -31,8 +31,6 @@ public class Trends {
         System.out.println(stopwatch);
 
         // Logarithmic      =>      O(log n)
-        System.out.println("Sorting the list to be prepared for binary search...\n");
-        Collections.sort(list);
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
         System.out.println("Binary searching in a list of size " + size + "...");
         stopwatch.reset();
@@ -112,7 +110,6 @@ public class Trends {
      *
      * @param n1 The first BigInteger number to add.
      * @param n2 The second BigInteger number to add.
-     *
      * @return The sum of the two input numbers.
      */
     private static BigInteger addTwoNumbers(BigInteger n1, BigInteger n2) {
@@ -124,12 +121,10 @@ public class Trends {
      * Performs a binary search on a sorted list of integers.
      *
      * @param list The sorted list of integers to search.
-     * @param n The integer to search for.
-     * @param low The lower index of the search range.
+     * @param n    The integer to search for.
+     * @param low  The lower index of the search range.
      * @param high The upper index of the search range.
-     *
      * @return The index of the first occurrence of the integer {@code n} in the list, or -1 if not found.
-     *
      * @throws IllegalArgumentException if the list is null or empty.
      * @throws IllegalArgumentException if the low index is less than 0 or greater than the high index.
      * @throws IllegalArgumentException if the high index is greater than the size of the list minus one.
@@ -165,8 +160,7 @@ public class Trends {
      *
      * @param list The list of integers to find the maximum from.
      * @return The maximum number in the list.
-     *
-     * @throws NullPointerException If the given list is null.
+     * @throws NullPointerException     If the given list is null.
      * @throws IllegalArgumentException If the given list is empty.
      */
     private static int findMaximumNumber(ArrayList<Integer> list) {
@@ -252,11 +246,9 @@ public class Trends {
      *
      * @param n The position of the Fibonacci number to calculate.
      *          Must be a non-negative integer.
-     *
      * @return The nth Fibonacci number.
-     *         If n is less than or equal to 1, the function returns n.
-     *         Otherwise, the function returns the sum of the (n-2)th and (n-1)th Fibonacci numbers.
-     *
+     * If n is less than or equal to 1, the function returns n.
+     * Otherwise, the function returns the sum of the (n-2)th and (n-1)th Fibonacci numbers.
      * @throws IllegalArgumentException If n is a negative number.
      */
     private static int fibonacci(int n) {
@@ -289,7 +281,7 @@ public class Trends {
      *
      * @param n The non-negative integer for which the factorial is to be calculated.
      * @return The factorial of the given number.
-     *
+     * <p>
      * Note: This function has a time complexity of O(n!), which means it will take an exponential amount of time to compute
      * the factorial of large numbers.
      */
