@@ -53,8 +53,8 @@ class Time {
 public:
     Time(); // constructor
     void setTime(int, int); // set hour, minute
-    void printMilitary(); // print military time format
-    void printStandard(); // print standard time format
+    void print24(); // print military time format
+    void print12(); // print standard time format
 
 private:
     int hour; // 0 - 23
@@ -72,13 +72,13 @@ void Time::setTime(int h, int m) {
     minute = (m >= 0 && m < 60) ? m : 0;
 }
 
-void Time::printMilitary() {
+void Time::print24() {
     // print time in military format
     cout << (hour < 10 ? "0" : "") << hour << ":"
             << (minute < 10 ? "0" : "") << minute; // add 0
 }
 
-void Time::printStandard() {
+void Time::print12() {
     cout << ((hour == 0 || hour == 12) ? 12 : hour % 12)
             << ":" << (minute < 10 ? "0" : "") << minute
             << (hour < 12 ? " AM" : " PM") << endl; //endl is equal to “\n”
@@ -102,12 +102,12 @@ int main() {
 
     Time t; // new is not mandatory
     cout << "The initial military time is ";
-    t.printMilitary();
+    t.print24();
     cout << "\nThe initial standard time is ";
-    t.printStandard();
+    t.print12();
     t.setTime(15,27);
     cout << "The military time after setTime is ";
-    t.printMilitary();
+    t.print24();
     cout << "\nThe standard time after setTime is ";
-    t.printStandard();
+    t.print12();
 }

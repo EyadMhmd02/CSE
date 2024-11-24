@@ -93,6 +93,10 @@ void question5() {
     printf("hello %d bye %f", x, y);
 }
 
+/*
+Considering the following code:
+ */
+
 struct emp {
     int id;
     char *name;
@@ -102,14 +106,6 @@ struct emp john;
 
 void question6() {
     /*
-    Considering the following code
-
-    struct emp {
-    int id;
-    char* name;
-    };
-    struct emp john;
-
     Which of the following lines are correct?
 
     1-
@@ -139,6 +135,8 @@ void question6() {
     john.id = a;
     john.name = b;
     printf ("%d, %s", john.id, john.name);
+
+    Answer: 4
      */
     int a = 1;
     char b[] = "John Doe";
@@ -147,61 +145,55 @@ void question6() {
     printf("%d, %s", john.id, john.name);
 }
 
-typedef enum { true, false } booOoolean;
+/*
+Which of the following programs are correct in C?
+(select all that apply)
+*/
+
+typedef int booOoolean;
+typedef char FlagType;
+
+void question7program1() {
+    booOoolean x = 0;
+    int counter;
+    FlagType xx = 'A'; // comment
+}
+
+typedef enum { false, true } booOooolean;
 
 typedef enum { Sun, Mon, Tue, Wed, Thu, Fri, Sat } days;
 
-void question7() {
-    /*
-    Which of the following programs are correct in C?
-    (select all that apply)
-
-    1-
-    typedef int booOoolean;
-    typedef char FlagType;
-
-    int main() {
-        booOoolean x = 0;
-        int counter;
-        FlagType xx = 'A'; // comment
-    }
-
-    2-
-    typedef enum {false, true} booOoolean;
-    typedef enum {Sun, Mon, Tue, Wed, Thu, Fri, Sat} days;
-
-    int main() {
-        booOoolean a = false;
-        int counter;
-        days x = Mon, y = Fri;
-        while (x != y) x++;
-    }
-
-    3-
-    typedef enum {red, amber, green} traffic_light;
-
-    main() {
-        traffic_light x = red;
-        while (1)
-            switch (x) {
-                case amber:
-                    x = red;
-                    printf("R");
-                    break;
-                case red:
-                    x = green;
-                    printf("G");
-                    break;
-                case green:
-                    x = amber;
-                    printf("A");
-                    break;
-            }
-        }
-
-    Answer: 1, 2
-     */
+void question7program2() {
+    booOooolean a = false;
+    int counter;
+    days x = Mon, y = Fri;
+    while (x != y) x++;
 }
+
+typedef enum { red, amber, green } traffic_light;
+
+void question7program3() {
+    traffic_light x = red;
+    while (1)
+        switch (x) {
+            case amber:
+                x = red;
+                printf("R");
+                break;
+            case red:
+                x = green;
+                printf("G");
+                break;
+            case green:
+                x = amber;
+                printf("A");
+                break;
+        }
+}
+
+/*
+Answer: 1, 2, 3
+ */
 
 void question8() {
     /*
@@ -263,11 +255,12 @@ void question9() {
 
     Answer: 4
      */
-
     int x = -15;
     int *point = &x;
     printf("%d", *point);
 }
+
+void pass_array(int *arr);
 
 void question10() {
     /*
@@ -280,7 +273,16 @@ void question10() {
 
     Answer: 3
      */
+    int arr[] = {4, 5, 6};
+    pass_array(arr);
+}
+
+void pass_array(int *arr) {
+    printf("arr\t=> %p", arr);
+    printf("\n");
+    printf("&arr[0] => %p", &arr[0]);
 }
 
 int main() {
+    question10();
 }

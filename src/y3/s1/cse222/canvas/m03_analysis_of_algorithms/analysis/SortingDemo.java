@@ -8,16 +8,18 @@ import java.util.ArrayList;
 
 class SortingDemo {
     public static void main(String[] args) {
+        Stopwatch stopwatch = new Stopwatch();
         ArrayList<Integer> list = ListHandler.createList();
-        int size = Integer.MAX_VALUE;
+        int size = Integer.MAX_VALUE / 1000;
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
 
-        // Merge Sort       =>      O(n log n)
-        System.out.println("Merge sort\t\t=>\t\tO(n log n)");
+        // Shell Sort       =>      O(n^1.5)
+        ListHandler.shuffle(list);
+        System.out.println("Shell sort\t\t=>\t\tΩ(n log n), Θ(?), O(n^1.5)");
         System.out.printf("Sorting a list of size %d...\n", size);
-        Stopwatch stopwatch = new Stopwatch();
-        IterativeMergeSorter.sort(list);
+        stopwatch.reset();
+        ShellSorter.sort(list);
         System.out.println(stopwatch);
 
         // Heap Sort        =>      O(n log n)
@@ -28,12 +30,11 @@ class SortingDemo {
         HeapSorter.sort(list);
         System.out.println(stopwatch);
 
-        // Quick Sort       =>      O(n^2)
-        ListHandler.shuffle(list);
-        System.out.println("Quick sort\t\t=>\t\tO(n^2)");
+        // Merge Sort       =>      O(n log n)
+        System.out.println("Merge sort\t\t=>\t\tO(n log n)");
         System.out.printf("Sorting a list of size %d...\n", size);
         stopwatch.reset();
-        QuickSorter.sort(list, 0, size - 1);
+        MergeSorter.sort(list);
         System.out.println(stopwatch);
 
         // Selection Sort  =>      O(n^2)
