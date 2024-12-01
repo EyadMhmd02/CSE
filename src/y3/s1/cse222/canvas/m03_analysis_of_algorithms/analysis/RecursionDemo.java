@@ -121,19 +121,17 @@ Elapsed time:	000:00:00:00:001
 Linear			=>		O(n)
 Call times:		9,001
 
-Elapsed time:	000:00:00:00:003
+Elapsed time:	000:00:00:00:000
 
 Quadratic		=>		O(n^2)
 Call times:		1,801
 
-Elapsed time:	000:00:00:00:067
+Elapsed time:	000:00:00:00:044
 
 Exponential		=>		O(2^n)
 Note that the number 9,000 is extremely large to be used in a code of this time complexity
 Number will be reduced to 55
 Call times:		731,301,353
 
-Elapsed time:	000:00:20:10:527
-
-
+Elapsed time:	000:00:11:19:092
 */

@@ -62,7 +62,7 @@ public class QuizMidterm {
    c. Compile
    d. Heap
 
-   **Answer:** b. Static
+   **Answer:** a. Dynamic
 
    Explanation: In a linked list, memory is allocated dynamically for each node as needed, unlike static memory allocation.
 
@@ -80,7 +80,8 @@ public class QuizMidterm {
 
 ---
 
-7. **If the input to selection sort is A = [7, 23, 25, 13, 2, 12, 3, 16, 43] then after two swaps A =...**
+7. **If the input to selection sort is
+A = [7, 23, 25, 13, 2, 12, 3, 16, 43] then after two swaps A =...**
    a. [2, 13, 25, 3, 7, 12, 16, 43]
    b. [2, 3, 25, 13, 7, 12, 23, 16, 43]
    c. [2, 23, 25, 13, 7, 12, 16, 43]
@@ -110,9 +111,7 @@ public class QuizMidterm {
    c. n-1
    d. n
 
-   **Answer:** c. n-1
-
-   Explanation: In selection sort, each iteration results in one swap except for the last element, leading to n-1 swaps.
+   **Answer:** c. 0
 
 ---
 
@@ -178,7 +177,7 @@ public class QuizMidterm {
 
 15. **Which of the following functions grows the fastest as n increases to infinity?**
     a. n²
-    b. 2^n
+    b. 2ⁿ
     c. log n
     d. n!
 
@@ -192,7 +191,7 @@ public class QuizMidterm {
     a. The algorithm always takes exactly n² operations to complete.
     b. The algorithm takes at most n² operations to complete.
     c. The algorithm takes at least n² operations to complete.
-    d. The algorithm takes exactly n^2 operations to complete.
+    d. The algorithm takes exactly n² operations to complete.
 
     **Answer:** b. The algorithm takes at most n² operations to complete.
 
@@ -202,7 +201,9 @@ public class QuizMidterm {
 
 #### **Question 2:**
 
-**1. Consider the following array: [7, 23, 25, 13, 2, 12, 3]. Show a trace of execution for insertion sort.**
+**1. Consider the following array:
+[7, 23, 25, 13, 2, 12, 3].
+Show a trace of execution for insertion sort.**
    The trace should include the initial state of the array, followed by the array's state after each pass is made.
 
 **Answer:**

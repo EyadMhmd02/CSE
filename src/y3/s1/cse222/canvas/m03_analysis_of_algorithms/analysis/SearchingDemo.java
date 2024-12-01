@@ -57,15 +57,15 @@ Sorting the list...
 Binary Search			=>		O(log n)
 Searching a list of size 309,999,999...
 Found at index: 309,999,998
-Elapsed time:	000:00:00:00:001
+Elapsed time:	000:00:00:00:002
 
-Exponential Search	    =>		O(log n)
+Exponential Search		=>		O(log n)
 Searching a list of size 309,999,999...
 Found at index: 309,999,998
-Elapsed time:	000:00:00:00:001
+Elapsed time:	000:00:00:00:003
 
 Linear Search			=>		O(n)
 Searching a list of size 309,999,999...
 Found at index: 309,999,998
-Elapsed time:	000:00:00:13:693
+Elapsed time:	000:00:00:08:338
 */
