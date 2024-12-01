@@ -1,0 +1,112 @@
+1. What does "algorithm efficiency" mean?
+
+A. How easy the algorithm is to understand
+B. How fast or memory-efficient an algorithm is
+C. How many steps the algorithm has
+D. How secure the algorithm is
+
+Answer: B
+
+---
+
+2. What is Big-O notation used for?
+
+A. Measuring the smallest input an algorithm can handle
+B. Measuring the performance of an algorithm as input grows
+C. Measuring the number of lines in an algorithm
+D. Measuring the time for small inputs only
+
+Answer: B
+
+---
+
+3. Which Big-O notation represents the fastest algorithm?
+
+A. O(1)
+B. O(n)
+C. O(n²)
+D. O(log n)
+E. O(2ⁿ)
+F. O(n³)
+G. O(n log n)
+
+Answer: A
+
+---
+
+4. What does O(n) mean in Big-O notation?
+
+A. The algorithm takes the same time, no matter the input size
+B. The algorithm's time grows proportionally to the input size
+C. The algorithm runs in constant time
+D. The algorithm becomes faster as input grows
+
+Answer: B
+
+---
+
+5. Which scenario describes the "Worst Case" of an algorithm?
+
+A. The algorithm takes the least time to run
+B. The algorithm performs poorly for all inputs
+C. The algorithm takes the most time for some inputs
+D. The algorithm is unpredictable
+
+Answer: C
+
+---
+
+6. What is the main goal of Divide and Conquer algorithms?
+
+A. To solve a problem in one step
+B. To break a problem into smaller parts, solve them, and combine results
+C. To avoid using memory
+D. To handle only small inputs
+
+Answer: B
+
+
+
+---
+
+7. What is the difference between Time Complexity and Space Complexity?
+
+A. Time Complexity measures speed, Space Complexity measures memory
+B. Time Complexity measures memory, Space Complexity measures speed
+C. Both measure speed only
+D. Both measure memory only
+
+Answer: A
+
+---
+
+8. If an algorithm’s time complexity is O(n²), what happens when the input doubles?
+
+A. The running time stays the same
+B. The running time doubles
+C. The running time becomes four times longer
+D. The algorithm doesn’t work
+
+Answer: C
+
+---
+
+9. Which of the following describes the Best Case scenario?
+
+A. The algorithm always runs in constant time
+B. The algorithm takes the least time for a specific input
+C. The algorithm performs poorly for all inputs
+D. The algorithm runs unpredictably
+
+Answer: B
+
+---
+
+10. What does O(log n) mean in Big-O notation?
+
+A. The algorithm's time increases slightly as input size grows
+B. The algorithm’s time doubles as input size grows
+C. The algorithm’s time doesn’t depend on input size
+D. The algorithm performs worse for small inputs
+
+Answer: A

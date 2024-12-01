@@ -1,0 +1,292 @@
+1. What is the best-case time complexity of Insertion Sort?
+
+A. O(n²)
+B. O(n)
+C. O(n log n)
+D. O(1)
+
+Answer: B
+
+
+
+---
+
+2. Which sorting algorithm finds the smallest element and places it at the start of the list?
+
+A. Shell Sort
+B. Insertion Sort
+C. Selection Sort
+D. Merge Sort
+
+Answer: C
+
+---
+
+3. What is the primary advantage of Shell Sort over Insertion Sort?
+
+A. It uses less memory
+B. It compares elements far apart first, reducing overall comparisons
+C. It is a stable sorting algorithm
+D. It works only for small datasets
+
+Answer: B
+
+---
+
+4. Which sorting algorithm divides the data into subsets based on a gap sequence?
+
+A. Insertion Sort
+B. Selection Sort
+C. Shell Sort
+D. Quick Sort
+
+Answer: C
+
+---
+
+5. What is the worst-case time complexity of Selection Sort?
+
+A. O(n²)
+B. O(n log n)
+C. O(n)
+D. O(log n)
+
+Answer: A
+
+---
+
+6. Why is Insertion Sort stable?
+
+A. It doesn't swap equal elements
+B. It preserves the order of equal elements in the original list
+C. It requires extra memory
+D. It works only on sorted data
+
+Answer: B
+
+---
+
+7. Which of the following is a key feature of Shell Sort?
+
+A. Always stable
+B. Divides the list into equal-sized sublists
+C. Uses a gap sequence to compare distant elements
+D. Guaranteed O(n log n) performance
+
+Answer: C
+
+---
+
+8. Which algorithm works efficiently for nearly sorted data?
+
+A. Selection Sort (n^2) (n^2) (n^2)
+B. Insertion Sort (n)   (n^2) (n^2)
+C. Shell Sort
+D. Heap Sort
+
+Answer: B
+
+---
+
+9. What determines the efficiency of Shell Sort?
+
+A. The number of elements in the list
+B. The gap sequence used for comparisons
+C. The stability of the algorithm
+D. The size of the largest element in the list
+
+Answer: B
+
+--------------------------------------------------
+
+1. Insertion Sort Code Fill-in-the-Blanks
+
+Complete the following code for Insertion Sort by filling in the blanks:
+
+public class InsertionSort {
+    public static void sort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int key = arr[i];
+            int j = i - 1;
+
+            // Shift elements that are greater than key
+            while (_ && arr[j] > key) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = _;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {5, 3, 8, 1, 2};
+        sort(arr);
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+Questions:
+
+1. What should replace _ in the condition of the while loop?
+Answer: j >= 0
+
+
+2. What should replace _ when inserting the key?
+Answer: key
+
+
+
+
+---
+
+2. Selection Sort Identify the Output
+
+What is the output of the following Selection Sort code?
+
+public class SelectionSort {
+    public static void sort(int[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < arr[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            // Swap the smallest element with the first unsorted element
+            int temp = arr[minIndex];
+            arr[minIndex] = arr[i];
+            arr[i] = temp;
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {7, 4, 5, 2};
+        sort(arr);
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+Options:
+A. 7 4 5 2
+B. 2 4 5 7
+C. 5 4 7 2
+D. 4 2 7 5
+
+Answer: B. 2 4 5 7
+
+
+---
+
+3. Shell Sort Code Reorder
+
+The following code for Shell Sort is scrambled. Rearrange the lines to create a working implementation:
+
+for (int i = gap; i < arr.length; i++) {
+    int temp = arr[i];
+    int j = i;
+
+    while (j >= gap && arr[j - gap] > temp) {
+        arr[j] = arr[j - gap];
+        j -= gap;
+    }
+
+    arr[j] = temp;
+}
+
+for (int gap = arr.length / 2; gap > 0; gap /= 2) {
+    // Sorting the sublists for the current gap
+}
+
+public static void sort(int[] arr) {
+    // Loop over the gap sequence
+}
+
+Correct Order:
+
+1. public static void sort(int[] arr) {
+
+
+2. for (int gap = arr.length / 2; gap > 0; gap /= 2) {
+
+
+3. for (int i = gap; i < arr.length; i++) {
+
+
+4. int temp = arr[i];
+
+
+5. int j = i;
+
+
+6. while (j >= gap && arr[j - gap] > temp) {
+
+
+7. arr[j] = arr[j - gap];
+
+
+8. j -= gap;
+
+
+9. }
+
+
+10. arr[j] = temp;
+
+
+11. }
+
+
+12. }
+
+
+
+
+---
+
+4. Debug the Shell Sort Code
+
+The following Shell Sort code contains an error. Find and fix it:
+
+public class ShellSort {
+    public static void sort(int[] arr) {
+        for (int gap = arr.length / 2; gap > 0; gap /= 2) {
+            for (int i = gap; i < arr.length; i++) {
+                int temp = arr[i];
+                int j = i;
+
+                while (j >= gap || arr[j - gap] > temp) { // Error here
+                    arr[j] = arr[j - gap];
+                    j -= gap;
+                }
+
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
+Error: The condition
+j >= gap || arr[j - gap] > temp
+should be
+j >= gap && arr[j - gap] > temp.
+
+
+---
+
+5. Fill-in-the-Output Table (For Insertion Sort)
+
+Given the array {6, 3, 8, 5}, write the intermediate steps after each iteration of Insertion Sort:
+
+{look at image}
+
+Answers:
+| Step | Array            | Explanation                         |
+|------|-------------------|-------------------------------------|
+| 0    | {6, 3, 8, 5}     | Initial array                      |
+| 1    | {3, 6, 8, 5}     | Insert 3 before 6                  |
+| 2    | {3, 6, 8, 5}     | 8 is already in the correct position |
+| 3    | {3, 5, 6, 8}     | Insert 5 between 3 and 6           |

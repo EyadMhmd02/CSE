@@ -1,0 +1,55 @@
+What is Recursion in programming?
+   A) A loop inside a loop
+   B) A function that calls itself
+   C) A method to handle large datasets
+   D) A way to manage memory better
+   **Answer:** B) A function that calls itself
+
+In the factorial example, what is the Base Case?
+   A) When n == 0
+   B) When n == 1
+   C) When n > 5
+   D) When n < 0
+   **Answer:** A) When n == 0
+
+Which of the following is true about recursive functions?
+   A) They always return the same value
+   B) They cannot call other functions
+   C) They call themselves until a base case is reached
+   D) They are always faster than iterative solutions
+   **Answer:** C) They call themselves until a base case is reached
+
+What happens if a recursive function doesn't have a Base Case?
+   A) It will return a result after a few calls
+   B) It will cause an infinite loop
+   C) It will exit immediately
+   D) It will never be called
+   **Answer:** B) It will cause an infinite loop
+
+What does a recursive function require to avoid infinite recursion?
+A) A special variable
+B) A Base Case
+C) A loop
+D) A large stack size
+Answer: B) A Base Case
+
+In the factorial example, what is the value returned when n = 0?
+A) 0
+B) 1
+C) n
+D) -1
+Answer: B) 1
+
+What is the time complexity of the recursive Fibonacci function?
+A) O(n)
+B) O(log n)
+C) O(n^2)
+D) O(2^n)
+Answer: D) O(2^n)
+
+Which of the following is true about recursion and iteration?
+A) Recursion is always better than iteration
+B) Recursion is more memory-efficient than iteration
+C) Recursion uses more memory due to function call stack
+D) Recursion never uses any memory
+Answer: C) Recursion uses more memory due to function call stack

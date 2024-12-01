@@ -1,4 +1,4 @@
-//package y3.s1.cse222.canvas.m05_elementary_sorts.hw02;
+//package y3.s1.cse222.canvas.m05_elementary_sorts.txt.hw02;
 //
 ///**
 // * (basic description of the program or class)

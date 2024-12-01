@@ -1,0 +1,69 @@
+What is the main purpose of Data Abstraction?
+A) To make code harder to understand
+B) To simplify complex systems by focusing on relevant details
+C) To increase the size of the program
+D) To allow direct access to implementation details
+Answer: B) To simplify complex systems by focusing on relevant details
+
+Which of the following is an example of Data Abstraction?
+A) A class that defines how data is stored in memory
+B) A method that hides the implementation but provides a useful function
+C) A for-loop that processes raw data
+D) A function that directly manipulates memory addresses
+Answer: B) A method that hides the implementation but provides a useful function
+
+What is the difference between an Abstract Data Type (ADT) and a Data Structure?
+A) ADT focuses on what operations can be performed, while Data Structures focus on how data is stored
+B) ADT is about implementation, Data Structures are about usage
+C) ADT is specific to Java, while Data Structures are universal
+D) ADTs and Data Structures are the same thing
+Answer: A) ADT focuses on what operations can be performed, while Data Structures focus on how data is stored
+
+What is NOT a characteristic of Abstract Data Types (ADT)?
+A) Encapsulation of data
+B) Providing a specific implementation of operations
+C) Defining operations that can be performed
+D) Hiding implementation details
+Answer: B) Providing a specific implementation of operations
+
+Which Java feature supports Data Abstraction?
+A) Loops
+B) Classes and Interfaces
+C) Arrays
+D) Primitive data types
+Answer: B) Classes and Interfaces
+
+How does encapsulation relate to Data Abstraction?
+A) Encapsulation is the process of hiding the implementation details of data
+B) Encapsulation and Data Abstraction are unrelated
+C) Encapsulation reveals all implementation details to the user
+D) Encapsulation focuses on user interface design only
+Answer: A) Encapsulation is the process of hiding the implementation details of data
+
+Which of the following is an Abstract Data Type (ADT)?
+A) Stack
+B) Integer
+C) If-statement
+D) File path
+Answer: A) Stack
+
+In object-oriented programming, how do you achieve Data Abstraction?
+A) By using loops
+B) By defining interfaces or abstract classes
+C) By writing long functions with no encapsulation
+D) By directly accessing fields in a class
+Answer: B) By defining interfaces or abstract classes
+
+What happens when implementation details are hidden?
+A) The user must understand every part of the code
+B) The code becomes more complex
+C) The code becomes easier to use and modify
+D) The program will not compile
+Answer: C) The code becomes easier to use and modify
+
+Why is Data Abstraction important in programming?
+A) It slows down program execution
+B) It helps create modular and reusable code
+C) It avoids using functions altogether
+D) It eliminates the need for testing
+Answer: B) It helps create modular and reusable code

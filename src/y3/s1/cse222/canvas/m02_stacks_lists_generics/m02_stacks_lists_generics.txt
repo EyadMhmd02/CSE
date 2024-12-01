@@ -1,0 +1,110 @@
+1. What is a Stack?
+
+A stack is:
+A. A data structure that follows the FIFO principle
+B. A data structure that follows the LIFO principle
+C. A list that allows adding and removing elements from any position
+D. A type of queue
+
+Answer: B
+
+---
+
+2. What does LIFO stand for?
+
+A. Last In, First Out
+B. Last In, Forever Out
+C. Longest Item, First Out
+D. Left In, First Out
+
+Answer: A
+
+---
+
+3. Which operation removes the top element of a stack?
+
+A. Push
+B. Pop
+C. Peek
+D. Add
+
+Answer: B
+
+---
+
+4. What does the push() method do in a stack?
+
+A. Removes an element from the top
+B. Adds an element to the top
+C. Checks if the stack is empty
+D. Returns the size of the stack
+
+Answer: B
+
+---
+
+5. What is a Queue?
+
+A queue is:
+
+A. A data structure that follows the FIFO principle
+B. A data structure that follows the LIFO principle
+C. A stack that can be accessed from both ends
+D. A structure that only stores numbers
+
+Answer: A
+
+---
+
+6. What does FIFO stand for?
+
+A. First In, First Out
+B. First In, Forever Out
+C. Fastest In, Fastest Out
+D. Fixed In, First Out
+
+Answer: A
+
+---
+
+7. In a linked list, what is a "node"?
+
+A. A place where data is stored along with a pointer to the next node
+B. A data structure that only holds numbers
+C. A type of array
+D. A special method for stacks
+
+Answer: A
+
+---
+
+8. What are Generics in Java used for?
+
+A. To create methods that only work with numbers
+B. To allow classes and methods to work with different data types
+C. To simplify stack operations
+D. To replace loops
+
+Answer: B
+
+---
+
+9. Which method is used to check the size of a stack?
+
+A. isEmpty()
+B. size()
+C. pop()
+D. clear()
+
+Answer: B
+
+---
+
+10. What happens if you pop() from an empty stack?
+
+A. Nothing happens
+B. The program throws an exception
+C. The program automatically pushes 0
+D. The program ends
+
+Answer: B
