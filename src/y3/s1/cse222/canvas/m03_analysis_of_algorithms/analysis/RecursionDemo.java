@@ -5,44 +5,45 @@ import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwat
 public class RecursionDemo {
     public static void main(String[] args) {
         Stopwatch stopwatch = new Stopwatch();
-        int n = 8000;
-        System.out.printf("number = %d\n\n", n);
+        int n = 9000;
+        System.out.printf("number = %,3d\n\n", n);
 
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
         stopwatch.reset();
         recursiveFun1(n);
-        System.out.printf("Call times:\t\t%d\n\n", count1);
+        System.out.printf("Call times:\t\t%,3d\n\n", count1);
         System.out.println(stopwatch);
 
         System.out.println("Linear\t\t\t=>\t\tO(n)");
         stopwatch.reset();
         recursiveFun2(n);
-        System.out.printf("Call times:\t\t%d\n\n", count2);
+        System.out.printf("Call times:\t\t%,3d\n\n", count2);
 
         System.out.println(stopwatch);
 
         System.out.println("Linear\t\t\t=>\t\tO(n)");
         stopwatch.reset();
         recursiveFun3(n);
-        System.out.printf("Call times:\t\t%d\n\n", count3);
+        System.out.printf("Call times:\t\t%,3d\n\n", count3);
 
         System.out.println(stopwatch);
 
+        Integer n1 = 0;
         System.out.println("Quadratic\t\t=>\t\tO(n^2)");
         stopwatch.reset();
-        recursiveFun4(n);
-        System.out.printf("Call times:\t\t%d\n\n", count4);
+        recursiveFun4(n, n1);
+        System.out.printf("Call times:\t\t%,3d\n\n", count4);
 
         System.out.println(stopwatch);
 
         System.out.println("Exponential\t\t=>\t\tO(2^n)");
 
-        System.out.printf("Note that the number %d is extremely large to be used in a code of this time complexity\nNumber will be reduced to ", n);
+        System.out.printf("Note that the number %,3d is extremely large to be used in a code of this time complexity\nNumber will be reduced to", n);
         n = 55;
-        System.out.printf("%d\n", n);
+        System.out.printf("%,3d\n", n);
         stopwatch.reset();
         recursiveFun5(n);
-        System.out.printf("Call times:\t\t%d\n\n", count5);
+        System.out.printf("Call times:\t\t%,3d\n\n", count5);
 
         System.out.println(stopwatch);
 
@@ -83,15 +84,15 @@ public class RecursionDemo {
     }
 
     // O(n^2)
-    private static int recursiveFun4(int n) {
+    private static int recursiveFun4(int n, Integer counter) {
         count4++;
         for (int i = 0; i < n; i += 2) {
-            // do something
+            counter++;
         }
         if (n <= 0)
             return 1;
         else
-            return 1 + recursiveFun4(n - 5);
+            return 1 + recursiveFun4(n - 5, counter);
     }
 
     // O(2^n) // fibonacci sum
@@ -102,3 +103,37 @@ public class RecursionDemo {
         return recursiveFun5(n - 2) + recursiveFun5(n - 1);
     }
 }
+
+// SAMPLE OUTPUT:
+/*
+number = 9,000
+
+Logarithmic		=>		O(log n)
+Call times:		  7
+
+Elapsed time:	000:00:00:00:000
+
+Linear			=>		O(n)
+Call times:		1,801
+
+Elapsed time:	000:00:00:00:001
+
+Linear			=>		O(n)
+Call times:		9,001
+
+Elapsed time:	000:00:00:00:003
+
+Quadratic		=>		O(n^2)
+Call times:		1,801
+
+Elapsed time:	000:00:00:00:067
+
+Exponential		=>		O(2^n)
+Note that the number 9,000 is extremely large to be used in a code of this time complexity
+Number will be reduced to 55
+Call times:		731,301,353
+
+Elapsed time:	000:00:20:10:527
+
+
+*/

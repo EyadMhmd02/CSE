@@ -1,19 +1,18 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms;
 
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.list_handler.ListHandler;
 
-import java.util.ArrayList;
-
 /**
- * This class provides a static method for sorting an ArrayList of integers using the Heap Sort algorithm.
+ * This class provides a static method for sorting an GlueList of integers using the Heap Sort algorithm.
  */
 public class HeapSorter {
     /**
-     * Sorts the given ArrayList of integers in ascending order using the Heap Sort algorithm.
+     * Sorts the given GlueList of integers in ascending order using the Heap Sort algorithm.
      *
-     * @param list The ArrayList to be sorted.
+     * @param list The GlueList to be sorted.
      */
-    public static void sort(ArrayList<Integer> list) {
+    public static void sort(GlueList<Integer> list) {
         int n = list.size();
 
         // Build a max heap.
@@ -32,13 +31,13 @@ public class HeapSorter {
     }
 
     /**
-     * Helper method to maintain the heap property of the given ArrayList.
+     * Helper method to maintain the heap property of the given GlueList.
      *
-     * @param list The ArrayList to be heapified.
+     * @param list The GlueList to be heapified.
      * @param n The size of the heap.
      * @param i The index of the root of the subtree to be heapified.
      */
-    private static void heapify(ArrayList<Integer> list, int n, int i) {
+    private static void heapify(GlueList<Integer> list, int n, int i) {
         int largest = i;
         int left = 2 * i + 1;
         int right = 2 * i + 2;
@@ -63,13 +62,13 @@ public class HeapSorter {
     }
 
     /**
-     * Helper method to swap two elements in the given ArrayList.
+     * Helper method to swap two elements in the given GlueList.
      *
-     * @param list The ArrayList containing the elements to be swapped.
+     * @param list The GlueList containing the elements to be swapped.
      * @param i The index of the first element to be swapped.
      * @param j The index of the second element to be swapped.
      */
-    private static void swap(ArrayList<Integer> list, int i, int j) {
+    private static void swap(GlueList<Integer> list, int i, int j) {
         ListHandler.swap(list, i, j);
     }
 }

@@ -15,10 +15,11 @@ add_executable(CSE
         #        src/y3/s1/cse240/lecs/lec09/lec09.cpp
         #        src/y3/s1/cse240/lecs/lec09/lec09_test1.cpp
         #        src/y3/s1/cse240/lecs/lec09/lec09_test2.cpp
-#        src/y3/s1/cse240/lecs/lec10/lec10.cpp
-        src/y3/s1/cse240/lecs/lec10/lec10_test1.cpp
+        #        src/y3/s1/cse240/lecs/lec10/lec10.cpp
+        #        src/y3/s1/cse240/lecs/lec10/lec10_test1.cpp
         #        src/y3/s1/cse240/revision_midterm.cpp
         #        src/y3/s1/cse240/quizzes/quiz_before_midterm/quiz_before_midterm.c
+        src/y3/s1/cse240/quizzes/quiz_midterm/quiz_midterm.cpp
         #        src/y3/s1/cse240/lecs/lec05/lec5_test1.c
         #        src/y3/s1/cse240/lecs/lec05/lec05_test2.c
         #        src/y3/s1/cse240/lecs/lec06/lec06_test1.c

@@ -1,14 +1,19 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis;
 
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.list_handler.ListHandler;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms.BogoSorter;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms.MergeSorter;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwatch;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.Collections;
 
+/**
+ * The main class for demonstrating the time complexity of various algorithms.
+ * It includes methods for adding two BigInteger numbers, performing binary search,
+ * finding the maximum number, sorting a list using merge sort, checking pairs and triplets,
+ * calculating Fibonacci numbers, and performing bogo sort.
+ */
 public class Trends {
     /**
      * The main method of the Trends class. It demonstrates the time complexity of various algorithms.
@@ -16,75 +21,78 @@ public class Trends {
      * @param args Command line arguments (not used in this method).
      */
     public static void main(String[] args) {
-        // generate an ArrayList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
-        ArrayList<Integer> list = ListHandler.createList();
-        int size = Integer.MAX_VALUE / 10;
+        // generate an GlueList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
+        GlueList<Integer> list = ListHandler.createList();
+        int size = ListHandler.MAX_SIZE;
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         int key = ListHandler.setKeyAtLast(list, 30);
 
         // Constant         =>      O(1)
+        long num = Long.MAX_VALUE;
         System.out.println("Constant\t\t=>\t\tO(1)");
-        System.out.println("Adding two very large numbers...");
+        System.out.printf("Adding %,3d + %,3d...\n", num, num);
         Stopwatch stopwatch = new Stopwatch();
-        addTwoNumbers(BigInteger.valueOf(Long.MAX_VALUE), BigInteger.valueOf(Long.MAX_VALUE));
+        addTwoNumbers(BigInteger.valueOf(num), BigInteger.valueOf(num));
         System.out.println(stopwatch);
 
         // Logarithmic      =>      O(log n)
         System.out.println("Logarithmic\t\t=>\t\tO(log n)");
-        System.out.println("Binary searching in a list of size " + size + "...");
+        System.out.printf("Binary searching in a list of size %,3d...\n", size);
         stopwatch.reset();
         binarySearch(list, key, 0, list.size() - 1);
         System.out.println(stopwatch);
 
         // Linear           =>      O(n)
         System.out.println("Linear\t\t\t=>\t\tO(n)");
-        System.out.println("Finding the maximum number in a list of size " + size + "...");
+        System.out.printf("Finding the maximum number in a list of size %,3d...\n", size);
         stopwatch.reset();
         findMaximumNumber(list);
         System.out.println(stopwatch);
 
         // Linearithmic     =>      O(n log n)
+        size /= 10;
+        System.out.println("size /= 10");
         list = ListHandler.createList();
-        size = Integer.MAX_VALUE / 100;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Linearithmic\t=>\t\tO(n log n)");
-        System.out.println("Merge sorting a list of size " + size + "...");
+        System.out.printf("Merge sorting a list of size %,3d...\n", size);
         stopwatch.reset();
         mergeSort(list);
         System.out.println(stopwatch);
 
-        // Quadratic        =>      O(n^2)
+        // Quadratic        =>      O(n²)
+        size /= 100;
+        System.out.println("size /= 1000");
         list = ListHandler.createList();
-        size = Integer.MAX_VALUE / 10000;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
-        System.out.println("Quadratic\t\t=>\t\tO(n^2)");
-        System.out.println("Checking all pairs in a list of size " + size + "...");
+        System.out.println("Quadratic\t\t=>\t\tO(n²)");
+        System.out.printf("Checking all pairs in a list of size %,3d...\n", size);
         stopwatch.reset();
         checkAllPairs(list);
         System.out.println(stopwatch);
 
-        // Cubic            =>      O(n^3)
+        // Cubic            =>      O(n³)
+        size /= 10;
+        System.out.println("size /= 10");
         list = ListHandler.createList();
-//    size = Integer.MAX_VALUE / 100000;
-        size = 5000;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
-        System.out.println("Cubic\t\t\t=>\t\tO(n^3)");
-        System.out.println("Checking all triplets in a list of size " + size + "...");
+        System.out.println("Cubic\t\t\t=>\t\tO(n³)");
+        System.out.printf("Checking all triplets in a list of size %,3d...\n", size);
         stopwatch.reset();
         checkAllTriplets(list);
         System.out.println(stopwatch);
 
-        // Exponential      =>      O(2^n)
-        int n = 52;
-        System.out.println("Exponential\t\t=>\t\tO(2^n)");
+        // Exponential      =>      O(2ⁿ)
+        int n = 54;
+        System.out.println("Exponential\t\t=>\t\tO(2ⁿ)");
         System.out.println("Finding fibonacci sum of " + n + "...");
         stopwatch.reset();
         fibonacci(n);
         System.out.println(stopwatch);
 
         // Factorial        =>      O(n!)
-        n = 14;
+        n = 16;
         System.out.println("Factorial\t\t=>\t\tO(n!)");
         System.out.println("Running a function for " + n + "! times...");
         stopwatch.reset();
@@ -96,7 +104,7 @@ public class Trends {
         size = 14;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
-        System.out.println("Bogo sorting a list of size " + size + "...");
+        System.out.printf("Bogo sorting a list of size %,3d...", size);
         stopwatch.reset();
         bogoSort(list);
         System.out.println("Actually it's unpredictable...");
@@ -115,6 +123,7 @@ public class Trends {
     private static BigInteger addTwoNumbers(BigInteger n1, BigInteger n2) {
         return n1.add(n2);
     }
+
     // Logarithmic      =>      O(log n)
 
     /**
@@ -125,11 +134,11 @@ public class Trends {
      * @param low  The lower index of the search range.
      * @param high The upper index of the search range.
      * @return The index of the first occurrence of the integer {@code n} in the list, or -1 if not found.
-     * @throws IllegalArgumentException if the list is null or empty.
-     * @throws IllegalArgumentException if the low index is less than 0 or greater than the high index.
-     * @throws IllegalArgumentException if the high index is greater than the size of the list minus one.
+     * @throws IllegalArgumentException If the list is null or empty.
+     * @throws IllegalArgumentException If the low index is less than 0 or greater than the high index.
+     * @throws IllegalArgumentException If the high index is greater than the size of the list minus one.
      */
-    private static int binarySearch(ArrayList<Integer> list, int n, int low, int high) {
+    private static int binarySearch(GlueList<Integer> list, int n, int low, int high) {
         if (list == null || list.isEmpty()) {
             throw new IllegalArgumentException("The list cannot be null or empty.");
         }
@@ -163,7 +172,7 @@ public class Trends {
      * @throws NullPointerException     If the given list is null.
      * @throws IllegalArgumentException If the given list is empty.
      */
-    private static int findMaximumNumber(ArrayList<Integer> list) {
+    private static int findMaximumNumber(GlueList<Integer> list) {
         if (list == null) {
             throw new NullPointerException("The given list is null.");
         }
@@ -190,12 +199,11 @@ public class Trends {
      *
      * @param list The list of integers to be sorted.
      */
-    private static void mergeSort(ArrayList<Integer> list) {
+    private static void mergeSort(GlueList<Integer> list) {
         MergeSorter.sort(list);
     }
 
-
-    // Quadratic        =>      O(n^2)
+    // Quadratic        =>      O(n²)
 
     /**
      * This function checks all possible pairs of integers in the given list and counts the number of pairs whose sum equals zero.
@@ -203,7 +211,7 @@ public class Trends {
      * @param list The list of integers to check pairs from.
      * @return The count of pairs whose sum equals zero.
      */
-    private static int checkAllPairs(ArrayList<Integer> list) {
+    private static int checkAllPairs(GlueList<Integer> list) {
         int counter = 0;
         for (int i = 0; i < list.size(); i++) {
             for (int j = i + 1; j < list.size(); j++) {
@@ -215,15 +223,15 @@ public class Trends {
         return counter;
     }
 
-    // Cubic            =>      O(n^3)
+    // Cubic            =>      O(n³)
 
     /**
-     * This function checks all possible triplets in the given list and counts the number of triplets whose sum equals zero.
+     * This function checks all possible triplets of integers in the given list and counts the number of triplets whose sum equals zero.
      *
-     * @param list The list of integers to check for triplets.
+     * @param list The list of integers to check triplets from.
      * @return The count of triplets whose sum equals zero.
      */
-    private static int checkAllTriplets(ArrayList<Integer> list) {
+    private static int checkAllTriplets(GlueList<Integer> list) {
         int counter = 0;
         for (int i = 0; i < list.size(); i++) {
             for (int j = i + 1; j < list.size(); j++) {
@@ -237,7 +245,7 @@ public class Trends {
         return counter;
     }
 
-    // Exponential      =>      O(2^n)
+    // Exponential      =>      O(2ⁿ)
 
     /**
      * This function calculates the nth Fibonacci number using recursion.
@@ -247,29 +255,14 @@ public class Trends {
      * @param n The position of the Fibonacci number to calculate.
      *          Must be a non-negative integer.
      * @return The nth Fibonacci number.
-     * If n is less than or equal to 1, the function returns n.
-     * Otherwise, the function returns the sum of the (n-2)th and (n-1)th Fibonacci numbers.
      * @throws IllegalArgumentException If n is a negative number.
      */
     private static int fibonacci(int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("n must be a non-negative integer");
+            throw new IllegalArgumentException("n must be a non-negative integer.");
         }
         if (n <= 1) return n;
         return fibonacci(n - 2) + fibonacci(n - 1);
-    }
-
-
-    static void towerOfHanoi(int n, char from_rod,
-                             char to_rod, char aux_rod) {
-        if (n == 0) {
-            return;
-        }
-        towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
-        System.out.println("Move disk " + n + " from rod "
-                + from_rod + " to rod "
-                + to_rod);
-        towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
     }
 
     // Factorial        =>      O(n!)
@@ -281,9 +274,6 @@ public class Trends {
      *
      * @param n The non-negative integer for which the factorial is to be calculated.
      * @return The factorial of the given number.
-     * <p>
-     * Note: This function has a time complexity of O(n!), which means it will take an exponential amount of time to compute
-     * the factorial of large numbers.
      */
     private static void factorialRuntimeFunction(int n) {
         for (int i = 0; i < n; i++) {
@@ -301,9 +291,9 @@ public class Trends {
      * @param list The list of integers to be sorted.
      * @throws IllegalArgumentException If the input list is null.
      */
-    private static void bogoSort(ArrayList<Integer> list) {
+    private static void bogoSort(GlueList<Integer> list) {
         if (list == null) {
-            throw new IllegalArgumentException("Input list cannot be null");
+            throw new IllegalArgumentException("Input list cannot be null.");
         }
         BogoSorter.sort(list);
     }
@@ -339,7 +329,7 @@ Creating list...
 
 Populating list with size of 214748...
 
-Quadratic		=>		O(n^2)
+Quadratic		=>		O(n²)
 Checking all pairs in a list of size 214748...
 Elapsed time:	000:00:01:29:033
 
@@ -347,11 +337,11 @@ Creating list...
 
 Populating list with size of 5000...
 
-Cubic			=>		O(n^3)
+Cubic			=>		O(n³)
 Checking all triplets in a list of size 5000...
 Elapsed time:	000:00:01:51:059
 
-Exponential		=>		O(2^n)
+Exponential		=>		O(2ⁿ)
 Finding fibonacci sum of 52...
 Elapsed time:	000:00:03:28:772
 

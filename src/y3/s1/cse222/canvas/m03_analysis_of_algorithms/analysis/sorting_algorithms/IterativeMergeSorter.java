@@ -1,9 +1,9 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms;
 
-import java.util.ArrayList;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 
 /**
- * Iterative implementation of Merge Sort algorithm using ArrayList.
+ * Iterative implementation of Merge Sort algorithm using GlueList.
  *
  * @author Tabnine
  */
@@ -14,13 +14,13 @@ public class IterativeMergeSorter {
      * First sub-list is arr[l..m]
      * Second sub-list is arr[m+1..r]
      */
-    private static void merge(ArrayList<Integer> arr, int l, int m, int r) {
+    private static void merge(GlueList<Integer> arr, int l, int m, int r) {
         int n1 = m - l + 1;
         int n2 = r - m;
 
         // Create temp arrays
-        ArrayList<Integer> L = new ArrayList<>(n1);
-        ArrayList<Integer> R = new ArrayList<>(n2);
+        GlueList<Integer> L = new GlueList<>(n1);
+        GlueList<Integer> R = new GlueList<>(n2);
 
         // Copy data to temp arrays
         for (int i = 0; i < n1; ++i)
@@ -64,7 +64,7 @@ public class IterativeMergeSorter {
     /**
      * Iterative merge sort function to sort arr[l..r]
      */
-    public static void sort(ArrayList<Integer> arr) {
+    public static void sort(GlueList<Integer> arr) {
         int n = arr.size();
 
         // Start with subarray size 1 and merge subarrays of size 1

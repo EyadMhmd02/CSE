@@ -1,19 +1,33 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.list_handler;
 
 import org.jetbrains.annotations.NotNull;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
 public class ListHandler {
-    public static @NotNull ArrayList<Integer> createList() {
+    public final static int MAX_SIZE = 532199999;
+
+    /**
+     * Creates a new ArrayList of integers.
+     *
+     * @return A new ArrayList of integers.
+     */
+    public static @NotNull GlueList<Integer> createList() {
         System.out.println("Creating list...\n");
-        return new ArrayList<>(); // n
+        return new GlueList<>(); // n
     }
 
-    public static void populateListWithRandomNumbers(ArrayList<Integer> list, int size, int bound) {
-        System.out.println("Populating list with size of " + size + "...");
+    /**
+     * Populates the given list with random integers.
+     *
+     * @param list  The list to be populated.
+     * @param size  The number of random integers to generate.
+     * @param bound The upper bound (exclusive) for the random integers.
+     */
+    public static void populateListWithRandomNumbers(GlueList<Integer> list, int size, int bound) {
+        System.out.printf("Populating list of size %,3d...\n", size);
         System.out.println();
         Random random = new Random();
         for (int i = 0; i < size; i++) {
@@ -21,7 +35,14 @@ public class ListHandler {
         }
     }
 
-    public static int setKeyAtLast(ArrayList<Integer> list, int key) {
+    /**
+     * Sets the value of the last element in the list to the given key.
+     *
+     * @param list The list in which to set the value.
+     * @param key  The value to set.
+     * @return The key that was set.
+     */
+    public static int setKeyAtLast(GlueList<Integer> list, int key) {
         list.set(list.size() - 1, key);
         return key;
     }
@@ -32,7 +53,7 @@ public class ListHandler {
      * @param list The list of integers to be checked.
      * @return {@code true} if the list is sorted in ascending order, {@code false} otherwise.
      */
-    public static boolean isSorted(ArrayList<Integer> list) {
+    public static boolean isSorted(GlueList<Integer> list) {
         if (list == null) return true;
 
         if (list.size() <= 1) {
@@ -55,13 +76,18 @@ public class ListHandler {
      * @param i    The index of the first element to swap.
      * @param j    The index of the second element to swap.
      */
-    public static void swap(ArrayList<Integer> list, int i, int j) {
+    public static void swap(GlueList<Integer> list, int i, int j) {
         int temp = list.get(i);
         list.set(i, list.get(j));
         list.set(j, temp);
     }
 
-    public static void shuffle(ArrayList<Integer> list) {
+    /**
+     * Shuffles the elements in the given list.
+     *
+     * @param list The list to be shuffled.
+     */
+    public static void shuffle(GlueList<Integer> list) {
         System.out.println("Shuffling list...");
         System.out.println();
         Collections.shuffle(list);

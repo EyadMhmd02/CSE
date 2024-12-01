@@ -1,6 +1,6 @@
 package y3.s1.cse222.canvas.m05_elementary_sorts;
 
-import java.util.ArrayList;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 
 /**
  * This class provides a static method for sorting an ArrayList of integers using the Insertion Sort algorithm.
@@ -13,7 +13,7 @@ public class InsertionSorter {
      * @param list The ArrayList to be sorted.
      * @throws NullPointerException If the given list is null.
      */
-    public static void sort(ArrayList<Integer> list) {
+    public static void sort(GlueList<Integer> list) {
         if (list == null) {
             throw new NullPointerException("The given list is null.");
         }
@@ -48,10 +48,10 @@ public class InsertionSorter {
         //           0  1  2  3  4
         int[] arr = {5, 3, 0, 8, 1};
         InsertionSorter.sort(arr);
-        printArray(arr);
+        printList(arr);
     }
 
-    private static void printArray(int[] arr) {
+    private static void printList(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }

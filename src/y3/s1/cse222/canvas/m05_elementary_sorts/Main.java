@@ -1,18 +1,17 @@
 package y3.s1.cse222.canvas.m05_elementary_sorts;
 
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.list_handler.ListHandler;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms.MergeSorter;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwatch;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
         Stopwatch stopwatch = new Stopwatch();
 
-        ArrayList<Integer> list = ListHandler.createList();
+        GlueList<Integer> list = ListHandler.createList();
         ListHandler.populateListWithRandomNumbers(list, 1000000, 10);
 
         System.out.println("Sorting...\n");

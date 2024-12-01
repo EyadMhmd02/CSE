@@ -1,21 +1,21 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.searching_algorithms;
 
-import java.util.ArrayList;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 
 /**
- * A class that implements the binary search algorithm for searching an element in a sorted ArrayList.
+ * A class that implements the binary search algorithm for searching an element in a sorted GlueList.
  */
 public class BinarySearcher {
 
     /**
-     * Searches for the given key in the sorted ArrayList and returns the index of the first occurrence.
+     * Searches for the given key in the sorted GlueList and returns the index of the first occurrence.
      * If the key is not found, returns -1.
      *
-     * @param list The sorted ArrayList to search in.
+     * @param list The sorted GlueList to search in.
      * @param key  The key to search for.
      * @return The index of the first occurrence of the key, or -1 if not found.
      */
-    public static int search(ArrayList<Integer> list, int key) {
+    public static int search(GlueList<Integer> list, int key) {
         int left = 0;
         int right = list.size() - 1;
 
@@ -37,14 +37,14 @@ public class BinarySearcher {
     }
 
     /**
-     * Searches for the given key in the sorted ArrayList and returns the index of the last occurrence.
+     * Searches for the given key in the sorted GlueList and returns the index of the last occurrence.
      * If the key is not found, returns -1.
      *
-     * @param list The sorted ArrayList to search in.
+     * @param list The sorted GlueList to search in.
      * @param key  The key to search for.
      * @return The index of the last occurrence of the key, or -1 if not found.
      */
-    public static int searchLastOccurrence(ArrayList<Integer> list, int key) {
+    public static int searchLastOccurrence(GlueList<Integer> list, int key) {
         int left = 0;
         int right = list.size() - 1;
         int result = -1;

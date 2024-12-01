@@ -1,9 +1,7 @@
 package y3.s1.cse222.canvas.m05_elementary_sorts;
 
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.list_handler.ListHandler;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * This class contains a static method for sorting an ArrayList of integers using the Selection Sort algorithm.
@@ -15,7 +13,7 @@ public class SelectionSorter {
      *
      * @param list The ArrayList to be sorted.
      */
-    public static void sort(ArrayList<Integer> list) {
+    public static void sort(GlueList<Integer> list) {
         for (int i = 0; i < list.size() - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < list.size(); j++) {
@@ -34,7 +32,7 @@ public class SelectionSorter {
      * @param i    The index of the first element to swap.
      * @param j    The index of the second element to swap.
      */
-    private static void swap(ArrayList<Integer> list, int i, int j) {
+    private static void swap(GlueList<Integer> list, int i, int j) {
         ListHandler.swap(list, i, j);
     }
 
@@ -49,7 +47,7 @@ public class SelectionSorter {
 
             swap(arr, minIdx, i);
 
-            printArray(arr);
+            printList(arr);
         }
     }
 
@@ -65,10 +63,10 @@ public class SelectionSorter {
         //           0  1  2  3  4
         int[] arr = {5, 3, 0, 8, 1};
         SelectionSorter.sort(arr);
-        printArray(arr);
+        printList(arr);
     }
 
-    private static void printArray(int[] arr) {
+    private static void printList(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }

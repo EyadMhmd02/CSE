@@ -1,19 +1,19 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.sorting_algorithms;
 
-import java.util.ArrayList;
+import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.bonus.GlueList;
 
 /**
- * This class provides a static method for sorting an ArrayList of integers using the Insertion Sort algorithm.
+ * This class provides a static method for sorting an GlueList of integers using the Insertion Sort algorithm.
  */
 public class InsertionSorter {
 
     /**
-     * Sorts the given ArrayList of integers in ascending order using the Insertion Sort algorithm.
+     * Sorts the given GlueList of integers in ascending order using the Insertion Sort algorithm.
      *
-     * @param list The ArrayList to be sorted.
+     * @param list The GlueList to be sorted.
      * @throws NullPointerException If the given list is null.
      */
-    public static void sort(ArrayList<Integer> list) {
+    public static void sort(GlueList<Integer> list) {
         if (list == null) {
             throw new NullPointerException("The given list is null.");
         }
