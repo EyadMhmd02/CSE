@@ -12,7 +12,7 @@ public class Main {
         Stopwatch stopwatch = new Stopwatch();
 
         GlueList<Integer> list = ListHandler.createList();
-        ListHandler.populateListWithRandomNumbers(list, 1000000, 10);
+        ListHandler.populateListWithRandomNumbers(list, 9999999, 10);
 
         System.out.println("Sorting...\n");
 

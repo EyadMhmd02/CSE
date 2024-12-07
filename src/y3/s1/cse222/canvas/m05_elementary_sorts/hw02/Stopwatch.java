@@ -1,16 +1,16 @@
-package edu.ser222.m02_01;
+package y3.s1.cse222.canvas.m05_elementary_sorts.hw02;
 
 /**
  * A utility class to measure the running time (wall clock) of a program.
- * 
+ *
  * Improved over textbook implementation by switching to nanoTime.
- * 
+ *
  * @author Acuna
  * @author Sedgewick
  * @author Wayne
  * @version 1.0
  */
-public class Stopwatch { 
+public class Stopwatch {
 
     private final long start;
 
@@ -19,7 +19,7 @@ public class Stopwatch {
      */
     public Stopwatch() {
         start = System.nanoTime();
-    } 
+    }
 
     /**
      * Returns the elapsed CPU time (in seconds) since the stopwatch was created.

@@ -55,8 +55,8 @@ class SortingDemo {
         System.out.println(stopwatch);
 
         // Insertion Sort  =>      O(n²)
-        size /= 100;
-        System.out.println("size /= 100\n");
+        size /= 1000;
+        System.out.println("size /= 1000\n");
         list = ListHandler.createList();
         ListHandler.populateListWithRandomNumbers(list, size, bound);
 //        ListHandler.shuffle(list);
