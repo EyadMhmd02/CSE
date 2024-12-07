@@ -22,69 +22,70 @@ public class Trends {
      */
     public static void main(String[] args) {
         // generate an GlueList with maximum integer size possible, numbers in it are randomly generated, with upper bound 20
+        Stopwatch stopwatch = new Stopwatch();
         GlueList<Integer> list = ListHandler.createList();
         int size = ListHandler.MAX_SIZE;
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         int key = ListHandler.setKeyAtLast(list, 30);
 
-        // Constant         =>      O(1)
-        long num = Long.MAX_VALUE;
-        System.out.println("Constant\t\t=>\t\tO(1)");
-        System.out.printf("Adding %,3d + %,3d...\n", num, num);
-        Stopwatch stopwatch = new Stopwatch();
-        addTwoNumbers(BigInteger.valueOf(num), BigInteger.valueOf(num));
-        System.out.println(stopwatch);
-
-        // Logarithmic      =>      O(log n)
-        System.out.println("Logarithmic\t\t=>\t\tO(log n)");
-        System.out.printf("Binary searching in a list of size %,3d...\n", size);
-        stopwatch.reset();
-        binarySearch(list, key, 0, list.size() - 1);
-        System.out.println(stopwatch);
-
-        // Linear           =>      O(n)
-        System.out.println("Linear\t\t\t=>\t\tO(n)");
-        System.out.printf("Finding the maximum number in a list of size %,3d...\n", size);
-        stopwatch.reset();
-        findMaximumNumber(list);
-        System.out.println(stopwatch);
-
-        // Linearithmic     =>      O(n log n)
-        size /= 10;
-        System.out.println("size /= 10");
-        list = ListHandler.createList();
-        ListHandler.populateListWithRandomNumbers(list, size, bound);
-        System.out.println("Linearithmic\t=>\t\tO(n log n)");
-        System.out.printf("Merge sorting a list of size %,3d...\n", size);
-        stopwatch.reset();
-        mergeSort(list);
-        System.out.println(stopwatch);
-
-        // Quadratic        =>      O(n²)
-        size /= 100;
-        System.out.println("size /= 1000");
-        list = ListHandler.createList();
-        ListHandler.populateListWithRandomNumbers(list, size, bound);
-        System.out.println("Quadratic\t\t=>\t\tO(n²)");
-        System.out.printf("Checking all pairs in a list of size %,3d...\n", size);
-        stopwatch.reset();
-        checkAllPairs(list);
-        System.out.println(stopwatch);
-
-        // Cubic            =>      O(n³)
-        size /= 10;
-        System.out.println("size /= 10");
-        list = ListHandler.createList();
-        ListHandler.populateListWithRandomNumbers(list, size, bound);
-        System.out.println("Cubic\t\t\t=>\t\tO(n³)");
-        System.out.printf("Checking all triplets in a list of size %,3d...\n", size);
-        stopwatch.reset();
-        checkAllTriplets(list);
-        System.out.println(stopwatch);
+//        // Constant         =>      O(1)
+//        long num = Long.MAX_VALUE;
+//        System.out.println("Constant\t\t=>\t\tO(1)");
+//        System.out.printf("Adding %,3d + %,3d...\n", num, num);
+//        stopwatch.reset();
+//        addTwoNumbers(BigInteger.valueOf(num), BigInteger.valueOf(num));
+//        System.out.println(stopwatch);
+//
+//        // Logarithmic      =>      O(log n)
+//        System.out.println("Logarithmic\t\t=>\t\tO(log n)");
+//        System.out.printf("Binary searching in a list of size %,3d...\n", size);
+//        stopwatch.reset();
+//        binarySearch(list, key, 0, list.size() - 1);
+//        System.out.println(stopwatch);
+//
+//        // Linear           =>      O(n)
+//        System.out.println("Linear\t\t\t=>\t\tO(n)");
+//        System.out.printf("Finding the maximum number in a list of size %,3d...\n", size);
+//        stopwatch.reset();
+//        findMaximumNumber(list);
+//        System.out.println(stopwatch);
+//
+//        // Linearithmic     =>      O(n log n)
+//        size /= 10;
+//        System.out.println("size /= 10");
+//        list = ListHandler.createList();
+//        ListHandler.populateListWithRandomNumbers(list, size, bound);
+//        System.out.println("Linearithmic\t=>\t\tO(n log n)");
+//        System.out.printf("Merge sorting a list of size %,3d...\n", size);
+//        stopwatch.reset();
+//        mergeSort(list);
+//        System.out.println(stopwatch);
+//
+//        // Quadratic        =>      O(n²)
+//        size /= 100;
+//        System.out.println("size /= 1000");
+//        list = ListHandler.createList();
+//        ListHandler.populateListWithRandomNumbers(list, size, bound);
+//        System.out.println("Quadratic\t\t=>\t\tO(n²)");
+//        System.out.printf("Checking all pairs in a list of size %,3d...\n", size);
+//        stopwatch.reset();
+//        checkAllPairs(list);
+//        System.out.println(stopwatch);
+//
+//        // Cubic            =>      O(n³)
+//        size = 9999;
+//        System.out.printf("size = %,3d\n\n", size);
+//        list = ListHandler.createList();
+//        ListHandler.populateListWithRandomNumbers(list, size, bound);
+//        System.out.println("Cubic\t\t\t=>\t\tO(n³)");
+//        System.out.printf("Checking all triplets in a list of size %,3d...\n", size);
+//        stopwatch.reset();
+//        checkAllTriplets(list);
+//        System.out.println(stopwatch);
 
         // Exponential      =>      O(2ⁿ)
-        int n = 54;
+        int n = 55;
         System.out.println("Exponential\t\t=>\t\tO(2ⁿ)");
         System.out.println("Finding fibonacci sum of " + n + "...");
         stopwatch.reset();
@@ -101,7 +102,7 @@ public class Trends {
 
         // Bigger           =>      O(n n!)
         list = ListHandler.createList();
-        size = 14;
+        size = 16;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
         System.out.printf("Bogo sorting a list of size %,3d...", size);
@@ -335,14 +336,15 @@ Quadratic		=>		O(n²)
 Checking all pairs in a list of size 532,199...
 Elapsed time:	000:00:56:58:049
 
-size /= 10
+size = 9,999
+
 Creating list...
 
-Populating list of size 53,219...
+Populating list of size 9,999...
 
 Cubic			=>		O(n³)
-Checking all triplets in a list of size 53,219...
-Elapsed time:	000:00:01:51:059
+Checking all triplets in a list of size 9,999...
+Elapsed time:	000:01:38:19:658
 
 Exponential		=>		O(2ⁿ)
 Finding fibonacci sum of 52...
