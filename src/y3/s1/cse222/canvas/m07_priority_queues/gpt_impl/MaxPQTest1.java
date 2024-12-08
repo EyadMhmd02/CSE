@@ -1,10 +1,10 @@
-package y3.s1.cse222.canvas.m07_priority_queues;
+package y3.s1.cse222.canvas.m07_priority_queues.gpt_impl;
 
 import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwatch;
 
 import java.util.Random;
 
-public class MaxPQTest {
+public class MaxPQTest1 {
     public static void main(String[] args) {
         int size = 99999999; // حجم البيانات
         MaxPQ<Integer> pq = new MaxPQ<>(size);

@@ -1,0 +1,94 @@
+Question 1:
+What is the main purpose of a Priority Queue?
+1- To sort all elements in ascending order.
+2- To quickly access the element with the highest or lowest priority.
+3- To implement hash-based storage for data.
+4- To ensure that all elements are unique.
+Answer: 2 - To quickly access the element with the highest or lowest priority.
+Explanation: The main goal of a Priority Queue is to efficiently retrieve and manipulate the element with the highest priority.
+
+Question 2:
+Which data structure is most commonly used to implement a Priority Queue?
+1- Array
+2- Binary Heap
+3- Linked List
+4- Hash Table
+Answer: 2 - Binary Heap
+Explanation: A Binary Heap ensures efficient insertion and deletion operations, making it ideal for Priority Queues.
+
+
+Question 3:
+What is the time complexity of inserting an element into a Binary Heap-based Priority Queue?
+1- O(1)
+2- O(log n)
+3- O(n)
+4- O(n log n)
+Answer: 2 -
+Explanation: Insertion may require reordering the heap, which takes O(log n) time in the worst case.
+
+Question 4:
+What does the delMax operation do in a Max Priority Queue?
+1- Removes and returns the smallest element.
+2- Removes and returns the largest element.
+3- Removes all elements in the queue.
+4- Removes and returns a random element.
+Answer: 2 - Removes and returns the largest element.
+Explanation: In a Max Priority Queue, delMax removes the element with the highest priority.
+
+Question 5:
+What is the purpose of the swim operation in a Binary Heap?
+1- To move an element up the heap to restore order.
+2- To remove the largest element from the heap.
+3- To divide the heap into two subtrees.
+4- To merge two heaps into one.
+Answer: 1 - To move an element up the heap to restore order.
+Explanation: swim ensures that the heap property is maintained by moving an element upward.
+
+Question 6:
+What happens if you attempt to remove an element from an empty Priority Queue?
+1- The operation succeeds with a default value.
+2- An exception is thrown.
+3- The operation is ignored.
+4- The Priority Queue is reset.
+Answer: 2 - An exception is thrown.
+Explanation: Removing an element from an empty Priority Queue usually results in an exception to prevent undefined behavior.
+
+Question 7:
+What is the space complexity of a Binary Heap-based Priority Queue?
+1- O(1)
+2- O(n)
+3- O(log n)
+4- O(n²)
+Answer: 2 -
+O(n)
+Explanation: The Binary Heap stores all elements in an array-like structure, requiring space proportional to the number of elements.
+
+Question 8:
+What is the primary difference between a Max Priority Queue and a Min Priority Queue?
+
+1- A Max Priority Queue does not use a Binary Heap.
+2- A Min Priority Queue retrieves the element with the lowest priority, while a Max Priority Queue retrieves the highest.
+3- A Max Priority Queue is faster than a Min Priority Queue.
+4- A Min Priority Queue does not support the delMax operation.
+Answer: 2 - A Min Priority Queue retrieves the element with the lowest priority, while a Max Priority Queue retrieves the highest.
+Explanation: The difference lies in whether the highest or lowest priority element is managed.
+
+Question 9:
+What operation ensures that the Binary Heap remains in proper order after removing the root element?
+1- swim
+2- sink
+3- merge
+4- delete
+Answer: 2 - sink
+Explanation: sink moves the root element down the heap to restore the heap property.
+
+Question 10:
+In a Max Priority Queue, where is the element with the highest priority located?
+
+1- At the root (first position).
+2- At the leftmost leaf.
+3- At the rightmost leaf.
+4- In the middle of the heap.
+Answer: 1 - At the root (first position).
+Explanation: The element with the highest priority is always at the root in a Max Priority Queue.
+
