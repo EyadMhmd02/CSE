@@ -17,7 +17,8 @@ add_executable(CSE
         #        src/y3/s1/cse240/lecs/_3_static_example1.cpp
         #        src/y3/s1/cse240/lecs/_4_static_example2.cpp
         #        src/y3/s1/cse240/lecs/_5_constructor_destrcutor.cpp
-        src/y3/s1/cse240/lecs/_6_delete.cpp
+        #        src/y3/s1/cse240/lecs/_6_delete.cpp
+        src/y3/s1/cse240/gpt/revision1.cpp
         #        src/y3/s1/cse240/lecs/lec09/_2_scope_resoultion_operator.cpp
         #        src/y3/s1/cse240/lecs/lec09/input_example1.cpp
         #        src/y3/s1/cse240/lecs/lec11/inheritance_example1.cpp
