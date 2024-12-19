@@ -22,24 +22,24 @@ public:
     }
 };
 
-class Derived : public Base {
+class Derived1 : public Base {
 public:
-    Derived(int n) : Base(n) {
+    Derived1(int n) : Base(n) {
         cout << "Derived constructor" << endl;
     }
 
-    ~Derived() {
+    ~Derived1() {
         cout << "Derived destructor" << endl;
     }
 };
 
 void code1() {
-    Derived myPQ1(50);
+    Derived1 myPQ1(50);
     myPQ1.function(); // inherited
     myPQ1.function(); // inherited
 
-    Derived *myPQ2;
-    myPQ2 = new Derived(50);
+    Derived1 *myPQ2;
+    myPQ2 = new Derived1(50);
     myPQ2->function(); // inherited
     myPQ2->function(); // inherited
     delete myPQ2;

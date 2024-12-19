@@ -1,0 +1,3 @@
+
+If a problem's time complexity is 𝑂(𝑛!), how does its growth compare to 𝑂(2^𝑛)?
+
