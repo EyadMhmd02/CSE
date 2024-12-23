@@ -14,45 +14,45 @@ class SortingDemo {
         int bound = 20;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
 
-//        // Bucket Sort     =>      O(n + k)
-//        ListHandler.shuffle(list);
-//        System.out.println("Bucket sort\t\t=>\t\tO(n + k)");
-//        System.out.printf("Sorting a list of size %,3d...\n", size);
-//        stopwatch.reset();
-//        BucketSorter.sort(list);
-//        System.out.println(stopwatch);
-//
-//        // Merge Sort       =>      O(n log n)
-//        ListHandler.shuffle(list);
-//        System.out.println("Merge sort\t\t=>\t\tO(n log n)");
-//        System.out.printf("Sorting a list of size %,3d...\n", size);
-//        stopwatch.reset();
-//        MergeSorter.sort(list);
-//        System.out.println(stopwatch);
-//
-//        // Comb Sort       =>      O(n log n)
-//        ListHandler.shuffle(list);
-//        System.out.println("Comb sort\t\t=>\t\tO(n log n)");
-//        System.out.printf("Sorting a list of size %,3d...\n", size);
-//        stopwatch.reset();
-//        CombSorter.sort(list);
-//        System.out.println(stopwatch);
-//
-//        // Heap Sort        =>      O(n log n)
-//        ListHandler.shuffle(list);
-//        System.out.println("Heap sort\t\t=>\t\tO(n log n)");
-//        System.out.printf("Sorting a list of size %,3d...\n", size);
-//        stopwatch.reset();
-//        HeapSorter.sort(list);
-//        System.out.println(stopwatch);
-//
-//        // Shell Sort       =>      O(n¹·⁵)
-//        ListHandler.shuffle(list);
-//        System.out.println("Shell sort\t\t=>\t\tΩ(n log n), Θ(?), O(n¹·⁵)");
-//        System.out.printf("Sorting a list of size %,3d...\n", size);
-//        stopwatch.reset();
-//        ShellSorter.sort(list);
-//        System.out.println(stopwatch);
+        // Bucket Sort     =>      O(n + k)
+        ListHandler.shuffle(list);
+        System.out.println("Bucket sort\t\t=>\t\tO(n + k)");
+        System.out.printf("Sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        BucketSorter.sort(list);
+        System.out.println(stopwatch);
+
+        // Merge Sort       =>      O(n log n)
+        ListHandler.shuffle(list);
+        System.out.println("Merge sort\t\t=>\t\tO(n log n)");
+        System.out.printf("Sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        MergeSorter.sort(list);
+        System.out.println(stopwatch);
+
+        // Comb Sort       =>      O(n log n)
+        ListHandler.shuffle(list);
+        System.out.println("Comb sort\t\t=>\t\tO(n log n)");
+        System.out.printf("Sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        CombSorter.sort(list);
+        System.out.println(stopwatch);
+
+        // Heap Sort        =>      O(n log n)
+        ListHandler.shuffle(list);
+        System.out.println("Heap sort\t\t=>\t\tO(n log n)");
+        System.out.printf("Sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        HeapSorter.sort(list);
+        System.out.println(stopwatch);
+
+        // Shell Sort       =>      O(n¹·⁵)
+        ListHandler.shuffle(list);
+        System.out.println("Shell sort\t\t=>\t\tΩ(n log n), Θ(?), O(n¹·⁵)");
+        System.out.printf("Sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        ShellSorter.sort(list);
+        System.out.println(stopwatch);
 
         // Insertion Sort  =>      O(n²)
         size /= 1000;
