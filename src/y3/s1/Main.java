@@ -1,48 +1,70 @@
 package y3.s1;
 
-import y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch.Stopwatch;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Stopwatch stopwatch = new Stopwatch();
-        long n = 1000000L;
-        long counter = 0;
-
-        System.out.println("n...");
-        stopwatch.reset();
-        for (int i = 0; i < n; i++) {
-            counter++;
+        List<Character> list = new ArrayList<Character>();
+        for (int i = 0; i < 7; i++) {
+            list.add((char) ('a' + i));
         }
-        System.out.println(counter);
-        System.out.println(stopwatch);
 
-        counter = 0;
-        System.out.println("n^2...");
-        stopwatch.reset();
-        for (long i = 0; i < n; i++) {
-            for (long j = 0; j < n; j++) {
-                counter++;
-            }
+        System.out.println(list); // [a, b, c, d, e, f, g]
+
+        System.out.println(myReverse(list));
+    }
+
+    public static void method1() {
+        int x = 3;
+        System.out.println(x); // 3
+        method2();
+        // null
+        // hello
+        // null
+        System.out.println(x); // 3
+        System.out.println("end"); // end
+    }
+
+    public static void method2() {
+        Integer x = null;
+        System.out.println(x); // null
+        method3(); // hello
+        System.out.println(x); // null
+    }
+
+    public static void method3() {
+        String x = "hello";
+        System.out.println(x); // hello
+    }
+
+    public static void printHelloWorld() {
+        System.out.println("Hello, World!");
+    }
+
+    public static int addFour(int x) {
+        return x + 4;
+    }
+
+    public static double hypotenuse(double length, double width) {
+        return Math.sqrt((length * length) + (width * width));
+    }
+
+    public static String firstNChars(String s, int n, boolean reverseIt) {
+        if (reverseIt) {
+            return new StringBuilder(s).reverse().substring(0, n);
+        } else {
+            return s.substring(0, n);
         }
-        System.out.println(counter);
-        System.out.println(stopwatch);
     }
-}
 
-class A {
-    public A() {
-        System.out.println("A");
-    }
-}
+    public static <T> List<T> myReverse(List<T> list) {
+        List<T> newList = new ArrayList<>();
 
-class B extends A {
-    public B() {
-        System.out.println("B");
-    }
-}
+        for (T x : list) {
+            newList.add(0, x);
+        }
 
-class C extends B {
-    public C() {
-        System.out.println("C");
+        return newList;
     }
 }

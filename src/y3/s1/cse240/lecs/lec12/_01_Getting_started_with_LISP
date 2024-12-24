@@ -1,0 +1,16 @@
+CL-USER 1 > #|
+What does the following LISP expression return?
+
+(subseq "Hello, World!" 7 12)
+
+A) "World!"
+B) "World"
+C) "o, Wor"
+D) "Hello"
+
+Correct Answer: B
+|#
+(subseq "Hello, World!" 7 12)
+"World"
+
+CL-USER 2 >

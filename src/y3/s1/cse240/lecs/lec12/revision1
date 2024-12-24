@@ -1,0 +1,49 @@
+
+CL-USER 1 > (+ 31 5)
+36
+
+CL-USER 2 > (* 50 6)
+300
+
+CL-USER 3 > (print "hello world")
+
+"hello world" 
+"hello world"
+
+CL-USER 4 > (sqrt 16)
+4.0
+
+CL-USER 5 > (sqrt 2)
+1.4142135
+
+CL-USER 6 > (subseq "i love you" 2 6)
+"love"
+
+CL-USER 7 > (string-upcase "i love you")
+"I LOVE YOU"
+
+CL-USER 8 > (reverse "i love you")
+"uoy evol i"
+
+CL-USER 9 > (= 4 3)
+NIL
+
+CL-USER 10 > (numberp "hello")
+NIL
+
+CL-USER 11 > (numberp 23)
+T
+
+CL-USER 12 > (+ 33 (* 2.3 4) 9)
+51.2
+
+CL-USER 13 > (length "Hello")
+5
+
+CL-USER 14 > (+ (length "Hello") 44)
+49
+
+CL-USER 15 > (and (< 3 (* 2 5)) (not (>= 2 6)))
+T
+
+CL-USER 16 > 

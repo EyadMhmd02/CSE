@@ -79,8 +79,8 @@ Answer: C
 
 8. Which algorithm works efficiently for nearly sorted data?
 
-A. Selection Sort (n^2) (n^2) (n^2)
-B. Insertion Sort (n)   (n^2) (n^2)
+A. Selection Sort (n²) (n²) (n²)
+B. Insertion Sort (n)  (n²) (n²)
 C. Shell Sort
 D. Heap Sort
 
