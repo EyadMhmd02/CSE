@@ -84,6 +84,6 @@ public class Queue {
      */
     @Override
     public String toString() {
-        return getList().toString();
+        return "[ " + getList().toString() + "]";
     }
 }
