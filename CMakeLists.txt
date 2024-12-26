@@ -22,7 +22,7 @@ add_executable(CSE
         #        src/y3/s1/cse240/lecs/lec09/_2_scope_resoultion_operator.cpp
         #        src/y3/s1/cse240/lecs/lec09/input_example1.cpp
         #        src/y3/s1/cse240/lecs/_7_inheritance_example1.cpp
-        src/y3/s1/cse240/quizzes/quiz4/quiz4.cpp
+        #        src/y3/s1/cse240/quizzes/quiz4/quiz4.cpp
         #        src/y3/s1/cse240/lecs/lec09/lec09_test1.cpp
         #        src/y3/s1/cse240/lecs/lec09/lec09_test2.cpp
         #        src/y3/s1/cse240/lecs/lec10/lec10.cpp
@@ -46,4 +46,5 @@ add_executable(CSE
         #    "src/y3/s1/cse240/refs/1.3.3 Orthogonality.c"
         #    "src/y3/s1/cse240/refs/1_3_1 Data types and type equivalence.c"
         #    "src/y3/s1/cse240/refs/1_3_2 Type checking and type conversion.c"
+        src/y3/s1/cse240/project/test.cpp
 )
