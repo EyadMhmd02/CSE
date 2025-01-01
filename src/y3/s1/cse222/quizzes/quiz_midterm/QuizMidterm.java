@@ -219,7 +219,7 @@ Show a trace of execution for insertion sort.**
     */
 
     public static void main(String[] args) {
-        int[] array = {7, 23, 25, 13, 2, 12, 3};
+        int[] array = {3, 8, 23, 18, 15, 16};
         System.out.println("**Initial Array:** " + Arrays.toString(array));
 
         insertionSortWithTrace(array);

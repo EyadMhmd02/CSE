@@ -13,7 +13,7 @@ add_executable(CSE
         #        src/y3/s1/cse240/lecs/lec03/lec03.c
         #                src/y3/s1/cse240/lecs/lec08/lec08.c
         #        src/y3/s1/cse240/lecs/lec09/lec09.cpp
-        #        src/y3/s1/cse240/main.cpp
+        src/y3/s1/cse240/main.cpp
         #        src/y3/s1/cse240/lecs/_3_static_example1.cpp
         #        src/y3/s1/cse240/lecs/_4_static_example2.cpp
         #        src/y3/s1/cse240/lecs/_5_constructor_destrcutor.cpp
@@ -46,5 +46,6 @@ add_executable(CSE
         #    "src/y3/s1/cse240/refs/1.3.3 Orthogonality.c"
         #    "src/y3/s1/cse240/refs/1_3_1 Data types and type equivalence.c"
         #    "src/y3/s1/cse240/refs/1_3_2 Type checking and type conversion.c"
-        src/y3/s1/cse240/project/test.cpp
+        #        src/y3/s1/cse240/project/test.cpp
+        #        src/y3/s1/cse240/quizzes/quiz3/quiz3.c
 )

@@ -1,0 +1,88 @@
+MCQs on Hash Tables
+
+What is the primary purpose of a hash function?
+A. To sort data
+B. To quickly locate a key
+C. To reduce memory usage
+D. To optimize code
+
+Answer: B
+
+Which of the following is a key property of a hash function?
+A. Efficiency in computation
+B. Uniform key distribution
+C. Deterministic output
+D. All of the above
+
+Answer: D
+
+How does Separate Chaining resolve collisions?
+A. Increases the table size
+B. Uses a linked list at each index
+C. Skips the collided index
+D. Deletes colliding elements
+Answer: B
+
+In Linear Probing, what happens when a collision occurs?
+A. A random index is chosen
+B. The next empty slot is used
+C. The colliding element is replaced
+D. A linked list is created
+Answer: B
+
+Which of the following hash functions would provide the best distribution?
+A. hash(x) = x % 10
+B. hash(x) = (x.hashCode() & 0x7fffffff) % M
+C. hash(x) = x % 2
+D. hash(x) = x / M
+Answer: B
+
+If a hash table uses Separate Chaining with 10 keys and a table size of 5, how many keys would be in each list on average?
+A. 1
+B. 2
+C. 5
+D. 10
+Answer: B
+
+Why is it recommended to use a prime number for the table size?
+A. To improve speed
+B. To reduce collisions
+C. To ensure uniform key distribution
+D. All of the above
+Answer: D
+
+Which Java method is used to compute the hash of an object?
+A. getHash()
+B. hashCode()
+C. computeHash()
+D. generateHash()
+Answer: B
+
+What does the load factor (α) represent in a hash table?
+A. The ratio of elements (N) to the table size (M)
+B. The number of collisions
+C. The total number of operations
+D. The size of each linked list
+Answer: A
+
+What is the ideal load factor (α) for Linear Probing to minimize collisions?
+A. 1
+B. 0.75
+C. 0.5
+D. 0.25
+Answer: C
+
+Additional Notes:
+
+Resize Strategy:
+When the load factor (α) exceeds a certain threshold (e.g., 0.5 for Linear Probing), the table size should be doubled to reduce collisions.
+
+Performance:
+Hash tables are very efficient:
+Average case for get and put:
+𝑂(1)
+Worst case (with many collisions):
+𝑂(𝑛)
+
+Applications:
+Frequently used in databases, caching, and other systems where fast lookup is critical.
