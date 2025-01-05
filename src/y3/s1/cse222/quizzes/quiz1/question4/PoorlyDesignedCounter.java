@@ -1,4 +1,4 @@
-package y3.s1.cse222.quizzes.mod01cairn.question4;
+package y3.s1.cse222.quizzes.quiz1.question4;
 
 /**
  * Sedgewick and Wayne discuss 7 basic ways an API may be poorly designed (p97; online). For example, an API may be:

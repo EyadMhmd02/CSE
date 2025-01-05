@@ -1,4 +1,4 @@
-package y3.s1.cse222.quizzes.mod01cairn.question2;
+package y3.s1.cse222.quizzes.quiz1.question2;
 
 public class Main {
     public static void main(String[] args) {

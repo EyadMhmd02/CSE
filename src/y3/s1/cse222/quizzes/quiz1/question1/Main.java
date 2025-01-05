@@ -1,4 +1,4 @@
-package y3.s1.cse222.quizzes.mod01cairn.question1;
+package y3.s1.cse222.quizzes.quiz1.question1;
 
 import org.jetbrains.annotations.NotNull;
 

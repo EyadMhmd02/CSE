@@ -1,4 +1,4 @@
-package y3.s1.cse222.quizzes.mod01cairn.question1;
+package y3.s1.cse222.quizzes.quiz1.question1;
 
 class Point2D {
     private final double x;

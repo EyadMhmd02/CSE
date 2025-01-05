@@ -111,7 +111,7 @@ A = [7, 23, 25, 13, 2, 12, 3, 16, 43] then after two swaps A =...**
    c. n-1
    d. n
 
-   **Answer:** c. 0
+   **Answer:** c. n-1
 
 ---
 
