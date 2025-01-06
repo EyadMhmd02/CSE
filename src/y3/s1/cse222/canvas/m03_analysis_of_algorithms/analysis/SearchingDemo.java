@@ -62,10 +62,11 @@ Elapsed time:	000:00:00:00:002
 Exponential Search		=>		O(log n)
 Searching a list of size 309,999,999...
 Found at index: 309,999,998
-Elapsed time:	000:00:00:00:003
+Elapsed time:	000:00:00:00:008
 
 Linear Search			=>		O(n)
 Searching a list of size 309,999,999...
 Found at index: 309,999,998
-Elapsed time:	000:00:00:08:338
+Elapsed time:	000:00:00:15:346
+
 */
