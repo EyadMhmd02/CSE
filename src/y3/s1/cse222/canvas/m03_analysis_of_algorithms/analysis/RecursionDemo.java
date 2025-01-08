@@ -29,14 +29,14 @@ public class RecursionDemo {
         System.out.println(stopwatch);
 
         Integer n1 = 0;
-        System.out.println("Quadratic\t\t=>\t\tO(n^2)");
+        System.out.println("Quadratic\t\t=>\t\tO(n²)");
         stopwatch.reset();
         recursiveFun4(n, n1);
         System.out.printf("Call times:\t\t%,3d\n\n", count4);
 
         System.out.println(stopwatch);
 
-        System.out.println("Exponential\t\t=>\t\tO(2^n)");
+        System.out.println("Exponential\t\t=>\t\tO(2ⁿ)");
 
         System.out.printf("Note that the number %,3d is extremely large to be used in a code of this time complexity\nNumber will be reduced to", n);
         n = 55;
@@ -123,12 +123,12 @@ Call times:		9,001
 
 Elapsed time:	000:00:00:00:000
 
-Quadratic		=>		O(n^2)
+Quadratic		=>		O(n²)
 Call times:		1,801
 
 Elapsed time:	000:00:00:00:044
 
-Exponential		=>		O(2^n)
+Exponential		=>		O(2ⁿ)
 Note that the number 9,000 is extremely large to be used in a code of this time complexity
 Number will be reduced to 55
 Call times:		731,301,353
