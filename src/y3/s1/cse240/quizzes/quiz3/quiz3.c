@@ -5,11 +5,13 @@
 #include <stdio.h>
 
 
-int foo(int *n) {
+int foo(int* n)
+{
     *n = 30;
 }
 
-void q1() {
+void q1()
+{
     int i = 15;
     foo(&i);
     printf("i=%d\n", i); // 30
@@ -49,7 +51,8 @@ Which code in C is equivalent to this code in Java
     float y = 10.3;
     printf("hello %d bye %f", x, y);
  */
-void q2() {
+void q2()
+{
     int x = 5;
     float y = 10.3;
     printf("hello %d bye %f", x, y);
@@ -60,7 +63,8 @@ void q2() {
 /*
 What does the below program print on the screen?
  */
-void q3() {
+void q3()
+{
     int i = 3, *j, k;
     j = &i;
     printf("%d\n", i * *j * i - *j);
@@ -71,7 +75,8 @@ void q3() {
 /*
 The following code is correct and print "Hello"
  */
-void q4() {
+void q4()
+{
     if (2 + 2 + 2 + 2)
         if (1)
             printf("Hello");
@@ -90,7 +95,8 @@ Which of the following are NOT primitive data types in C?
 7- float
 8- string ✘
  */
-void q5() {
+void q5()
+{
 }
 
 /*
@@ -99,7 +105,8 @@ What is the output of the following program?
 
 typedef enum week { Mon, Tue, Wed, Thur, Fri, Sat, Sun } WEEK;
 
-void q6() {
+void q6()
+{
     WEEK day;
     day = Wed;
     printf("%d", day);
@@ -127,9 +134,10 @@ printf("%p", point);
 int x = -15;
 printf("%p", &x);
  */
-void q7() {
+void q7()
+{
     int x = -15;
-    int *point = &x;
+    int* point = &x;
     printf("%d", *point);
 }
 
@@ -138,14 +146,16 @@ What is the output of the below code?
 */
 
 // n = 3
-int fun(int n) {
+int fun(int n)
+{
     if (n == 4)
         return n;
     else
         return 2 * fun(n + 1);
 }
 
-void q8() {
+void q8()
+{
     printf("%d", fun(3)); // 2 * 4 = 8
 }
 
@@ -153,7 +163,8 @@ void q8() {
 Given the following struct:
 */
 
-struct contact {
+struct contact
+{
     char name[32];
     int phone;
     char email[32];
@@ -186,7 +197,8 @@ scanf("%d", &x.phone);
 scanf("%s", x.email);
 */
 
-void q9() {
+void q9()
+{
     struct contact x;
     scanf("%s", &x.name);
     scanf("%d", &x.phone);
@@ -196,7 +208,8 @@ void q9() {
 /*
 What is the output of the below code?
 */
-void q10() {
+void q10()
+{
     int a[5] = {3, 1, 5, 20, 25};
     int i, j, m;
     i = *(a + 1) - 1;
@@ -229,18 +242,21 @@ void q10() {
 
 int i = 10;
 
-int bar(int m, int *n) {
+int bar(int m, int* n)
+{
     printf("i=%d k=%d l=%d\n", i, m, *n);
 }
 
-int foo2(int k, int *l) {
+int foo2(int k, int* l)
+{
     printf("i=%d k=%d l=%d\n", i, k, *l);
     k = 3;
     *l = 4;
     bar(k, l);
 }
 
-void q11() {
+void q11()
+{
     int j = 15;
     foo2(j, &i);
     printf("i=%d j=%d\n", i, j);
@@ -269,15 +285,7 @@ i = 4 j = 15
 Answer:
  */
 
-int main() {
-    int i = 0;
-    char a[] = "H2o2";
-    while (a[i] != '\0') {
-        *(a + 1) = *(a + i) + 2;
-        i++;
-    }
-    char *q = a;
-    q[2] = '#';
-    printf("%s", a);
-    return 0;
+int main()
+{
+    q11();
 }

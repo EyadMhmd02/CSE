@@ -75,7 +75,7 @@ public class Trends {
 //
 //        // Cubic            =>      O(n³)
 //        size = 9999;
-//        System.out.printf("size = %,3d\n\n", size);
+//        System.out.printf("size = %,3d\n", size);
 //        list = ListHandler.createList();
 //        ListHandler.populateListWithRandomNumbers(list, size, bound);
 //        System.out.println("Cubic\t\t\t=>\t\tO(n³)");
@@ -83,7 +83,7 @@ public class Trends {
 //        stopwatch.reset();
 //        checkAllTriplets(list);
 //        System.out.println(stopwatch);
-
+/* 
         // Exponential      =>      O(2ⁿ)
         int n = 55;
         System.out.println("Exponential\t\t=>\t\tO(2ⁿ)");
@@ -98,17 +98,35 @@ public class Trends {
         System.out.println("Running a function for " + n + "! times...");
         stopwatch.reset();
         factorialRuntimeFunction(n);
-        System.out.println(stopwatch);
+        System.out.println(stopwatch); */
 
         // Bigger           =>      O(n n!)
         list = ListHandler.createList();
-        size = 16;
+        size = 14;
         ListHandler.populateListWithRandomNumbers(list, size, bound);
         System.out.println("Bigger\t\t\t=>\t\tO(n n!)");
-        System.out.printf("Bogo sorting a list of size %,3d...", size);
+        System.out.println("Actually it's unpredictable...");
+        System.out.printf("Bogo sorting a list of size %,3d...\n", size);
         stopwatch.reset();
         bogoSort(list);
-        System.out.println("Actually it's unpredictable...");
+        System.out.println(stopwatch);
+
+        size += 2;
+        System.out.println("size += 2");
+        list = ListHandler.createList();
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
+        System.out.printf("Bogo sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        bogoSort(list);
+        System.out.println(stopwatch);
+
+        size ++;
+        System.out.println("size++");
+        list = ListHandler.createList();
+        ListHandler.populateListWithRandomNumbers(list, size, bound);
+        System.out.printf("Bogo sorting a list of size %,3d...\n", size);
+        stopwatch.reset();
+        bogoSort(list);
         System.out.println(stopwatch);
     }
 
@@ -337,7 +355,6 @@ Checking all pairs in a list of size 532,199...
 Elapsed time:	000:00:56:58:049
 
 size = 9,999
-
 Creating list...
 
 Populating list of size 9,999...
@@ -361,11 +378,27 @@ Creating list...
 Populating list with size of 14...
 
 Bigger			=>		O(n n!)
-Bogo sorting a list of size 14...
 Actually it's unpredictable...
+Bogo sorting a list of size 14...
 Elapsed time:	000:00:00:34:166
 Elapsed time:	000:00:09:45:653
 Elapsed time:	000:00:18:39:753
 Elapsed time:	000:00:44:03:972
+
+size += 2
+Creating list...
+
+Populating list with size of 16...
+
+Bogo sorting a list of size 16...
+Elapsed time:   000:08:27:49:323
+Elapsed time:   000.11:03:37:135
+
+size++
+Creating list...
+
+Populating list with size of 17...
+
+Bogo sorting a list of size 17...
 
 */

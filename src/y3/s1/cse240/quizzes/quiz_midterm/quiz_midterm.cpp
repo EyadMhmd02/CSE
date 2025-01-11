@@ -25,9 +25,10 @@ hello
 
  */
 
-int code2() {
+int code2()
+{
     int x = 5;
-    int *y;
+    int* y;
     y = &x;
     printf("value of x: %d \n", x);
     // value of x: 5
@@ -41,9 +42,11 @@ int code2() {
     return 0;
 }
 
-int code3(int x) {
+int code3(int x)
+{
     // x = 0
-    if (x > 0) {
+    if (x > 0)
+    {
         printf("%d", x);
         // 43211234
         code3(x - 1);
@@ -57,7 +60,8 @@ int code3(int x) {
 #include <iostream>
 using namespace std;
 
-class Queue {
+class Queue
+{
 public:
     Queue();
 
@@ -66,19 +70,23 @@ public:
     ~Queue();
 };
 
-Queue::Queue() {
+Queue::Queue()
+{
     cout << "constructor (void)" << endl;
 }
 
-Queue::Queue(int n) {
+Queue::Queue(int n)
+{
     cout << "constructor (int)" << endl;
 }
 
-Queue::~Queue() {
+Queue::~Queue()
+{
     cout << "destructor" << endl;
 }
 
-int code4() {
+int code4()
+{
     Queue myQueue1(500);
     // constructor (int)
     Queue myQueue2;
@@ -90,7 +98,8 @@ int code4() {
 
 /* Write a C++ class (named Student that makes the following code works (i.e., compiles correctly). Add variables and methods as needed.*/
 
-class Student {
+class Student
+{
 public:
     int id;
     string name;
@@ -101,13 +110,15 @@ public:
     void display();
 };
 
-Student::Student(int i, string n, int g) {
+Student::Student(int i, string n, int g)
+{
     id = i;
     name = n;
     grade = g;
 }
 
-void Student::display() {
+void Student::display()
+{
     /*
     id = 2
     name = John
@@ -119,17 +130,19 @@ void Student::display() {
     cout << "grade = " << grade << endl;
 }
 
-int code5() {
+int code5()
+{
     //id  name  grade
     Student s(2, "John", 100); // Creating an object passing values for id, name, grade
     s.display(); // Displaying Student attributes (id, name, and grade)
     return 0;
 }
 
-int main() {
+int main()
+{
     // code1();
     // code2();
-    // code3(4);
+    // code3(2);
     // code4();
     code5();
 }
