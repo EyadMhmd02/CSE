@@ -4,13 +4,13 @@ import y1.s2.Modules.Module7.cse205_src_mod_07.EmptyTreeException;
 import y1.s2.Modules.Module7.cse205_src_mod_07.Queue;
 import y1.s2.Modules.Module7.cse205_src_mod_07.Stack;
 
-public class BinaryTree {
+public class BinaryTree<Key, Value> {
     public static final int INORDER = 0;
     public static final int LEVEL_ORDER = 1;
     public static final int POSTORDER = 2;
     public static final int PREORDER = 3;
 
-    public Node root;
+    public Node<Key,Value> root;
 
     public BinaryTree() {
         this(0);
@@ -125,10 +125,10 @@ public class BinaryTree {
         }
     }
 
-    public static class Node {
+    public static class Node<Key, Value> {
         public int data;
-        public Node left;
-        public Node right;
+        public Node<Key, Value> left;
+        public Node<Key, Value> right;
 
         public Node() {
             this(0);
@@ -138,7 +138,7 @@ public class BinaryTree {
             this(data, null, null);
         }
 
-        public Node(int data, Node left, Node right) {
+        public Node(int data, Node<Key, Value> left, Node<Key, Value> right) {
             this.data = data;
             this.left = left;
             this.right = right;

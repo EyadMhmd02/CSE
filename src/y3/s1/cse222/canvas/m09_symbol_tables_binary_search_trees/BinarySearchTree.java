@@ -3,35 +3,35 @@ package y3.s1.cse222.canvas.m09_symbol_tables_binary_search_trees;
 import java.util.*;
 
 /**
+ * Node class represents a single node in the binary search tree.
+ */
+class Node<Key, Value> {
+    Key key;
+    Value value;
+    Node<Key, Value> left;
+    Node<Key, Value> right;
+    int size;
+
+    public Node(Key key, Value value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public Node(Key key, Value value, int size) {
+        this.key = key;
+        this.value = value;
+        this.size = size;
+    }
+}
+
+/**
  * BinarySearchTree class represents a binary search tree.
  *
  * @param <Key> The type of keys in the tree.
  * @param <Value> The type of values in the tree.
  */
 class BinarySearchTree<Key extends Comparable<Key>, Value> {
-    private Node<Key, Value> root;
-
-    /**
-     * Node class represents a single node in the binary search tree.
-     */
-    private static class Node<Key, Value> {
-        private Key key;
-        private Value value;
-        private Node<Key, Value> left;
-        private Node<Key, Value> right;
-        private int size;
-
-        public Node(Key key, Value value) {
-            this.key = key;
-            this.value = value;
-        }
-
-        public Node(Key key, Value value, int size) {
-            this.key = key;
-            this.value = value;
-            this.size = size;
-        }
-    }
+    Node<Key, Value> root;
 
     /**
      * Inserts a key-value pair into the tree.
@@ -93,6 +93,9 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param key The key to delete.
      */
     public void delete(Key key) {
+        if (root == null) {
+            throw new NoSuchElementException("The tree is empty.");
+        }
         root = delete(root, key);
     }
 
@@ -160,6 +163,31 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
 
     /**
+     * Checks if the binary search tree contains a specific key.
+     *
+     * @param key The key to search for.
+     * @return {@code true} if the tree contains the key; {@code false} otherwise.
+     */
+    public boolean contains(Key key) {
+        return contains(root, key);
+    }
+
+    private boolean contains(Node<Key, Value> node, Key key) {
+        if (node == null) {
+            return false;
+        }
+
+        int cmp = key.compareTo(node.key);
+        if (cmp < 0) {
+            return contains(node.left, key);
+        } else if (cmp > 0) {
+            return contains(node.right, key);
+        } else {
+            return true;
+        }
+    }
+
+    /**
      * Gets the number of key-value pairs in the tree.
      *
      * @return The number of key-value pairs in the tree.
@@ -173,125 +201,69 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
         return x.size;
     }
 
-    public static <Key, Value extends Comparable<?>> void printNode(Node<Key, Value> root) {
-        int maxLevel = maxLevel(root);
-
-        printNodeInternal(Collections.singletonList(root), 1, maxLevel);
-    }
-
-    private static <Key, Value extends Comparable<?>> void printNodeInternal(List<Node<Key, Value>> nodes, int level, int maxLevel) {
-        if (nodes.isEmpty() || isAllElementsNull(nodes))
-            return;
-
-        int floor = maxLevel - level;
-        int endgeLines = (int) Math.pow(2, (Math.max(floor - 1, 0)));
-        int firstSpaces = (int) Math.pow(2, (floor)) - 1;
-        int betweenSpaces = (int) Math.pow(2, (floor + 1)) - 1;
-
-        printWhitespaces(firstSpaces);
-
-        List<Node<Key, Value>> newNodes = new ArrayList<>();
-        for (Node<Key, Value> node : nodes) {
-            if (node != null) {
-                System.out.print(node.value);
-                newNodes.add(node.left);
-                newNodes.add(node.right);
-            } else {
-                newNodes.add(null);
-                newNodes.add(null);
-                System.out.print(" ");
-            }
-
-            printWhitespaces(betweenSpaces);
-        }
-        System.out.println("");
-
-        for (int i = 1; i <= endgeLines; i++) {
-            for (int j = 0; j < nodes.size(); j++) {
-                printWhitespaces(firstSpaces - i);
-                if (nodes.get(j) == null) {
-                    printWhitespaces(endgeLines + endgeLines + i + 1);
-                    continue;
-                }
-
-                if (nodes.get(j).left != null)
-                    System.out.print("/");
-                else
-                    printWhitespaces(1);
-
-                printWhitespaces(i + i - 1);
-
-                if (nodes.get(j).right != null)
-                    System.out.print("\\");
-                else
-                    printWhitespaces(1);
-
-                printWhitespaces(endgeLines + endgeLines - i);
-            }
-
-            System.out.println("");
+    /**
+     * Finds the largest key in the binary search tree that is less than or equal to the given key.
+     *
+     * @param x The key to find the floor for.
+     * @return The largest key in the tree that is less than or equal to {@code x}, or {@code null} if no such key exists.
+     */
+    Key floor(Key x) {
+        // Base case: return null if no floor found
+        if (root == null) {
+            return null;
         }
 
-        printNodeInternal(newNodes, level + 1, maxLevel);
-    }
-
-    private static void printWhitespaces(int count) {
-        for (int i = 0; i < count; i++)
-            System.out.print(" ");
-    }
-
-    private static <Key, Value extends Comparable<?>> int maxLevel(Node<Key, Value> node) {
-        if (node == null)
-            return 0;
-
-        return Math.max(maxLevel(node.left), maxLevel(node.right)) + 1;
-    }
-
-    private static <T> boolean isAllElementsNull(List<T> list) {
-        for (Object object : list) {
-            if (object != null)
-                return false;
+        // If the root's key is equal to x,
+        // we've found the floor
+        if (root.key.compareTo(x) == 0) {
+            return root.key;
         }
 
-        return true;
+        // If root's key is greater than x,
+        // search in the left subtree
+        if (root.key.compareTo(x) > 0) {
+            return floor(x);
+        }
+
+        // Else, search in the right subtree
+        // and compare with current root
+        Key floorValue = floor(x);
+
+        // If the right subtree returns a valid floor,
+        // return that, otherwise return the current root's key
+        return (floorValue != null && floorValue.compareTo(x) <= 0)
+                ? floorValue : root.key;
     }
 
     /**
-     * Main method to test the BinarySearchTree class.
+     * Finds the smallest key in the binary search tree that is greater than or equal to the given key.
      *
-     * @param args Command-line arguments (not used in this example).
+     * @param key The key to find the ceiling for.
+     * @return The smallest key in the tree that is greater than or equal to {@code key}, or {@code null} if no such key exists.
      */
-    public static void main(String[] args) {
-        BinarySearchTree<String, Integer> bst = new BinarySearchTree<>();
+    Key ceiling(Key key) {
+        // Base case
+        if (root == null) {
+            return null;
+        }
 
-        Node<String, Integer> n1 = new Node<>("Root", 67);
-        Node<String, Integer> n2 = new Node<>("Left Child", 54);
-        Node<String, Integer> n3 = new Node<>("Right Child", 87);
-        Node<String, Integer> n4 = new Node<>("Left Grandchild of 54", 12);
-        Node<String, Integer> n5 = new Node<>("Right Grandchild of 54", 62);
-        Node<String, Integer> n6 = new Node<>("Left Grandchild of 87", 79);
-        Node<String, Integer> n7 = new Node<>("Right Grandchild of 87", 100);
-        Node<String, Integer> n8 = new Node<>("Left Child of 12", 45);
-        Node<String, Integer> n9 = new Node<>("Right Child of 79", 93);
+        // We found equal key
+        if (root.key.compareTo(key) == 0) {
+            return root.key;
+        }
 
-        bst.root = n1;
+        // If root's key is smaller,
+        // ceil must be in the right subtree
+        if (root.key.compareTo(key) < 0) {
+            return ceiling(key);
+        }
 
-        n1.left = n2;
-        n1.right = n3;
-
-        n2.left = n4;
-        n2.right = n5;
-        n3.left = n6;
-        n3.right = n7;
-
-        n4.left = n8;
-        n4.right = n9;
-
-        // Print the BST visually
-        System.out.println("Visual representation of the BST:");
-        printNode(bst.root);
-        bst.deleteMax();
+        // Else, either left subtree or root
+        // has the ceil value
+        Key ceil = ceiling(key);
+        return (ceil != null && ceil.compareTo(key) >= 0) ? ceil : root.key;
     }
+
 
     /**
      * Performs an in-order traversal of the tree and prints the keys and values.

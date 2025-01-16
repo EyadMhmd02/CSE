@@ -1,6 +1,6 @@
 package y3.s1.cse222.canvas.m09_symbol_tables_binary_search_trees;
 
-public class TestBST {
+public class BinarySearchTreeTest2 {
     public static void main(String[] args) {
         BinarySearchTree<Integer, String> bst = new BinarySearchTree<>();
 
@@ -22,6 +22,9 @@ public class TestBST {
 
         // Test size method
         System.out.println("Size of BST: " + bst.size()); // 3
+
+        BinarySearchTreePrinter printer = new BinarySearchTreePrinter();
+        printer.print(bst.root, false);
     }
 }
 
