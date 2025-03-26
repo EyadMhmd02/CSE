@@ -2,3 +2,5 @@
 /cmake-build-debug/
 
 .codegpt
+*.mp4
+*.part
