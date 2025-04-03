@@ -1,3 +1,4 @@
+/*
 public class PhotoObservation extends Observation {
 
 	private int imageURL;
@@ -27,3 +28,4 @@ public class PhotoObservation extends Observation {
 	}
 
 }
+*/

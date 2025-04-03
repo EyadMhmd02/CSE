@@ -1,3 +1,4 @@
+/*
 package src;
 
 public class Professor extends Person {
@@ -27,3 +28,4 @@ public class Professor extends Person {
 	}
 
 }
+*/

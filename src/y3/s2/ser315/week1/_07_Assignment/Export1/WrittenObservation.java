@@ -1,3 +1,4 @@
+/*
 public class WrittenObservation extends Observation {
 
 	private String summary;
@@ -25,3 +26,4 @@ public class WrittenObservation extends Observation {
 	}
 
 }
+*/
