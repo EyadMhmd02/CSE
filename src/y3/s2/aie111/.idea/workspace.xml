@@ -4,18 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0a02cb1-0983-46cf-a324-398a40b843e8" name="Changes" comment="aie111" />
+    <list default="true" id="c0a02cb1-0983-46cf-a324-398a40b843e8" name="Changes" comment="aie111">
+      <change afterPath="$PROJECT_DIR$/04_Simple reflex vacuum cleaner/MyClass.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/04_Simple reflex vacuum cleaner/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/06_Lecture 3/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/export1/src/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/export1/src/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/export1/src/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/week1/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/week1/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/week1/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/week1/Test1.asta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/week1/Test2.asta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ser315/week1/Test2.asta.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/aie111.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/aie111.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/04_Simple reflex vacuum cleaner.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/04_Simple reflex vacuum cleaner/04_Simple reflex vacuum cleaner.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/05_TestMain.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/05_TestMain.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/06_Lecture 3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2uowSiVUhxutFNUZBchWiC2kMqa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,7 +50,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.MyClass.executor": "Run",
+    "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -31,10 +61,15 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CSE\src\y3\s2\aie111\04_Simple reflex vacuum cleaner" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -52,6 +87,7 @@
       <option name="presentableId" value="Default" />
       <updated>1689265371187</updated>
       <workItem from="1742928238211" duration="3609000" />
+      <workItem from="1743148854070" duration="4901000" />
     </task>
     <task id="LOCAL-00001" summary="aie111">
       <option name="closed" value="true" />
@@ -70,5 +106,20 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="aie111" />
     <option name="LAST_COMMIT_MESSAGE" value="aie111" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/06_Lecture 3/main.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/aie111$MyClass.coverage" NAME="MyClass Coverage Results" MODIFIED="1743150008316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/04_Simple reflex vacuum cleaner" />
+    <SUITE FILE_PATH="coverage/aie111$main.coverage" NAME="main Coverage Results" MODIFIED="1743154633926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/06_Lecture 3" />
   </component>
 </project>
