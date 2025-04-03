@@ -1,3 +1,4 @@
+/*
 package src;
 
 public class PhotoObservation extends Observation {
@@ -34,3 +35,4 @@ public class PhotoObservation extends Observation {
 	}
 
 }
+*/

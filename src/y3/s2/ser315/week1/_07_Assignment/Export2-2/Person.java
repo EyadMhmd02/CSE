@@ -1,3 +1,4 @@
+/*
 package src;
 
 public class Person {
@@ -19,3 +20,4 @@ public class Person {
 	}
 
 }
+*/

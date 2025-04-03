@@ -1,3 +1,4 @@
+/*
 public abstract class Observation {
 
 	private String id;
@@ -23,3 +24,4 @@ public abstract class Observation {
 	}
 
 }
+*/

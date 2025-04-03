@@ -1,3 +1,4 @@
+/*
 public class FieldTrip {
 
 	public FieldTrip(Course course) {
@@ -29,3 +30,4 @@ public class FieldTrip {
 	}
 
 }
+*/

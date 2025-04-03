@@ -1,3 +1,4 @@
+/*
 package src;
 
 public class Student extends Person {
@@ -31,3 +32,4 @@ public class Student extends Person {
 	}
 
 }
+*/
