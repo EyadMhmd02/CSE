@@ -1,0 +1,187 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="600" y="30" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Tutoring System - System Class Model</text>
+  
+  <!-- Control Classes -->
+  <!-- AppointmentControl -->
+  <rect x="450" y="70" width="300" height="120" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" />
+  <line x1="450" y1="100" x2="750" y2="100" stroke="#1976d2" stroke-width="2" />
+  <line x1="450" y1="130" x2="750" y2="130" stroke="#1976d2" stroke-width="2" />
+  <text x="600" y="90" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">AppointmentControl</text>
+  <text x="460" y="120" font-family="Arial" font-size="14">+ appointments: List&lt;Appointment&gt;</text>
+  <text x="460" y="150" font-family="Arial" font-size="14">+ cancelAppointment(appointmentId: int, email: String, isSick: boolean): String</text>
+  <text x="460" y="170" font-family="Arial" font-size="14">+ createAppointment(email: String, time: DateTime, online: boolean): String</text>
+  
+  <!-- UserControl -->
+  <rect x="150" y="70" width="250" height="120" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" />
+  <line x1="150" y1="100" x2="400" y2="100" stroke="#1976d2" stroke-width="2" />
+  <line x1="150" y1="130" x2="400" y2="130" stroke="#1976d2" stroke-width="2" />
+  <text x="275" y="90" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">UserControl</text>
+  <text x="160" y="120" font-family="Arial" font-size="14">+ students: List&lt;Student&gt;</text>
+  <text x="160" y="150" font-family="Arial" font-size="14">+ tutors: List&lt;Tutor&gt;</text>
+  <text x="160" y="170" font-family="Arial" font-size="14">+ login(email: String, password: String): boolean</text>
+  
+  <!-- SubjectControl -->
+  <rect x="800" y="70" width="250" height="120" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" />
+  <line x1="800" y1="100" x2="1050" y2="100" stroke="#1976d2" stroke-width="2" />
+  <line x1="800" y1="130" x2="1050" y2="130" stroke="#1976d2" stroke-width="2" />
+  <text x="925" y="90" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">SubjectControl</text>
+  <text x="810" y="120" font-family="Arial" font-size="14">+ subjects: List&lt;Subject&gt;</text>
+  <text x="810" y="150" font-family="Arial" font-size="14">+ addSubject(manager: Manager, name: String): void</text>
+  <text x="810" y="170" font-family="Arial" font-size="14">+ deleteSubject(manager: Manager, name: String): void</text>
+  
+  <!-- Entity Classes -->
+  <!-- User (abstract) -->
+  <rect x="500" y="250" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="500" y1="280" x2="700" y2="280" stroke="#afb42b" stroke-width="2" />
+  <line x1="500" y1="310" x2="700" y2="310" stroke="#afb42b" stroke-width="2" />
+  <text x="600" y="270" font-family="Arial" font-size="16" font-weight="bold" font-style="italic" text-anchor="middle">User</text>
+  <text x="510" y="300" font-family="Arial" font-size="14">+ userName: String</text>
+  <text x="510" y="320" font-family="Arial" font-size="14">+ password: String</text>
+  <text x="510" y="340" font-family="Arial" font-size="14">+ email: String</text>
+  
+  <!-- Student -->
+  <rect x="250" y="400" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="250" y1="430" x2="450" y2="430" stroke="#afb42b" stroke-width="2" />
+  <line x1="250" y1="460" x2="450" y2="460" stroke="#afb42b" stroke-width="2" />
+  <text x="350" y="420" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Student</text>
+  <text x="260" y="450" font-family="Arial" font-size="14">+ credits: int</text>
+  <text x="260" y="480" font-family="Arial" font-size="14">+ appointments: List&lt;Appointment&gt;</text>
+  <text x="260" y="500" font-family="Arial" font-size="14">+ paymentCard: PaymentCard</text>
+  
+  <!-- Tutor -->
+  <rect x="500" y="400" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="500" y1="430" x2="700" y2="430" stroke="#afb42b" stroke-width="2" />
+  <line x1="500" y1="460" x2="700" y2="460" stroke="#afb42b" stroke-width="2" />
+  <text x="600" y="420" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Tutor</text>
+  <text x="510" y="450" font-family="Arial" font-size="14">+ zoomId: String</text>
+  <text x="510" y="480" font-family="Arial" font-size="14">+ subjects: List&lt;Subject&gt;</text>
+  <text x="510" y="500" font-family="Arial" font-size="14">+ appointments: List&lt;Appointment&gt;</text>
+  
+  <!-- Manager -->
+  <rect x="750" y="400" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="750" y1="430" x2="950" y2="430" stroke="#afb42b" stroke-width="2" />
+  <line x1="750" y1="460" x2="950" y2="460" stroke="#afb42b" stroke-width="2" />
+  <text x="850" y="420" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Manager</text>
+  <text x="760" y="450" font-family="Arial" font-size="14">+ subjects: List&lt;Subject&gt;</text>
+  <text x="760" y="480" font-family="Arial" font-size="14">+ tutors: List&lt;Tutor&gt;</text>
+  
+  <!-- Appointment (abstract) -->
+  <rect x="500" y="550" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="500" y1="580" x2="700" y2="580" stroke="#afb42b" stroke-width="2" />
+  <line x1="500" y1="610" x2="700" y2="610" stroke="#afb42b" stroke-width="2" />
+  <text x="600" y="570" font-family="Arial" font-size="16" font-weight="bold" font-style="italic" text-anchor="middle">Appointment</text>
+  <text x="510" y="600" font-family="Arial" font-size="14">+ appointmentId: int</text>
+  <text x="510" y="630" font-family="Arial" font-size="14">+ startTime: LocalDateTime</text>
+  <text x="510" y="650" font-family="Arial" font-size="14">+ student: Student</text>
+  <text x="510" y="670" font-family="Arial" font-size="14">+ tutor: Tutor</text>
+  
+  <!-- OnlineAppointment -->
+  <rect x="350" y="700" width="200" height="80" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="350" y1="730" x2="550" y2="730" stroke="#afb42b" stroke-width="2" />
+  <line x1="350" y1="760" x2="550" y2="760" stroke="#afb42b" stroke-width="2" />
+  <text x="450" y="720" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">OnlineAppointment</text>
+  <text x="360" y="750" font-family="Arial" font-size="14">+ OnlineAppointment(startTime: LocalDateTime)</text>
+  
+  <!-- CampusAppointment -->
+  <rect x="650" y="700" width="200" height="80" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="650" y1="730" x2="850" y2="730" stroke="#afb42b" stroke-width="2" />
+  <line x1="650" y1="760" x2="850" y2="760" stroke="#afb42b" stroke-width="2" />
+  <text x="750" y="720" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">CampusAppointment</text>
+  <text x="660" y="750" font-family="Arial" font-size="14">+ CampusAppointment(startTime: LocalDateTime)</text>
+  
+  <!-- Subject -->
+  <rect x="900" y="550" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="900" y1="580" x2="1100" y2="580" stroke="#afb42b" stroke-width="2" />
+  <line x1="900" y1="610" x2="1100" y2="610" stroke="#afb42b" stroke-width="2" />
+  <text x="1000" y="570" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Subject</text>
+  <text x="910" y="600" font-family="Arial" font-size="14">+ name: String</text>
+  <text x="910" y="630" font-family="Arial" font-size="14">+ manager: Manager</text>
+  <text x="910" y="650" font-family="Arial" font-size="14">+ tutors: List&lt;Tutor&gt;</text>
+  
+  <!-- PaymentCard -->
+  <rect x="100" y="550" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="100" y1="580" x2="300" y2="580" stroke="#afb42b" stroke-width="2" />
+  <line x1="100" y1="610" x2="300" y2="610" stroke="#afb42b" stroke-width="2" />
+  <text x="200" y="570" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">PaymentCard</text>
+  <text x="110" y="600" font-family="Arial" font-size="14">+ name: String</text>
+  <text x="110" y="630" font-family="Arial" font-size="14">+ cardNo: int</text>
+  <text x="110" y="650" font-family="Arial" font-size="14">+ cvc: int</text>
+  <text x="110" y="670" font-family="Arial" font-size="14">+ expiryDate: LocalDate</text>
+  
+  <!-- TutoringRoom -->
+  <rect x="900" y="700" width="200" height="110" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" />
+  <line x1="900" y1="730" x2="1100" y2="730" stroke="#afb42b" stroke-width="2" />
+  <line x1="900" y1="760" x2="1100" y2="760" stroke="#afb42b" stroke-width="2" />
+  <text x="1000" y="720" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">TutoringRoom</text>
+  <text x="910" y="750" font-family="Arial" font-size="14">+ CAPACITY: int = 5</text>
+  <text x="910" y="780" font-family="Arial" font-size="14">+ appointments: List&lt;CampusAppointment&gt;</text>
+  
+  <!-- Inheritance Relationships -->
+  <!-- Student inherits from User -->
+  <polyline points="350,400 350,340 500,340" fill="none" stroke="#000" stroke-width="1.5" />
+  <polygon points="500,340 490,334 490,346" fill="#000" />
+  
+  <!-- Tutor inherits from User -->
+  <polyline points="600,400 600,360 600,340" fill="none" stroke="#000" stroke-width="1.5" />
+  <polygon points="600,340 594,350 606,350" fill="#000" />
+  
+  <!-- Manager inherits from User -->
+  <polyline points="850,400 850,340 700,340" fill="none" stroke="#000" stroke-width="1.5" />
+  <polygon points="700,340 710,334 710,346" fill="#000" />
+  
+  <!-- OnlineAppointment inherits from Appointment -->
+  <polyline points="450,700 450,640 500,640" fill="none" stroke="#000" stroke-width="1.5" />
+  <polygon points="500,640 490,634 490,646" fill="#000" />
+  
+  <!-- CampusAppointment inherits from Appointment -->
+  <polyline points="750,700 750,640 700,640" fill="none" stroke="#000" stroke-width="1.5" />
+  <polygon points="700,640 710,634 710,646" fill="#000" />
+  
+  <!-- Association Relationships -->
+  <!-- UserControl manages Students -->
+  <line x1="275" y1="190" x2="350" y2="400" stroke="#000" stroke-width="1.5" stroke-dasharray="5,5" />
+  <text x="290" y="300" font-family="Arial" font-size="12">manages</text>
+  
+  <!-- UserControl manages Tutors -->
+  <line x1="320" y1="190" x2="500" y2="400" stroke="#000" stroke-width="1.5" stroke-dasharray="5,5" />
+  <text x="380" y="300" font-family="Arial" font-size="12">manages</text>
+  
+  <!-- AppointmentControl manages Appointments -->
+  <line x1="600" y1="190" x2="600" y2="550" stroke="#000" stroke-width="1.5" stroke-dasharray="5,5" />
+  <text x="620" y="370" font-family="Arial" font-size="12">manages</text>
+  
+  <!-- SubjectControl manages Subjects -->
+  <line x1="925" y1="190" x2="1000" y2="550" stroke="#000" stroke-width="1.5" stroke-dasharray="5,5" />
+  <text x="980" y="370" font-family="Arial" font-size="12">manages</text>
+  
+  <!-- Student has PaymentCard -->
+  <line x1="250" y1="450" x2="200" y2="550" stroke="#000" stroke-width="1.5" />
+  <text x="210" y="510" font-family="Arial" font-size="12">1</text>
+  <text x="180" y="540" font-family="Arial" font-size="12">1</text>
+  
+  <!-- Student has Appointments -->
+  <line x1="450" y1="450" x2="500" y2="600" stroke="#000" stroke-width="1.5" />
+  <text x="460" y="470" font-family="Arial" font-size="12">1</text>
+  <text x="490" y="590" font-family="Arial" font-size="12">*</text>
+  
+  <!-- Tutor has Subjects -->
+  <line x1="700" y1="450" x2="900" y2="600" stroke="#000" stroke-width="1.5" />
+  <text x="710" y="470" font-family="Arial" font-size="12">1</text>
+  <text x="890" y="590" font-family="Arial" font-size="12">*</text>
+  
+  <!-- Tutor has Appointments -->
+  <line x1="600" y1="510" x2="600" y2="550" stroke="#000" stroke-width="1.5" />
+  <text x="610" y="530" font-family="Arial" font-size="12">1</text>
+  <text x="610" y="545" font-family="Arial" font-size="12">*</text>
+  
+  <!-- Manager has Subjects -->
+  <line x1="850" y1="510" x2="1000" y2="550" stroke="#000" stroke-width="1.5" />
+  <text x="860" y="520" font-family="Arial" font-size="12">1</text>
+  <text x="980" y="540" font-family="Arial" font-size="12">*</text>
+  
+  <!-- TutoringRoom has CampusAppointments -->
+  <line x1="900" y1="750" x2="850" y2="750" stroke="#000" stroke-width="1.5" />
+  <text x="880" y="740" font-family="Arial" font-size="12">1</text>
+  <text x="860" y="740" font-family="Arial" font-size="12">*</text>
+</svg>

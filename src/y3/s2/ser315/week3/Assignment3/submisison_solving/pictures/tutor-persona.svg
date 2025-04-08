@@ -1,0 +1,76 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="400" fill="#f0f7f0" stroke="#4caf50" stroke-width="4" rx="10" ry="10" />
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#4caf50" rx="10" ry="10" />
+  <text x="40" y="45" font-family="Arial" font-size="32" font-weight="bold" fill="white">David Garcia</text>
+  <text x="40" y="70" font-family="Arial" font-size="18" fill="white">Graduate Teaching Assistant</text>
+  
+  <!-- Profile Info -->
+  <rect x="40" y="90" width="240" height="270" fill="white" stroke="#4caf50" stroke-width="2" rx="10" ry="10" />
+  
+  <!-- Profile Image Placeholder -->
+  <rect x="60" y="110" width="80" height="80" fill="#e0e0e0" rx="40" ry="40" />
+  <circle cx="100" cy="140" r="20" fill="#b0b0b0" />
+  <circle cx="100" cy="180" r="30" fill="#b0b0b0" />
+  
+  <!-- Quote -->
+  <rect x="60" y="210" width="200" height="70" fill="#e6f5e6" rx="5" ry="5" />
+  <text x="70" y="235" font-family="Arial" font-size="14" font-style="italic" fill="#333">"I love helping students grasp complex concepts and seeing that moment when it clicks for them."</text>
+  
+  <!-- Basic Info -->
+  <text x="60" y="300" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Age:</text>
+  <text x="100" y="300" font-family="Arial" font-size="14" fill="#333">26</text>
+  
+  <text x="60" y="320" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Role:</text>
+  <text x="100" y="320" font-family="Arial" font-size="14" fill="#333">MS Student & TA</text>
+  
+  <text x="60" y="340" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Expertise:</text>
+  <text x="125" y="340" font-family="Arial" font-size="14" fill="#333">Data Structures, Algorithms</text>
+  
+  <!-- Goals Section -->
+  <rect x="300" y="90" width="230" height="160" fill="white" stroke="#4caf50" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="115" font-family="Arial" font-size="18" font-weight="bold" fill="#4caf50">Goals</text>
+  
+  <circle cx="320" cy="135" r="5" fill="#4caf50" />
+  <text x="335" y="140" font-family="Arial" font-size="14" fill="#333">Build teaching experience</text>
+  
+  <circle cx="320" cy="160" r="5" fill="#4caf50" />
+  <text x="335" y="165" font-family="Arial" font-size="14" fill="#333">Supplement graduate stipend</text>
+  
+  <circle cx="320" cy="185" r="5" fill="#4caf50" />
+  <text x="335" y="190" font-family="Arial" font-size="14" fill="#333">Maintain flexible schedule</text>
+  
+  <circle cx="320" cy="210" r="5" fill="#4caf50" />
+  <text x="335" y="215" font-family="Arial" font-size="14" fill="#333">Focus on quality over quantity</text>
+  
+  <!-- Frustrations Section -->
+  <rect x="300" y="260" width="230" height="100" fill="white" stroke="#4caf50" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="285" font-family="Arial" font-size="18" font-weight="bold" fill="#4caf50">Frustrations</text>
+  
+  <circle cx="320" cy="305" r="5" fill="#ff5252" />
+  <text x="335" y="310" font-family="Arial" font-size="14" fill="#333">No-shows without notice</text>
+  
+  <circle cx="320" cy="330" r="5" fill="#ff5252" />
+  <text x="335" y="335" font-family="Arial" font-size="14" fill="#333">Students who haven't prepared</text>
+  
+  <!-- Skills & Schedule -->
+  <rect x="550" y="90" width="230" height="270" fill="white" stroke="#4caf50" stroke-width="2" rx="10" ry="10" />
+  <text x="560" y="115" font-family="Arial" font-size="18" font-weight="bold" fill="#4caf50">Availability & Skills</text>
+  
+  <text x="560" y="145" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Peak Hours:</text>
+  <text x="640" y="145" font-family="Arial" font-size="14" fill="#333">Evenings & Weekends</text>
+  
+  <text x="560" y="170" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Teaching Experience:</text>
+  <rect x="690" y="162" width="80" height="15" fill="#e0e0e0" rx="7" ry="7" />
+  <rect x="690" y="162" width="65" height="15" fill="#81c784" rx="7" ry="7" />
+  
+  <text x="560" y="195" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Subjects:</text>
+  <text x="570" y="215" font-family="Arial" font-size="14" fill="#333">• SER315 - Software Design</text>
+  <text x="570" y="235" font-family="Arial" font-size="14" fill="#333">• SER316 - Software Enterprise</text>
+  <text x="570" y="255" font-family="Arial" font-size="14" fill="#333">• SER222 - Data Structures</text>
+  
+  <text x="560" y="280" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Prefers:</text>
+  <text x="615" y="280" font-family="Arial" font-size="14" fill="#333">Both online & in-person</text>
+</svg>

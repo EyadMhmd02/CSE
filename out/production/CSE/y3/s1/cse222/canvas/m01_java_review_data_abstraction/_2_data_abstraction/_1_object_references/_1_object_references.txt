@@ -18,7 +18,7 @@
   Counter c2 = c1; // c2 now refers to the same Counter object as c1
   }
 
-  see: Counter.java, Main.java
+  see: Counter.java, y3.s2.ser315.week3.implementation_eghanem.Main.java
 
 - Common methods:
     - All classes inherit from the Object class, which provides a set of common methods that can be used on any object.
