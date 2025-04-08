@@ -1,7 +1,7 @@
 package y1.s2.Modules.Module2.cse205_h02.h02.src.h02_50;//**************************************************************************************************
-// CLASS: Quizzes.Quiz1_2.Main
+// CLASS: Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main
 //
-// Quizzes.Quiz1_2.Main simply instantiates a View object so the GUI will be displayed when the program runs.
+// Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main simply instantiates a View object so the GUI will be displayed when the program runs.
 //**************************************************************************************************
 import javax.swing.JFrame;
 

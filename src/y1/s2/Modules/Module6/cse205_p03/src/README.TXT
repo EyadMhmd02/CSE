@@ -15,24 +15,24 @@ and suppose our IDE creates a src subdirectory to store the source code files of
 
     ~/cse205/projs/SomeProject/src   -- this is the Project Source Code File Directory
 
-Now, suppose we add a class named Main to our project and Main is not declared in a package. Then,
-Main will be declared in the default package and our project will store the class in Main.java in
+Now, suppose we add a class named y3.s2.ser315.week3.implementation_eghanem.Main to our project and y3.s2.ser315.week3.implementation_eghanem.Main is not declared in a package. Then,
+y3.s2.ser315.week3.implementation_eghanem.Main will be declared in the default package and our project will store the class in y3.s2.ser315.week3.implementation_eghanem.Main.java in
 the src subdirectory.
 
-    ~/cse205/projs/SomeProject/src/Main.java  -- Main is declared in the default package
+    ~/cse205/projs/SomeProject/src/y3.s2.ser315.week3.implementation_eghanem.Main.java  -- y3.s2.ser315.week3.implementation_eghanem.Main is declared in the default package
 
 Now, suppose we add a new class named SomeClass to our project and we declare SomeClass in a pack-
 age named package_a. Then, our IDE will create a subdirectory named project_a under src, and our
 two classes will be stored as:
 
-    ~/cse205/projs/SomeProject/src/Main.java                 -- Main declared in default package
+    ~/cse205/projs/SomeProject/src/y3.s2.ser315.week3.implementation_eghanem.Main.java                 -- y3.s2.ser315.week3.implementation_eghanem.Main declared in default package
     ~/cse205/projs/SomeProject/src/package_a/SomeClass.java  -- SomeClass is declared in package_a
 
 If we are building the project at the command line using the javac command, then we would need to
 make ~/cse205/projs/SomeProject/src our current working directory and then perform this command to
 build:
 
-    ~/cse205/projs/SomeProject/src $ javac Main.java package_a/SomeClass.java
+    ~/cse205/projs/SomeProject/src $ javac y3.s2.ser315.week3.implementation_eghanem.Main.java package_a/SomeClass.java
 
 where the $ and everything to the left of it is just our terminal prompt string; the actual
 build command starts with javac.

@@ -1,5 +1,5 @@
 //**************************************************************************************************
-// CLASS: Main
+// CLASS: y3.s2.ser315.week3.implementation_eghanem.Main
 //
 // AUTHOR
 // Kevin R. Burger (burgerk@asu.edu)
@@ -17,7 +17,7 @@ import static y1.s2.Modules.Module6.cse205_p03.src.proj3.CourseConstants.NUM_EXA
 import static y1.s2.Modules.Module6.cse205_p03.src.proj3.CourseConstants.NUM_HOMEWORKS;
 
 /**
- * The Main class containing the main() and run() methods.
+ * The y3.s2.ser315.week3.implementation_eghanem.Main class containing the main() and run() methods.
  */
 public class Main {
     /**
@@ -31,7 +31,7 @@ public class Main {
     private View mView;
 
     /**
-     * This is where execution starts. Instantiate a Main object and then call run().
+     * This is where execution starts. Instantiate a y3.s2.ser315.week3.implementation_eghanem.Main object and then call run().
      */
     public static void main(String[] args) {
         new Main().run();
@@ -122,7 +122,7 @@ public class Main {
      * <p>
      * call JFrame.setDefaultLookAndFeelDecorated(true or false depending on your preference)
      * <p>
-     * -- Create the View passing 'this' as the argument so the View will be linked to the Main
+     * -- Create the View passing 'this' as the argument so the View will be linked to the y3.s2.ser315.week3.implementation_eghanem.Main
      * <p>
      * -- class, so they may communicate with each other. Then pass the newly created View object
      * <p>

@@ -18,7 +18,7 @@ class MergeSortTest {
         return list;
     }
 
-    // Main Method to Test Merge Sort with Stopwatch
+    // y3.s2.ser315.week3.implementation_eghanem.Main Method to Test Merge Sort with Stopwatch
     public static void main(String[] args) {
         int size = 999999; // Size of the list
 

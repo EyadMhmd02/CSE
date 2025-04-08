@@ -52,7 +52,7 @@ _+setCurrStudent(pCurrStudent: Student): void _
 --
 _+FRAME_WIDTH:int := 525_
 _+FRAME_HEIGHT: int := 225_
--mMain: Main
+-mMain: y3.s2.ser315.week3.implementation_eghanem.Main
 -mClearButton: JButton
 -mExamText: JTextField[]
 -mExitButton: JButton
@@ -61,15 +61,15 @@ _+FRAME_HEIGHT: int := 225_
 -mSearchButton: JButton
 -mStudentName: JTextField
 --
-+View(pMain: Main): &lt;&lt;ctor&gt;&gt;
++View(pMain: y3.s2.ser315.week3.implementation_eghanem.Main): &lt;&lt;ctor&gt;&gt;
 +actionPerformed(pEvent: ActionEvent): void &lt;&lt;override&gt;&gt;
 -clear(): void
 -clearNumbers(): void
 -displayStudent(pStudent: Student): void
--getMain() : Main
+-getMain() : y3.s2.ser315.week3.implementation_eghanem.Main
 +messageBox(pMessage: String): void
 -saveStudent(pStudent: Student): void
--setMain(pMain: Main): void</panel_attributes>
+-setMain(pMain: y3.s2.ser315.week3.implementation_eghanem.Main): void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -80,7 +80,7 @@ _+FRAME_HEIGHT: int := 225_
       <w>224</w>
       <h>216</h>
     </coordinates>
-    <panel_attributes>proj3::Main
+    <panel_attributes>proj3::y3.s2.ser315.week3.implementation_eghanem.Main
 --
 _-NUM_EXAMS: int := 3 &lt;&lt;const&gt;&gt;_
 _-NUM_HOMEWORKS: int := 5 &lt;&lt;const&gt;&gt;_

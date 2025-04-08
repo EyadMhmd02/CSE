@@ -1,7 +1,7 @@
 package y1.s2.Modules.Module7.cse205_p04.src;//package y1.s2.Modules.Module7.cse205_p04.src;
 //
 ////***************************************************************************************************************************
-//// CLASS: Main
+//// CLASS: y3.s2.ser315.week3.implementation_eghanem.Main
 ////
 //// AUTHOR
 //// Kevin R. Burger (burgerk@asu.edu)
@@ -14,18 +14,18 @@ package y1.s2.Modules.Module7.cse205_p04.src;//package y1.s2.Modules.Module7.cse
 //import javax.swing.*;
 //
 ///**
-// * The Main class containing the main() and run() methods.
+// * The y3.s2.ser315.week3.implementation_eghanem.Main class containing the main() and run() methods.
 // */
-//public class Main {
+//public class y3.s2.ser315.week3.implementation_eghanem.Main {
 //
 //    // A reference to the View object.
 //    private View mView;
 //
 //    /**
-//     * This is where execution starts. Instantiate a Main object and then call run().
+//     * This is where execution starts. Instantiate a y3.s2.ser315.week3.implementation_eghanem.Main object and then call run().
 //     */
 //    public static void main(String[] args) {
-//        new Main().run();
+//        new y3.s2.ser315.week3.implementation_eghanem.Main().run();
 //    }
 //
 //    /**

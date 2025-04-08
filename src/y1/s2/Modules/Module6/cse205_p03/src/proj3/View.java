@@ -31,9 +31,9 @@ public class View extends JFrame implements ActionListener {
     public static final int FRAME_HEIGHT = 250;
 
     /**
-     * When the View() ctor is called from Main.run() to create the View, run() passes a reference
-     * to the Main object as the argument to View(). We save that reference into mMain and then
-     * later we can use mMain to communicate with the Main class.
+     * When the View() ctor is called from y3.s2.ser315.week3.implementation_eghanem.Main.run() to create the View, run() passes a reference
+     * to the y3.s2.ser315.week3.implementation_eghanem.Main object as the argument to View(). We save that reference into mMain and then
+     * later we can use mMain to communicate with the y3.s2.ser315.week3.implementation_eghanem.Main class.
      * <p>
      * mMain is made accessible within this class via accessor/mutator methods getMain() and
      * setMain(). It shall not be directly accessed.
@@ -57,13 +57,13 @@ public class View extends JFrame implements ActionListener {
      * <p>
      * The View constructor creates the GUI interface and makes the frame visible at the end.
      *
-     * @param pMain is an instance of the Main class. This links the View to the Main class so
+     * @param pMain is an instance of the y3.s2.ser315.week3.implementation_eghanem.Main class. This links the View to the y3.s2.ser315.week3.implementation_eghanem.Main class so
      *              they may communicate with each other.
      */
     public View(Main pMain) {
 
         /*
-          Save a reference to the Main object pMain into instance var mMain by calling setMain().
+          Save a reference to the y3.s2.ser315.week3.implementation_eghanem.Main object pMain into instance var mMain by calling setMain().
          */
         setMain(pMain);
 
@@ -154,7 +154,7 @@ public class View extends JFrame implements ActionListener {
 
         // Set the default close operation to JFrame.DO_NOTHING_ON_CLOSE. This disables the X close
         // button in the title bar of the View so now the only way to exit the program is by click-
-        // ing the Exit button. This ensures that Main.exit() will be called so it will write the
+        // ing the Exit button. This ensures that y3.s2.ser315.week3.implementation_eghanem.Main.exit() will be called so it will write the
         // student records back out to the gradebook database.
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -199,7 +199,7 @@ public class View extends JFrame implements ActionListener {
      * <p>
      * Else
      * <p>
-     * -- Main contains a method named search() which given the last name of a student
+     * -- y3.s2.ser315.week3.implementation_eghanem.Main contains a method named search() which given the last name of a student
      * <p>
      * -- will search the Roster for the student. search() either returns the Student
      * <p>
@@ -310,7 +310,7 @@ public class View extends JFrame implements ActionListener {
      *                 <p>
      *                 PSEUDOCODE:
      *                 method displayStudent(pStudent : Student) : void
-     *                 For i = 0 to Main.getNumHomeworks - 1 Do
+     *                 For i = 0 to y3.s2.ser315.week3.implementation_eghanem.Main.getNumHomeworks - 1 Do
      *                 int hw = pStudent.getHomework(i)
      *                 String hwstr = convert hw to a String (Hint: Integer.toString())
      *                 mHomeworkText[i].setText(hwstr)
@@ -319,7 +319,7 @@ public class View extends JFrame implements ActionListener {
      *                 end displayStudent
      *                 <p>
      *                 DO NOT HARDCODE THE NUMBER OF HOMEWORKS AND EXAMS. Call the constant accessor methods in
-     *                 Main.
+     *                 y3.s2.ser315.week3.implementation_eghanem.Main.
      *                 ???
      *                 <p>
      *                 /**
@@ -362,7 +362,7 @@ public class View extends JFrame implements ActionListener {
      * <p>
      * PSEUDOCODE:
      * method saveStudent(pStudent : Student) : void
-     * For i = 0 to Main.getNumHomeworks - 1 Do
+     * For i = 0 to y3.s2.ser315.week3.implementation_eghanem.Main.getNumHomeworks - 1 Do
      * String hwstr = mHomeworkText[i].getText()
      * int hw = convert hwstr to an int (Hint: Integer.parseInt())
      * Call pStudent.setHomework(i, hw)

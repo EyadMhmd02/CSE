@@ -101,7 +101,7 @@ _+ONLINE_TECH_FEE: const int = 75_
       <w>344</w>
       <h>120</h>
     </coordinates>
-    <panel_attributes>Quizzes.Quiz1_2.Main
+    <panel_attributes>Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main
 --
 --
 _+main(pArgs: String[]): void_

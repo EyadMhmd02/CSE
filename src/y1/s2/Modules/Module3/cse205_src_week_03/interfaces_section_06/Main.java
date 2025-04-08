@@ -1,9 +1,9 @@
 package y1.s2.Modules.Module3.cse205_src_week_03.interfaces_section_06;
 //**************************************************************************************************
-// CLASS: Quizzes.Quiz1_2.Main (Quizzes.Quiz1_2.Main.java)
+// CLASS: Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main (Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main.java)
 //
 // DESCRIPTION
-// This is the Quizzes.Quiz1_2.Main (test) class for the interface example in "Interfaces: Section 6".
+// This is the Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main (test) class for the interface example in "Interfaces: Section 6".
 //
 // AUTHOR
 // Kevin R. Burger (burgerk@asu.edu)

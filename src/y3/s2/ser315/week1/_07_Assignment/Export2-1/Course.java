@@ -4,54 +4,54 @@
 //
 //public class Course {
 //
-//	private int number;
+//    private int number;
 //
-//	private String dept;
+//    private String dept;
 //
-//	private String description;
+//    private String description;
 //
-//	private int credits;
+//    private int credits;
 //
-//	private Roster roster;
+//    private Roster roster;
 //
-//	private FieldTrip[] trips;
+//    private FieldTrip[] trips;
 //
-//	private Professor prof;
+//    private Professor prof;
 //
-//	public Course(String department, int classNumber, int credits, String description, Professor prof) {
+//    public Course(String department, int classNumber, int credits, String description, Professor prof) {
 //
-//	}
+//    }
 //
-//	public Course(String department, int classNumber, int credits, String description) {
+//    public Course(String department, int classNumber, int credits, String description) {
 //
-//	}
+//    }
 //
-//	public String getName() {
-//		return null;
-//	}
+//    public String getName() {
+//        return null;
+//    }
 //
-//	public int getCredits() {
-//		return 0;
-//	}
+//    public int getCredits() {
+//        return 0;
+//    }
 //
-//	public boolean addProfessor(Professor prof) {
-//		return false;
-//	}
+//    public boolean addProfessor(Professor prof) {
+//        return false;
+//    }
 //
-//	public Professor getProfessor() {
-//		return null;
-//	}
+//    public Professor getProfessor() {
+//        return null;
+//    }
 //
-//	public boolean enrollStudent(Student student) {
-//		return false;
-//	}
+//    public boolean enrollStudent(Student student) {
+//        return false;
+//    }
 //
-//	public List<String> getStudentNames() {
-//		return null;
-//	}
+//    public List<String> getStudentNames() {
+//        return null;
+//    }
 //
-//	public FieldTrip getFieldTrip(int number) {
-//		return null;
-//	}
+//    public FieldTrip getFieldTrip(int number) {
+//        return null;
+//    }
 //
 //}

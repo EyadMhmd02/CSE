@@ -1,10 +1,10 @@
 package y1.s2.Modules.Module2.cse205_p02.src;
 
 // **************************************************************************************************
-//// CLASS: Main
+//// CLASS: y3.s2.ser315.week3.implementation_eghanem.Main
 ////
 //// DESCRIPTION
-//// The Main class for Project 2.
+//// The y3.s2.ser315.week3.implementation_eghanem.Main class for Project 2.
 ////
 //// AUTHOR
 //// Kevin R. Burger (burgerk@asu.edu)
@@ -23,7 +23,7 @@ import java.util.Scanner;
 public class Main {
 
     /**
-     * Instantiate a Main object and call run() on the object.
+     * Instantiate a y3.s2.ser315.week3.implementation_eghanem.Main object and call run() on the object.
      * Note that essentially now, run()
      * becomes the starting point of execution for the program.
      */

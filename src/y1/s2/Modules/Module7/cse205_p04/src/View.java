@@ -27,7 +27,7 @@ package y1.s2.Modules.Module7.cse205_p04.src;//package y1.s2.Modules.Module7.cse
 //    private JButton mEvalButton;
 //    private JTextField mInputText;
 //    private JButton mExitButton;
-//    private Main mMain;
+//    private y3.s2.ser315.week3.implementation_eghanem.Main mMain;
 //    private JLabel mResultLabel;
 //
 //    /**
@@ -35,8 +35,8 @@ package y1.s2.Modules.Module7.cse205_p04.src;//package y1.s2.Modules.Module7.cse
 //     * <p>
 //     * The View constructor creates the GUI interface and makes the frame visible at the end.
 //     */
-//    public View(Main pMain) {
-//        // Save a reference to the Main object pMain in mMain.
+//    public View(y3.s2.ser315.week3.implementation_eghanem.Main pMain) {
+//        // Save a reference to the y3.s2.ser315.week3.implementation_eghanem.Main object pMain in mMain.
 //        ???
 //
 //        // PSEUDOCODE:

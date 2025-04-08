@@ -16,7 +16,7 @@ public class Add {
         int num1 = 25;
         int num2 = 15;
 
-        // create an object of Main
+        // create an object of y3.s2.ser315.week3.implementation_eghanem.Main
         Add obj = new Add();
         // calling method
         int result = obj.addNumbers(num1, num2);

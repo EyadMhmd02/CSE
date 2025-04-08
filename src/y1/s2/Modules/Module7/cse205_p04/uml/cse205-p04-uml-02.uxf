@@ -22,7 +22,7 @@
       <w>180</w>
       <h>120</h>
     </coordinates>
-    <panel_attributes>Main
+    <panel_attributes>y3.s2.ser315.week3.implementation_eghanem.Main
 --
 -mView: View
 --
@@ -78,10 +78,10 @@ _+FRAME_HEIGHT = 180: final int_
 -mEvalButton: JButton
 -mInputText: JTextField
 -mExitButton: JButton
--mMain: Main
+-mMain: y3.s2.ser315.week3.implementation_eghanem.Main
 -mResultLabel: JLabel
 --
-+View(Main pMain): &lt;&lt;ctor&gt;&gt;
++View(y3.s2.ser315.week3.implementation_eghanem.Main pMain): &lt;&lt;ctor&gt;&gt;
 +actionPerformed(pEvent: ActionEvent): void
 -clear(): void
 -evaluate(): void

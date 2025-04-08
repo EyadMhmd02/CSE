@@ -24,7 +24,7 @@ public class GradebookWriter extends PrintWriter {
      * Call the super class ctor that takes a String as the argument, i.e, PrintWriter(String).
      * The PrintWriter ctor opens the file named by pFname for writing. It will throw a
      * FileNotFoundException if the file could not be opened for writing. We throw the exception
-     * here as well where it will eventually be caught in Main.exit() -- see SR 7.
+     * here as well where it will eventually be caught in y3.s2.ser315.week3.implementation_eghanem.Main.exit() -- see SR 7.
      *
      * @param pFname The name of the output file to be opened for writing.
      */

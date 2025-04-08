@@ -2,7 +2,7 @@ package y3.s1.cse222.canvas.m09_symbol_tables_binary_search_trees;
 
 public class BinarySearchTreeTest1 {
     /**
-     * Main method to test the BinarySearchTree class.
+     * y3.s2.ser315.week3.implementation_eghanem.Main method to test the BinarySearchTree class.
      *
      * @param args Command-line arguments (not used in this example).
      */

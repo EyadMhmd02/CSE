@@ -1,5 +1,5 @@
 package y1.s2.Modules.Module2.cse205_h02.h02.src.h02_45;//******************************************************************************
-// CLASS: Quizzes.Quiz1_2.Main (Quizzes.Quiz1_2.Main.java)
+// CLASS: Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main (Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main.java)
 //
 // DESCRIPTION
 // This is the main class for the program.
@@ -22,7 +22,7 @@ import java.util.ArrayList;
 public class Main { 
 
     /**
-     * main() instantiates an object of this Quizzes.Quiz1_2.Main class and then calls run()
+     * main() instantiates an object of this Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main class and then calls run()
      * on the object.
      */
 	public static void main(String[] pArgs) {

@@ -1,7 +1,7 @@
 package y1.s2.Modules.Module7.cse205_src_mod_07;
 
 //package y1.s2.Modules.Module7.cse205_src_mod_07;//**************************************************************************************************
-//// CLASS: Main
+//// CLASS: y3.s2.ser315.week3.implementation_eghanem.Main
 ////
 //// DESCRIPTION
 //// This class implements a simple testing driver for the BinaryTree<E> class.
@@ -16,7 +16,7 @@ package y1.s2.Modules.Module7.cse205_src_mod_07;
 ////**************************************************************************************************
 //
 ///**
-// * Main
+// * y3.s2.ser315.week3.implementation_eghanem.Main
 // */
 public class Main implements BinaryTreeVisitor<Integer> {
 

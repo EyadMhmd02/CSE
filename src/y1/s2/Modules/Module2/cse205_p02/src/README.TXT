@@ -1,6 +1,6 @@
 This folder contains some of the Java source code files for the project:
 
-Quizzes.Quiz1_2.Main.java
+Quizzes.Quiz1_2.y3.s2.ser315.week3.implementation_eghanem.Main.java
 Finish the code in this class by studying the UML class diagram and reading the comments and
 implementing the pseudocode.
           
