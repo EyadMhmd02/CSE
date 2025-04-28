@@ -1,0 +1,113 @@
+<svg viewBox="0 0 1000 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Title -->
+  <text x="500" y="30" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle">Object View - Tutoring System</text>
+  
+  <!-- Control Objects -->
+  <rect x="50" y="70" width="250" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5" ry="5" />
+  <text x="175" y="105" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">userControl : UserControl</text>
+  
+  <rect x="350" y="70" width="300" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5" ry="5" />
+  <text x="500" y="105" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">appointmentControl : AppointmentControl</text>
+  
+  <rect x="700" y="70" width="250" height="60" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="5" ry="5" />
+  <text x="825" y="105" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">subjectControl : SubjectControl</text>
+  
+  <!-- Entity Objects -->
+  <!-- Students -->
+  <rect x="50" y="200" width="200" height="100" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="150" y="230" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">jacob : Student</text>
+  <line x1="50" y1="240" x2="250" y2="240" stroke="#afb42b" stroke-width="1" />
+  <text x="60" y="260" font-family="Arial" font-size="14">userName = "jake789"</text>
+  <text x="60" y="280" font-family="Arial" font-size="14">email = "jake@jake.com"</text>
+  <text x="60" y="300" font-family="Arial" font-size="14">credits = 0</text>
+  
+  <rect x="50" y="330" width="200" height="100" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="150" y="360" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">joseph : Student</text>
+  <line x1="50" y1="370" x2="250" y2="370" stroke="#afb42b" stroke-width="1" />
+  <text x="60" y="390" font-family="Arial" font-size="14">userName = "joey098"</text>
+  <text x="60" y="410" font-family="Arial" font-size="14">email = "joe@joe.com"</text>
+  <text x="60" y="430" font-family="Arial" font-size="14">credits = 0</text>
+  
+  <!-- Tutors -->
+  <rect x="300" y="200" width="200" height="100" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="400" y="230" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">david : Tutor</text>
+  <line x1="300" y1="240" x2="500" y2="240" stroke="#afb42b" stroke-width="1" />
+  <text x="310" y="260" font-family="Arial" font-size="14">userName = "Seth123"</text>
+  <text x="310" y="280" font-family="Arial" font-size="14">email = "david@tutoringCenter"</text>
+  <text x="310" y="300" font-family="Arial" font-size="14">zoomId = null</text>
+  
+  <rect x="300" y="330" width="200" height="100" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="400" y="360" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">kelly : Tutor</text>
+  <line x1="300" y1="370" x2="500" y2="370" stroke="#afb42b" stroke-width="1" />
+  <text x="310" y="390" font-family="Arial" font-size="14">userName = "Kelly456"</text>
+  <text x="310" y="410" font-family="Arial" font-size="14">email = "kelly@tutoringCenter"</text>
+  <text x="310" y="430" font-family="Arial" font-size="14">zoomId = null</text>
+  
+  <!-- Manager -->
+  <rect x="300" y="460" width="200" height="80" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="400" y="490" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">mehlhase : Manager</text>
+  <line x1="300" y1="500" x2="500" y2="500" stroke="#afb42b" stroke-width="1" />
+  <text x="310" y="520" font-family="Arial" font-size="14">userName = "Dr. Mehlhase"</text>
+  
+  <!-- Appointments -->
+  <rect x="550" y="200" width="250" height="100" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="675" y="230" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">appointment1 : OnlineAppointment</text>
+  <line x1="550" y1="240" x2="800" y2="240" stroke="#afb42b" stroke-width="1" />
+  <text x="560" y="260" font-family="Arial" font-size="14">appointmentId = [random]</text>
+  <text x="560" y="280" font-family="Arial" font-size="14">startTime = now + 2hrs</text>
+  <text x="560" y="300" font-family="Arial" font-size="14">student = jacob</text>
+  
+  <rect x="550" y="330" width="250" height="100" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="675" y="360" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">appointment2 : CampusAppointment</text>
+  <line x1="550" y1="370" x2="800" y2="370" stroke="#afb42b" stroke-width="1" />
+  <text x="560" y="390" font-family="Arial" font-size="14">appointmentId = [random]</text>
+  <text x="560" y="410" font-family="Arial" font-size="14">startTime = now + 12days</text>
+  <text x="560" y="430" font-family="Arial" font-size="14">student = joseph</text>
+  
+  <!-- Subjects -->
+  <rect x="550" y="460" width="200" height="60" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="650" y="490" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">ser315 : Subject</text>
+  <line x1="550" y1="500" x2="750" y2="500" stroke="#afb42b" stroke-width="1" />
+  <text x="560" y="520" font-family="Arial" font-size="14">name = "ser315"</text>
+  
+  <rect x="770" y="460" width="200" height="60" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="870" y="490" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">ser316 : Subject</text>
+  <line x1="770" y1="500" x2="970" y2="500" stroke="#afb42b" stroke-width="1" />
+  <text x="780" y="520" font-family="Arial" font-size="14">name = "ser316"</text>
+  
+  <rect x="770" y="530" width="200" height="60" fill="#f9fbe7" stroke="#afb42b" stroke-width="2" rx="5" ry="5" />
+  <text x="870" y="560" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">ser222 : Subject</text>
+  <line x1="770" y1="570" x2="970" y2="570" stroke="#afb42b" stroke-width="1" />
+  <text x="780" y="590" font-family="Arial" font-size="14">name = "ser222"</text>
+  
+  <!-- Connections -->
+  <!-- UserControl to Students -->
+  <line x1="100" y1="130" x2="100" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="100,200 95,190 105,190" fill="#333" />
+  
+  <!-- UserControl to Tutors -->
+  <line x1="200" y1="100" x2="400" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="400,200 392,193 395,185" fill="#333" />
+  
+  <!-- AppointmentControl to Appointments -->
+  <line x1="500" y1="130" x2="675" y2="200" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="675,200 668,193 671,185" fill="#333" />
+  
+  <!-- SubjectControl to Subjects -->
+  <line x1="825" y1="130" x2="825" y2="480" stroke="#333" stroke-width="1.5" stroke-dasharray="5,3" />
+  <polygon points="825,480 820,470 830,470" fill="#333" />
+  
+  <!-- Student to Appointment -->
+  <line x1="250" y1="250" x2="550" y2="250" stroke="#333" stroke-width="1.5" />
+  <line x1="250" y1="380" x2="550" y2="380" stroke="#333" stroke-width="1.5" />
+  
+  <!-- Tutor to Appointment -->
+  <line x1="500" y1="220" x2="550" y2="280" stroke="#333" stroke-width="1.5" />
+  <line x1="500" y1="380" x2="550" y2="410" stroke="#333" stroke-width="1.5" />
+  
+  <!-- Tutor to Subject -->
+  <line x1="380" y1="300" x2="550" y2="480" stroke="#333" stroke-width="1.5" />
+  <line x1="440" y1="300" x2="770" y2="480" stroke="#333" stroke-width="1.5" />
+  <line x1="380" y1="430" x2="550" y2="480" stroke="#333" stroke-width="1.5" />
+  <line x1="440" y1="430" x2="770" y2="550" stroke="#333" stroke-width="1.5" />
+</svg>

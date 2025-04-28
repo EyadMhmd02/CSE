@@ -1,0 +1,75 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="400" fill="#f0f8ff" stroke="#448aff" stroke-width="4" rx="10" ry="10" />
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="70" fill="#448aff" rx="10" ry="10" />
+  <text x="40" y="45" font-family="Arial" font-size="32" font-weight="bold" fill="white">Alex Chen</text>
+  <text x="40" y="70" font-family="Arial" font-size="18" fill="white">Computer Science Student</text>
+  
+  <!-- Profile Info -->
+  <rect x="40" y="90" width="240" height="270" fill="white" stroke="#448aff" stroke-width="2" rx="10" ry="10" />
+  
+  <!-- Profile Image Placeholder -->
+  <rect x="60" y="110" width="80" height="80" fill="#e0e0e0" rx="40" ry="40" />
+  <circle cx="100" cy="140" r="20" fill="#b0b0b0" />
+  <circle cx="100" cy="180" r="30" fill="#b0b0b0" />
+  
+  <!-- Quote -->
+  <rect x="60" y="210" width="200" height="70" fill="#e6f2ff" rx="5" ry="5" />
+  <text x="70" y="235" font-family="Arial" font-size="14" font-style="italic" fill="#333">"I need to balance my coursework with my part-time job. Time is precious!"</text>
+  
+  <!-- Basic Info -->
+  <text x="60" y="300" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Age:</text>
+  <text x="100" y="300" font-family="Arial" font-size="14" fill="#333">21</text>
+  
+  <text x="60" y="320" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Year:</text>
+  <text x="100" y="320" font-family="Arial" font-size="14" fill="#333">Junior</text>
+  
+  <text x="60" y="340" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Major:</text>
+  <text x="110" y="340" font-family="Arial" font-size="14" fill="#333">Computer Science</text>
+  
+  <!-- Goals Section -->
+  <rect x="300" y="90" width="230" height="160" fill="white" stroke="#448aff" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="115" font-family="Arial" font-size="18" font-weight="bold" fill="#448aff">Goals</text>
+  
+  <circle cx="320" cy="135" r="5" fill="#448aff" />
+  <text x="335" y="140" font-family="Arial" font-size="14" fill="#333">Improve grades in difficult classes</text>
+  
+  <circle cx="320" cy="160" r="5" fill="#448aff" />
+  <text x="335" y="165" font-family="Arial" font-size="14" fill="#333">Find tutors who match learning style</text>
+  
+  <circle cx="320" cy="185" r="5" fill="#448aff" />
+  <text x="335" y="190" font-family="Arial" font-size="14" fill="#333">Schedule sessions around work hours</text>
+  
+  <circle cx="320" cy="210" r="5" fill="#448aff" />
+  <text x="335" y="215" font-family="Arial" font-size="14" fill="#333">Get more practice with coding projects</text>
+  
+  <!-- Frustrations Section -->
+  <rect x="300" y="260" width="230" height="100" fill="white" stroke="#448aff" stroke-width="2" rx="10" ry="10" />
+  <text x="310" y="285" font-family="Arial" font-size="18" font-weight="bold" fill="#448aff">Frustrations</text>
+  
+  <circle cx="320" cy="305" r="5" fill="#ff5252" />
+  <text x="335" y="310" font-family="Arial" font-size="14" fill="#333">Last-minute cancellations</text>
+  
+  <circle cx="320" cy="330" r="5" fill="#ff5252" />
+  <text x="335" y="335" font-family="Arial" font-size="14" fill="#333">Difficulty finding available tutors</text>
+  
+  <!-- Tech Comfort Section -->
+  <rect x="550" y="90" width="230" height="270" fill="white" stroke="#448aff" stroke-width="2" rx="10" ry="10" />
+  <text x="560" y="115" font-family="Arial" font-size="18" font-weight="bold" fill="#448aff">Technology Usage</text>
+  
+  <text x="560" y="145" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Devices:</text>
+  <text x="620" y="145" font-family="Arial" font-size="14" fill="#333">Smartphone, Laptop</text>
+  
+  <text x="560" y="170" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Tech Comfort:</text>
+  <rect x="660" y="162" width="100" height="15" fill="#e0e0e0" rx="7" ry="7" />
+  <rect x="660" y="162" width="85" height="15" fill="#64b5f6" rx="7" ry="7" />
+  
+  <text x="560" y="195" font-family="Arial" font-size="14" font-weight="bold" fill="#333">Apps Used Daily:</text>
+  <text x="570" y="215" font-family="Arial" font-size="14" fill="#333">• Instagram</text>
+  <text x="570" y="235" font-family="Arial" font-size="14" fill="#333">• WhatsApp</text>
+  <text x="570" y="255" font-family="Arial" font-size="14" fill="#333">• University Portal</text>
+  <text x="570" y="275" font-family="Arial" font-size="14" fill="#333">• Email</text>
+  <text x="570" y="295" font-family="Arial" font-size="14" fill="#333">• Google Calendar</text>
+</svg>
