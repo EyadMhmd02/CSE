@@ -1,48 +1,53 @@
 package y3.s1.cse222.canvas.m03_analysis_of_algorithms.analysis.stopwatch;
 
 public class Stopwatch {
+    private static final long NANOS_IN_MILLI = 1_000_000L;
+    private static final long MILLIS_IN_SECOND = 1_000L;
+    private static final long SECONDS_IN_MINUTE = 60L;
+    private static final long MINUTES_IN_HOUR = 60L;
+    private static final long HOURS_IN_DAY = 24L;
+
     private long start;
 
     public Stopwatch() {
-        this.start = System.currentTimeMillis();
+        this.start = System.nanoTime();
     }
 
-    private long elapsedTimeMillis() {
-        long now = System.currentTimeMillis();
-        return now - start;
+    private long elapsedNanos() {
+        return System.nanoTime() - start;
+    }
+
+    private long nanos() {
+        return elapsedNanos() % NANOS_IN_MILLI;
     }
 
     private long millis() {
-        return elapsedTimeMillis() % 1000;
+        return (elapsedNanos() / NANOS_IN_MILLI) % MILLIS_IN_SECOND;
     }
 
     private long seconds() {
-        return (elapsedTimeMillis() % (1000 * 60)) / 1000;
+        return (elapsedNanos() / (NANOS_IN_MILLI * MILLIS_IN_SECOND)) % SECONDS_IN_MINUTE;
     }
 
     private long minutes() {
-        return (elapsedTimeMillis() % (1000 * 60 * 60)) / (1000 * 60);
+        return (elapsedNanos() / (NANOS_IN_MILLI * MILLIS_IN_SECOND * SECONDS_IN_MINUTE)) % MINUTES_IN_HOUR;
     }
 
     private long hours() {
-        return (elapsedTimeMillis() % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60);
+        return (elapsedNanos() / (NANOS_IN_MILLI * MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR)) % HOURS_IN_DAY;
     }
 
     private long days() {
-        return (elapsedTimeMillis() % (1000L * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24);
+        return elapsedNanos() / (NANOS_IN_MILLI * MILLIS_IN_SECOND * SECONDS_IN_MINUTE * MINUTES_IN_HOUR * HOURS_IN_DAY);
     }
 
     public void reset() {
-        start = System.currentTimeMillis();
+        this.start = System.nanoTime();
     }
 
     @Override
     public String toString() {
-        String days = ("000" + days()).substring(Long.toString(days()).length());
-        String hours = ("00" + hours()).substring(Long.toString(hours()).length());
-        String minutes = ("00" + minutes()).substring(Long.toString(minutes()).length());
-        String seconds = ("00" + seconds()).substring(Long.toString(seconds()).length());
-        String millis = ("000" + millis()).substring(Long.toString(millis()).length());
-        return String.format("Elapsed time:\t%s:%s:%s:%s:%s\n", days, hours, minutes, seconds, millis);
+        return String.format("Elapsed time:\t%03d:%02d:%02d:%02d:%03d:%06d\n",
+                days(), hours(), minutes(), seconds(), millis(), nanos());
     }
 }
