@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 //// AppointmentControl.java
 //import java.time.LocalDateTime;
 //import java.util.LinkedList;
@@ -184,6 +185,8 @@
 //    }
 //}
 =======
+=======
+>>>>>>> Stashed changes
 // AppointmentControl.java
 import java.time.LocalDateTime;
 import java.util.LinkedList;
@@ -367,5 +370,9 @@ public class Main {
         System.out.println("Joseph cancelling an appointment in time: ");
         System.out.println(appointmentControl.cancelAppointment(appointment2.appointmentId, joseph.email, false));
     }
+<<<<<<< Updated upstream
+}
+>>>>>>> Stashed changes
+=======
 }
 >>>>>>> Stashed changes
