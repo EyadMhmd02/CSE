@@ -1,0 +1,4 @@
+Assignment 1:
+Task 1: 
+Syntax is incorrect. -2 (Missing association b/w Student and Roster, Incorrect association b/w Roster and Observation)
+Multiplicities are incorrect -0.5 (Observation and Recorded Observation, Course and Field Trip, Professor and Course)
