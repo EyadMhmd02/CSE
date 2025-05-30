@@ -6,7 +6,7 @@
 //
 //	private Course course;
 //
-//	private RecordedObservations[] observations;
+//	private RecordedObservation[] observations;
 //
 //	public FieldTrip(Course course) {
 //
@@ -24,7 +24,7 @@
 //		return null;
 //	}
 //
-//	public List<RecordedObservations> getObservations() {
+//	public List<RecordedObservation> getObservations() {
 //		return null;
 //	}
 //
@@ -32,7 +32,7 @@
 //		return 0;
 //	}
 //
-//	private RecordedObservations getRecordedObservations(Student stu) {
+//	private RecordedObservation getRecordedObservation(Student stu) {
 //		return null;
 //	}
 //

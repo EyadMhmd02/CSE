@@ -3,11 +3,11 @@ package y3.s2.ser315.week1._07_Assignment.FieldTrip;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecordedObservations {
+public class RecordedObservation {
     private Student student;
     private List<Observation> observations;
 
-    public RecordedObservations(Student student) {
+    public RecordedObservation(Student student) {
         this.student = student;
         this.observations = new ArrayList<>();
     }

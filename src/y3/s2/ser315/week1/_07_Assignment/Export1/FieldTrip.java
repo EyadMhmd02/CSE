@@ -25,7 +25,7 @@ public class FieldTrip {
 		return 0;
 	}
 
-	public RecordedObservation getRecordedObservations(Student stu) {
+	public RecordedObservation getRecordedObservation(Student stu) {
 		return null;
 	}
 

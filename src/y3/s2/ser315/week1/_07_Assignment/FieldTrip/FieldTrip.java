@@ -5,7 +5,7 @@
 //
 //public class FieldTrip {
 //    private Course course;
-//    private List<RecordedObservations> observations;
+//    private List<RecordedObservation> observations;
 //
 //    public FieldTrip(Course course) {
 //        this.course = course;
@@ -13,45 +13,45 @@
 //    }
 //
 //    public int makeWrittenObservation(Student stu, String summ, String descr) {
-//        RecordedObservations sObservations = getRecordedObservations(stu);
+//        RecordedObservation sObservations = getRecordedObservation(stu);
 //        return sObservations.writeObservation(summ, descr);
 //    }
 //
 //    public int makePhotoObservation(Student stu, String imgURL, Double dLat, Double dLong) {
-//        RecordedObservations sObservations = getRecordedObservations(stu);
+//        RecordedObservation sObservations = getRecordedObservation(stu);
 //        return sObservations.photoObservation(imgURL, dLat, dLong);
 //    }
 //
 //    public List<String> getStudentNames() {
 //        List<String> studentNames = new ArrayList<>();
-//        for (RecordedObservations obs: this.observations) {
+//        for (RecordedObservation obs: this.observations) {
 //            studentNames.add(obs.getStudent().getName());
 //        }
 //        return studentNames;
 //    }
 //
-//    public List<RecordedObservations> getObservations() {
+//    public List<RecordedObservation> getObservations() {
 //        return new ArrayList(this.observations);
 //    }
 //
 //    public int getObservationCount() {
 //        int count = 0;
-//        for (RecordedObservations obs: this.observations) {
+//        for (RecordedObservation obs: this.observations) {
 //            count += obs.getObservationCount();
 //        }
 //        return count;
 //    }
 //
-//    private RecordedObservations getRecordedObservations(Student stu) {
-//        RecordedObservations studentObs = null;
-//        for (RecordedObservations obs: this.observations) {
+//    private RecordedObservation getRecordedObservation(Student stu) {
+//        RecordedObservation studentObs = null;
+//        for (RecordedObservation obs: this.observations) {
 //            if (obs.getStudent().equals(stu)) {
 //                studentObs = obs;
 //                break;
 //            }
 //        }
 //        if (studentObs == null) {
-//            studentObs = new RecordedObservations(stu);
+//            studentObs = new RecordedObservation(stu);
 //            this.observations.add(studentObs);
 //        }
 //        return studentObs;

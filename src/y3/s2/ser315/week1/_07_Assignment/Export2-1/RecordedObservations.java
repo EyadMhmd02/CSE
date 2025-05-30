@@ -2,13 +2,13 @@
 //
 //import java.util.List;
 //
-//public class RecordedObservations {
+//public class RecordedObservation {
 //
 //	private Observation[] observations;
 //
 //	private Student student;
 //
-//	public RecordedObservations(Student student) {
+//	public RecordedObservation(Student student) {
 //
 //	}
 //

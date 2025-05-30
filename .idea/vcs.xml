@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/y3/s2/ser316/SER315-GROUP-1-S25" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/y3/s2/ser316/eghanem" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/y3/s2/ser316/week1/_2_ASSIGNMENT_1/New folder/assign1git" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/y3/s2/ser316/week1/_2_ASSIGNMENT_1/labgit-master" vcs="Git" />

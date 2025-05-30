@@ -7,7 +7,7 @@ public class FieldTrip {
 
 	private Course course;
 
-	private RecordedObservations[] observations;
+	private RecordedObservation[] observations;
 
 	public FieldTrip(Course course) {
 
@@ -25,7 +25,7 @@ public class FieldTrip {
 		return null;
 	}
 
-	public List<RecordedObservations> getObservations() {
+	public List<RecordedObservation> getObservations() {
 		return null;
 	}
 
@@ -33,7 +33,7 @@ public class FieldTrip {
 		return 0;
 	}
 
-	private RecordedObservations getRecordedObservations(Student stu) {
+	private RecordedObservation getRecordedObservation(Student stu) {
 		return null;
 	}
 

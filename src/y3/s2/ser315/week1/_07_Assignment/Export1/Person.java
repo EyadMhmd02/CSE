@@ -1,11 +1,11 @@
 public class Person {
 
-	int name;
+	String name;
 
-	int email;
+	String email;
 
-	public int getName() {
-		return 0;
+	public String getName() {
+		return null;
 	}
 
 	public String getEmail() {

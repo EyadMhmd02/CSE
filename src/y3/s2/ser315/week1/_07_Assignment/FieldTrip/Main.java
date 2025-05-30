@@ -43,9 +43,9 @@
 //        ft1.makeWrittenObservation(stu4, "Everything is brown", "No matter how long I look, I can't see any fossils");
 //        ft1.makePhotoObservation(stu4, "https://www.nps.gov/mora/planyourvisit/images/sunrise_columnar-lava_sml.jpg?maxwidth=650&autorotate=false", 49.8, -121.7);
 //
-//        List<RecordedObservations> observations = ft1.getObservations();
+//        List<RecordedObservation> observations = ft1.getObservations();
 //        System.out.println("\nThe following observations were made by students:");
-//        for (RecordedObservations rObservation: observations) {
+//        for (RecordedObservation rObservation: observations) {
 //            List<Observation> listObs = rObservation.getObservations();
 //            String student = rObservation.getStudent().getName();
 //            System.out.println(student + " made the following observations:");
