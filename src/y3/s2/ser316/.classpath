@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="memoranda/src"/>
+	<classpathentry kind="src" path="SER315-GROUP-1-S25/src/main/java"/>
+	<classpathentry kind="src" path="week1/_2_ASSIGNMENT_1/labgit-master"/>
+	<classpathentry kind="lib" path="eghanem/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="memoranda/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/nekohtml.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/nekohtmlXni.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/swag.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/swexpl.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/xmlParserAPIs.jar"/>
+	<classpathentry kind="lib" path="memoranda/lib/xom-1.0.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/nekohtml.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/nekohtmlXni.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/swag.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/swexpl.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/xercesImpl.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/xmlParserAPIs.jar"/>
+	<classpathentry kind="lib" path="SER315-GROUP-1-S25/lib/xom-1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
