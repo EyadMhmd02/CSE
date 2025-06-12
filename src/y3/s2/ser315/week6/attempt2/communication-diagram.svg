@@ -1,0 +1,97 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Actor -->
+  <circle cx="80" cy="60" r="20" fill="white" stroke="black" stroke-width="1.5"/>
+  <line x1="80" y1="80" x2="80" y2="120" stroke="black" stroke-width="1.5"/>
+  <line x1="60" y1="100" x2="100" y2="100" stroke="black" stroke-width="1.5"/>
+  <line x1="80" y1="120" x2="60" y2="150" stroke="black" stroke-width="1.5"/>
+  <line x1="80" y1="120" x2="100" y2="150" stroke="black" stroke-width="1.5"/>
+  <text x="80" y="180" text-anchor="middle" font-weight="bold">:Tutor</text>
+  
+  <!-- Object instances - Control -->
+  <rect x="200" y="60" width="120" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="260" y="85" text-anchor="middle" font-weight="bold">:ManageAppts</text>
+  <line x1="200" y1="80" x2="320" y2="80" stroke="black" stroke-width="1.5"/>
+  
+  <rect x="460" y="60" width="150" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="535" y="85" text-anchor="middle" font-weight="bold">:ManageAccounts</text>
+  <line x1="460" y1="80" x2="610" y2="80" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Object instances - Entity -->
+  <rect x="460" y="170" width="120" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="520" y="195" text-anchor="middle" font-weight="bold">t:TutorData</text>
+  <line x1="460" y1="190" x2="580" y2="190" stroke="black" stroke-width="1.5"/>
+  
+  <rect x="460" y="280" width="140" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="530" y="305" text-anchor="middle" font-weight="bold">r:tutoringRoom</text>
+  <line x1="460" y1="300" x2="600" y2="300" stroke="black" stroke-width="1.5"/>
+  
+  <rect x="230" y="350" width="120" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="290" y="375" text-anchor="middle" font-weight="bold">:Appointment</text>
+  <line x1="230" y1="370" x2="350" y2="370" stroke="black" stroke-width="1.5"/>
+  
+  <rect x="120" y="450" width="180" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="210" y="475" text-anchor="middle" font-weight="bold">oa:OnlineAppointment</text>
+  <line x1="120" y1="470" x2="300" y2="470" stroke="black" stroke-width="1.5"/>
+  
+  <rect x="350" y="450" width="180" height="40" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="440" y="475" text-anchor="middle" font-weight="bold">ca:CampusAppointment</text>
+  <line x1="350" y1="470" x2="530" y2="470" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Links between objects -->
+  <line x1="100" y1="70" x2="200" y2="70" stroke="black" stroke-width="1.5"/>
+  <line x1="320" y1="70" x2="460" y2="70" stroke="black" stroke-width="1.5"/>
+  <line x1="535" y1="100" x2="535" y2="170" stroke="black" stroke-width="1.5"/>
+  <line x1="290" y1="100" x2="290" y2="350" stroke="black" stroke-width="1.5"/>
+  <line x1="280" y1="100" x2="520" y2="280" stroke="black" stroke-width="1.5"/>
+  <line x1="290" y1="390" x2="210" y2="450" stroke="black" stroke-width="1.5"/>
+  <line x1="290" y1="390" x2="440" y2="450" stroke="black" stroke-width="1.5"/>
+  <line x1="520" y1="210" x2="520" y2="280" stroke="black" stroke-width="1.5"/>
+  <line x1="440" y1="490" x2="520" y2="320" stroke="black" stroke-width="1.5"/>
+  
+  <!-- Message arrows and sequence numbers with corrected notation -->
+  <!-- 1. createAppointment message -->
+  <text x="120" y="50" font-size="12" font-weight="bold">1: createAppointment(email, time, online)</text>
+  <polygon points="190,70 200,70 195,65 195,75" fill="black"/>
+  
+  <!-- 2. getTutor message -->
+  <text x="340" y="50" font-size="12" font-weight="bold">2: getTutor(email)</text>
+  <polygon points="450,70 460,70 455,65 455,75" fill="black"/>
+  
+  <!-- 3. Return tutor -->
+  <text x="540" y="140" font-size="12" font-weight="bold">3: t</text>
+  <polygon points="535,160 535,170 530,165 540,165" fill="black"/>
+  
+  <!-- 4. Get room -->
+  <text x="310" y="200" font-size="12" font-weight="bold">4: getRoom()</text>
+  <polygon points="510,270 520,280 515,275 505,275" fill="black"/>
+  
+  <!-- 5. Check appointments -->
+  <text x="150" y="320" font-size="12" font-weight="bold">5: checkAppointments(time, room)</text>
+  <polygon points="290,340 290,350 285,345 295,345" fill="black"/>
+  
+  <!-- 6a. Create online appointment -->
+  <text x="100" y="420" font-size="12" font-weight="bold">6a: [online] create(id, time)</text>
+  <polygon points="205,440 210,450 200,445 215,445" fill="black"/>
+  
+  <!-- 6b. Create campus appointment -->
+  <text x="300" y="420" font-size="12" font-weight="bold">6b: [!online &amp;&amp; !already5] create(id, time, room)</text>
+  <polygon points="430,440 440,450 430,445 445,445" fill="black"/>
+  
+  <!-- 7. Add appointment to tutor -->
+  <text x="540" y="230" font-size="12" font-weight="bold">7: addAppointment(appt)</text>
+  <polygon points="520,270 520,280 515,275 525,275" fill="black"/>
+  
+  <!-- 8. Link campus appointment to room -->
+  <text x="560" y="400" font-size="12" font-weight="bold">8: located_in</text>
+  <polygon points="525,330 520,320 515,325 525,315" fill="black"/>
+  
+  <!-- Conditional note box -->
+  <rect x="630" y="60" width="150" height="140" fill="#ffcccc" stroke="black" stroke-width="1.5"/>
+  <text x="640" y="80" font-size="12" font-weight="bold">Notes:</text>
+  <text x="640" y="100" font-size="12">1. We assume the tutor exists</text>
+  <text x="640" y="120" font-size="12">in the system with the</text>
+  <text x="640" y="140" font-size="12">provided email address</text>
+  <text x="640" y="160" font-size="12">2. 'already5' is a guard</text>
+  <text x="640" y="180" font-size="12">condition checking for room</text>
+  <text x="640" y="200" font-size="12">capacity limit (5 appts)</text>
+</svg>

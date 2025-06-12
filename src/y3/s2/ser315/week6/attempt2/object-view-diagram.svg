@@ -1,0 +1,91 @@
+<svg viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Control Objects (Before) -->
+  <rect x="100" y="50" width="180" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="190" y="80" text-anchor="middle" font-weight="bold">accountManager:ManageAccounts</text>
+  
+  <rect x="400" y="50" width="180" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="490" y="80" text-anchor="middle" font-weight="bold">appointmentManager:ManageAppts</text>
+  
+  <!-- Entity Objects (Before) -->
+  <rect x="50" y="150" width="120" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="110" y="180" text-anchor="middle" font-weight="bold">david:TutorData</text>
+  
+  <rect x="180" y="150" width="120" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="240" y="180" text-anchor="middle" font-weight="bold">jacob:TutorData</text>
+  
+  <rect x="310" y="150" width="120" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="370" y="180" text-anchor="middle" font-weight="bold">joe:TutorData</text>
+  
+  <rect x="440" y="150" width="120" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="500" y="180" text-anchor="middle" font-weight="bold">kelly:TutorData</text>
+  
+  <rect x="600" y="150" width="200" height="50" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="700" y="180" text-anchor="middle" font-weight="bold">room:tutoringRoom</text>
+  
+  <!-- Entity Objects (After - in red) -->
+  <rect x="50" y="400" width="180" height="50" fill="white" stroke="red" stroke-width="1.5"/>
+  <text x="140" y="430" text-anchor="middle" font-weight="bold" fill="red">onlineAppt:OnlineAppointment</text>
+  
+  <rect x="250" y="400" width="180" height="50" fill="white" stroke="red" stroke-width="1.5"/>
+  <text x="340" y="430" text-anchor="middle" font-weight="bold" fill="red">campusAppt1:CampusAppointment</text>
+  
+  <rect x="450" y="400" width="180" height="50" fill="white" stroke="red" stroke-width="1.5"/>
+  <text x="540" y="430" text-anchor="middle" font-weight="bold" fill="red">campusAppt2:CampusAppointment</text>
+  
+  <!-- Relationships (Before) -->
+  <line x1="280" y1="75" x2="400" y2="75" stroke="black" stroke-width="1.5"/>
+  <text x="340" y="65" font-size="12">communicates_1</text>
+  
+  <line x1="125" y1="75" x2="110" y2="150" stroke="black" stroke-width="1.5"/>
+  <text x="90" y="120" font-size="12">manages1</text>
+  
+  <line x1="175" y1="75" x2="240" y2="150" stroke="black" stroke-width="1.5"/>
+  <text x="190" y="120" font-size="12">manages1</text>
+  
+  <line x1="205" y1="75" x2="370" y2="150" stroke="black" stroke-width="1.5"/>
+  <text x="270" y="120" font-size="12">manages1</text>
+  
+  <line x1="235" y1="75" x2="500" y2="150" stroke="black" stroke-width="1.5"/>
+  <text x="350" y="120" font-size="12">manages1</text>
+  
+  <line x1="500" y1="75" x2="700" y2="150" stroke="black" stroke-width="1.5"/>
+  <text x="620" y="120" font-size="12">manages3</text>
+  
+  <!-- Relationships (After - in red) -->
+  <line x1="490" y1="100" x2="140" y2="400" stroke="red" stroke-width="1.5"/>
+  <text x="300" y="250" font-size="12" fill="red">knows</text>
+  
+  <line x1="490" y1="100" x2="340" y2="400" stroke="red" stroke-width="1.5"/>
+  <text x="400" y="250" font-size="12" fill="red">knows</text>
+  
+  <line x1="490" y1="100" x2="540" y2="400" stroke="red" stroke-width="1.5"/>
+  <text x="510" y="250" font-size="12" fill="red">knows</text>
+  
+  <line x1="110" y1="200" x2="140" y2="400" stroke="red" stroke-width="1.5"/>
+  <text x="100" y="300" font-size="12" fill="red">schedules</text>
+  
+  <line x1="240" y1="200" x2="340" y2="400" stroke="red" stroke-width="1.5"/>
+  <text x="270" y="300" font-size="12" fill="red">schedules</text>
+  
+  <line x1="370" y1="200" x2="540" y2="400" stroke="red" stroke-width="1.5"/>
+  <text x="450" y="300" font-size="12" fill="red">schedules</text>
+  
+  <line x1="700" y1="200" x2="340" y2="400" stroke="red" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="500" y="300" font-size="12" fill="red">located_in</text>
+  
+  <line x1="700" y1="200" x2="540" y2="400" stroke="red" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="630" y="300" font-size="12" fill="red">located_in</text>
+  
+  <!-- Legend -->
+  <rect x="630" y="500" width="220" height="110" fill="white" stroke="black" stroke-width="1"/>
+  <text x="740" y="520" text-anchor="middle" font-weight="bold">Legend</text>
+  
+  <line x1="650" y1="540" x2="700" y2="540" stroke="black" stroke-width="1.5"/>
+  <text x="740" y="545" font-size="12">Initial State (Before)</text>
+  
+  <line x1="650" y1="570" x2="700" y2="570" stroke="red" stroke-width="1.5"/>
+  <text x="740" y="575" font-size="12" fill="red">After createAppointment (New)</text>
+  
+  <line x1="650" y1="600" x2="700" y2="600" stroke="red" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="740" y="605" font-size="12" fill="red">Located_in Relationship</text>
+</svg>

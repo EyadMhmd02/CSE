@@ -1,0 +1,102 @@
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- ManageAppts class -->
+  <rect x="50" y="50" width="300" height="160" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="50" y1="80" x2="350" y2="80" stroke="black" stroke-width="1.5" />
+  <line x1="50" y1="110" x2="350" y2="110" stroke="black" stroke-width="1.5" />
+  <text x="200" y="70" text-anchor="middle" font-weight="bold">ManageAppts</text>
+  <text x="60" y="100" dominant-baseline="middle">- rooms : ArrayList&lt;tutoringRoom&gt;</text>
+  <text x="60" y="130" dominant-baseline="middle">- appointments : ArrayList&lt;Appointment&gt;</text>
+  <text x="60" y="150" dominant-baseline="middle">+ createAppointment(email: String, time: Date, online: boolean): boolean</text>
+  <text x="60" y="170" dominant-baseline="middle">- checkAppointments(time: Date, room: tutoringRoom): boolean</text>
+  <text x="60" y="190" dominant-baseline="middle">+ getRoom(): tutoringRoom</text>
+  
+  <!-- ManageAccounts class -->
+  <rect x="450" y="50" width="300" height="100" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="80" x2="750" y2="80" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="110" x2="750" y2="110" stroke="black" stroke-width="1.5" />
+  <text x="600" y="70" text-anchor="middle" font-weight="bold">ManageAccounts</text>
+  <text x="460" y="100" dominant-baseline="middle">- tutors : ArrayList&lt;TutorData&gt;</text>
+  <text x="460" y="130" dominant-baseline="middle">+ getTutor(email: String): TutorData</text>
+  
+  <!-- TutorData class -->
+  <rect x="450" y="200" width="300" height="120" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="230" x2="750" y2="230" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="260" x2="750" y2="260" stroke="black" stroke-width="1.5" />
+  <text x="600" y="220" text-anchor="middle" font-weight="bold">TutorData</text>
+  <text x="460" y="250" dominant-baseline="middle">- email : String</text>
+  <text x="460" y="280" dominant-baseline="middle">- appointments : ArrayList&lt;Appointment&gt;</text>
+  <text x="460" y="300" dominant-baseline="middle">+ addAppointment(appt: Appointment): void</text>
+  <text x="460" y="320" dominant-baseline="middle">+ getEmail(): String</text>
+  
+  <!-- tutoringRoom class -->
+  <rect x="450" y="370" width="300" height="100" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="400" x2="750" y2="400" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="430" x2="750" y2="430" stroke="black" stroke-width="1.5" />
+  <text x="600" y="390" text-anchor="middle" font-weight="bold">tutoringRoom</text>
+  <text x="460" y="420" dominant-baseline="middle">- CAPACITY : int</text>
+  <text x="460" y="450" dominant-baseline="middle">+ getCapacity(): int</text>
+  
+  <!-- Appointment class -->
+  <rect x="50" y="300" width="300" height="140" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="50" y1="330" x2="350" y2="330" stroke="black" stroke-width="1.5" />
+  <line x1="50" y1="360" x2="350" y2="360" stroke="black" stroke-width="1.5" />
+  <text x="200" y="320" text-anchor="middle" font-weight="bold">Appointment</text>
+  <text x="200" y="345" text-anchor="middle" font-style="italic">&lt;&lt;abstract&gt;&gt;</text>
+  <text x="60" y="380" dominant-baseline="middle">- appointmentID : int</text>
+  <text x="60" y="400" dominant-baseline="middle">- startTime : Date</text>
+  <text x="60" y="420" dominant-baseline="middle">+ getID(): int</text>
+  <text x="60" y="440" dominant-baseline="middle">+ getStartTime(): Date</text>
+  
+  <!-- OnlineAppointment class -->
+  <rect x="50" y="520" width="300" height="80" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="50" y1="550" x2="350" y2="550" stroke="black" stroke-width="1.5" />
+  <line x1="50" y1="580" x2="350" y2="580" stroke="black" stroke-width="1.5" />
+  <text x="200" y="540" text-anchor="middle" font-weight="bold">OnlineAppointment</text>
+  <text x="60" y="570" dominant-baseline="middle">- linkURL : String</text>
+  <text x="60" y="600" dominant-baseline="middle">+ getLink(): String</text>
+  
+  <!-- CampusAppointment class -->
+  <rect x="450" y="520" width="300" height="100" fill="#ffffcc" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="550" x2="750" y2="550" stroke="black" stroke-width="1.5" />
+  <line x1="450" y1="580" x2="750" y2="580" stroke="black" stroke-width="1.5" />
+  <text x="600" y="540" text-anchor="middle" font-weight="bold">CampusAppointment</text>
+  <text x="460" y="570" dominant-baseline="middle">- room : tutoringRoom</text>
+  <text x="460" y="600" dominant-baseline="middle">+ getRoom(): tutoringRoom</text>
+  
+  <!-- Inheritance connections -->
+  <path d="M200,440 L200,490 L200,520" stroke="black" stroke-width="1.5" />
+  <path d="M200,490 L400,490 L600,520" stroke="black" stroke-width="1.5" />
+  <polygon points="190,510 200,520 210,510" fill="white" stroke="black" stroke-width="1.5" />
+  <polygon points="590,510 600,520 610,510" fill="white" stroke="black" stroke-width="1.5" />
+  
+  <!-- Association connections -->
+  <line x1="350" y1="70" x2="450" y2="70" stroke="black" stroke-width="1.5" />
+  <text x="380" y="55" font-size="12">communicates_1</text>
+  <text x="355" y="85" font-size="12">1</text>
+  <text x="435" y="85" font-size="12">1</text>
+  
+  <line x1="510" y1="150" x2="510" y2="200" stroke="black" stroke-width="1.5" />
+  <text x="460" y="180" font-size="12">manages1</text>
+  <text x="520" y="170" font-size="12">1</text>
+  <text x="520" y="195" font-size="12">*</text>
+  
+  <line x1="200" y1="210" x2="200" y2="300" stroke="black" stroke-width="1.5" />
+  <text x="160" y="260" font-size="12">knows</text>
+  <text x="210" y="220" font-size="12">1</text>
+  <text x="210" y="290" font-size="12">*</text>
+  
+  <line x1="580" y1="320" x2="580" y2="370" stroke="black" stroke-width="1.5" />
+  <text x="590" y="350" font-size="12">schedules</text>
+  <text x="570" y="330" font-size="12">1</text>
+  <text x="570" y="360" font-size="12">*</text>
+  
+  <line x1="300" y1="100" x2="450" y2="400" stroke="black" stroke-width="1.5" />
+  <text x="350" y="260" font-size="12">manages3</text>
+  <text x="310" y="110" font-size="12">1</text>
+  <text x="440" y="390" font-size="12">*</text>
+  
+  <line x1="600" y1="470" x2="600" y2="520" stroke="black" stroke-width="1.5" />
+  <text x="620" y="500" font-size="12">located_in</text>
+  <text x="590" y="490" font-size="12">1</text>
+  <text x="590" y="515" font-size="12">*</text>
+</svg>
